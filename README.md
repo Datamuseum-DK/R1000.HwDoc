@@ -45,7 +45,7 @@ Why ?!
 ------
 
 In Datamuseum.dk we have a
-[running Rational R1000 Computer(https://datamuseum.dk/wiki/Rational/R1000s400)
+[running Rational R1000 Computer](https://datamuseum.dk/wiki/Rational/R1000s400)
 and since that is in all likelyhood the only one in the world which
 will ever run again, we want to implement a software emulation
 to preserve this unique machine for posterity.
