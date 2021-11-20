@@ -47,6 +47,10 @@ class SExp():
         self.members.append(child)
         return self
 
+    def __isub__(self, child):
+        self.members.remove(child)
+        return self
+
     def __len__(self):
         return len(self.members)
 

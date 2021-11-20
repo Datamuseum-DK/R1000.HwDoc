@@ -4,6 +4,9 @@ help:
 	@echo "	Fetch		- Fetch PDF files from datamuseum.dk bitstore"
 	@echo "	Extract		- Extract images from the PDF files"
 	@echo "	ImageProc	- Setup for Image Processing"
+	@echo "	RemoveImages	- Remove background images from schematics"
+	@echo "	AddImages	- Add background images to schematics"
+	@echo "	RebuildSymbols	- Rebuild KiCad Symbols"
 	@echo
 	@echo "If you want the bulk storage elsewhere, create symlinks"
 	@echo "to CacheDir and WorkDir first."
@@ -57,6 +60,15 @@ ImageProc: Fetch Extract
 	@echo ""
 	@echo "	cd WorkDir/imgproc && make VAL_0063"
 
+RemoveImages:
+	@env PYTHONPATH=.:${PYTHONPATH} python3 -u tools/remove_schematic_background_image.py
+
+AddImages:
+	@env PYTHONPATH=.:${PYTHONPATH} python3 -u tools/insert_schematic_background_image.py
+
+RebuildSymbols:
+	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
+
 
 t_fetch:
 	[ -s CacheDir/${ARTIFACT}.${EXT} ] || ( \
@@ -68,8 +80,6 @@ t_extract:
 	    mkdir -p WorkDir/${BOARD}/_rawimg && \
 	    ${PDFIMAGES} ${PDF} WorkDir/${BOARD}/_rawimg/_ && \
 	    mv WorkDir/${BOARD}/_rawimg WorkDir/${BOARD}/rawimg )
-
-https://datamuseum.dk/bits/30000957
 
 
 phk:
