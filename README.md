@@ -11,6 +11,70 @@ followed to get there may be of general interest, in the context
 of computer hardware preservation, this repository captures
 the process from A to Z.
 
+But first a bit of…
+
+HOWTO information
+-----------------
+
+To refresh/create KiCad symbol files:
+
+	make RebuildSymbols
+
+To add background images to schematics before editing (optional):
+
+	make AddImages
+
+To remove background images *AND* prepare .kicad_sch files for
+commit after editing:
+
+	make RemoveImages
+
+If you want to play with the Image-processing:
+
+	make ImageProc
+
+Please note that a lot of disk-space is required for that, and
+you may want to put that elsewhere with two symlinks:
+
+	ln -s /tank/downloaded_stuff CacheDir
+	ln -s /tank/working_directory WorkDir
+
+Ok, and now to the explanation:
+
+Why ?!
+------
+
+In Datamuseum.dk we have a
+[running Rational R1000 Computer(https://datamuseum.dk/wiki/Rational/R1000s400)
+and since that is in all likelyhood the only one in the world which
+will ever run again, we want to implement a software emulation
+to preserve this unique machine for posterity.
+
+Normally one would simulate the instruction set of the computer, but
+the R1000 has no instruction set, in the sense that the 16 bit codes
+the Ada compiler's code generator produces is a private contract with
+the Microcode which interprets them.
+
+We have figured out quite a lot about these codes, for instance that
+0x008c means:
+
+	Action Heap_Access,Diana_Put_Node_On_Seq_Type 
+
+So, yeah, that's not feasible to emulate.
+
+Instead we aim to emulate at the microcode level, we have almost
+complete hardware and some amount of microcode documentation, but
+since even the microcode has subroutine calls, that is also a
+tall order.
+
+So our first stage is simulating the computer at the circuit
+level, all the chips and all the connections between them, and
+for that we need the schematics in a form which can be used
+to build that simulation, a so-called "net-list".
+
+This project is about producing that from bad-ish photocopies
+of the original schematics.
+
 The raw material
 ----------------
 
