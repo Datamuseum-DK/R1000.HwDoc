@@ -1,5 +1,5 @@
-Rational R1000/400 Machine Readble Hardware documentation
-=========================================================
+Rational R1000/400 Machine Readable Hardware documentation
+==========================================================
 
 This repository contains the process and the result for
 Datamuseum.dk's production of machine readable hardware
@@ -165,3 +165,8 @@ The non-rectangular components were entered by hand in KiCads component
 editor, including the "deMorgan" variations many of them had:
 
 ![NAND gate with demorgan variant](misc/sch_demorgan.png)
+
+Because the goal is to get a functional netlist for emulation
+purposes, we did not bother with multiple units per symbol,
+for instance the four NAND gates in a 74F00, we just have
+a symbol called "F00" with a single NAND gate.
