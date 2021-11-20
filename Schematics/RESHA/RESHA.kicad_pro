@@ -1,18 +1,299 @@
 {
+  "board": {
+    "layer_presets": []
+  },
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_label_syntax": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "extra_units": "error",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "lib_symbol_issues": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "similar_labels": "warning",
+      "unannotated": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
   "meta": {
     "filename": "RESHA.kicad_pro",
     "version": 1
   },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12.0,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      }
+    ],
+    "meta": {
+      "version": 2
+    },
+    "net_colors": null
+  },
+  "pcbnew": {
+    "last_paths": {
+      "gencad": "",
+      "idf": "",
+      "netlist": "",
+      "specctra_dsn": "",
+      "step": "",
+      "vrml": ""
+    },
+    "page_layout_descr_file": ""
+  },
   "schematic": {
+    "annotate_start_num": 0,
     "drawing": {
+      "default_bus_thickness": 12.0,
+      "default_line_thickness": 6.0,
       "default_text_size": 100.0,
+      "default_wire_thickness": 6.0,
+      "field_names": [],
       "intersheets_ref_own_page": true,
       "intersheets_ref_prefix": "{",
       "intersheets_ref_short": true,
       "intersheets_ref_show": true,
-      "intersheets_ref_suffix": "}"
+      "intersheets_ref_suffix": "}",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.375,
+      "pin_symbol_size": 25.0,
+      "text_offset_ratio": 0.15
     },
-    "page_layout_descr_file": "../R1000.kicad_wks"
+    "legacy_lib_dir": "",
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
+    "page_layout_descr_file": "../R1000.kicad_wks",
+    "plot_directory": "",
+    "spice_adjust_passive_values": false,
+    "spice_external_command": "spice \"%I\"",
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
   },
   "sheets": [
     [
@@ -21,47 +302,48 @@
     ],
     [
       "20011966-43f4-289a-18da-66086b243e55",
-      "pg_01.kicad_sch"
+      "Page 1"
     ],
     [
       "20011966-6fbc-3c35-3930-600703cd5c92",
-      "pg_02.kicad_sch"
+      "Page 2"
     ],
     [
       "20011966-25b3-494b-437a-1cad0dff4b5f",
-      "pg_03.kicad_sch"
+      "Page 3"
     ],
     [
       "20011966-61e1-6720-08cd-42da5ea84891",
-      "pg_04.kicad_sch"
+      "Page 4"
     ],
     [
       "20011966-4b29-5a6b-4cac-41dbb903ed78",
-      "pg_05.kicad_sch"
+      "Page 5"
     ],
     [
       "20011966-661e-6b8b-23ca-06cc0380aa32",
-      "pg_06.kicad_sch"
+      "Page 6"
     ],
     [
       "20011966-3241-4581-6e83-4d226cd202f4",
-      "pg_07.kicad_sch"
+      "Page 7"
     ],
     [
       "20011966-336f-4c7f-51ff-34ec365a2a03",
-      "pg_08.kicad_sch"
+      "Page 8"
     ],
     [
       "20011966-4136-08e1-4c08-3f189f12ddef",
-      "pg_09.kicad_sch"
+      "Page 9"
     ],
     [
       "20011966-4e00-25ce-0ccf-562e5523a61f",
-      "pg_11.kicad_sch"
+      "Page 11"
     ],
     [
       "20011966-312e-25b2-5212-35fe8ce247a5",
-      "pg_12.kicad_sch"
+      "Page 12"
     ]
-  ]
+  ],
+  "text_variables": {}
 }
