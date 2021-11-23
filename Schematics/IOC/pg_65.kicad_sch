@@ -2964,7 +2964,7 @@
         "Value"
         "OSC"
         (id 1)
-        (at -1.27 5.08 0)
+        (at -3.81 -7.62 0)
         (effects
           (font
             (size 2.54 2.54)
@@ -4441,11 +4441,6 @@
     (color 0 0 0 0)
   )
   (junction
-    (at 279.4 157.48)
-    (diameter 0)
-    (color 0 0 0 0)
-  )
-  (junction
     (at 307.34 101.6)
     (diameter 2.54)
     (color 0 0 0 0)
@@ -4657,18 +4652,6 @@
   )
   (wire
     (pts
-      (xy 43.18 121.92)
-      (xy 53.34 121.92)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid c28a6ef7-b8ad-493d-b737-6f99c177d3bc)
-  )
-  (wire
-    (pts
       (xy 45.72 152.4)
       (xy 53.34 152.4)
     )
@@ -4753,6 +4736,18 @@
   )
   (wire
     (pts
+      (xy 50.8 121.92)
+      (xy 53.34 121.92)
+    )
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (uuid c28a6ef7-b8ad-493d-b737-6f99c177d3bc)
+  )
+  (wire
+    (pts
       (xy 53.34 127)
       (xy 20.32 127)
     )
@@ -4810,6 +4805,18 @@
       (color 0 0 0 0)
     )
     (uuid 76dc768b-b655-4bb3-b29e-f72e12204c37)
+  )
+  (wire
+    (pts
+      (xy 81.28 317.5)
+      (xy 129.54 317.5)
+    )
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (uuid be5a3576-d8f6-4071-94d9-2a41b8e2694a)
   )
   (wire
     (pts
@@ -4954,18 +4961,6 @@
       (color 0 0 0 0)
     )
     (uuid f8444e8d-193d-4551-be54-84930ef3a0e2)
-  )
-  (wire
-    (pts
-      (xy 114.3 317.5)
-      (xy 129.54 317.5)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid be5a3576-d8f6-4071-94d9-2a41b8e2694a)
   )
   (wire
     (pts
@@ -5270,7 +5265,7 @@
   (wire
     (pts
       (xy 160.02 68.58)
-      (xy 185.42 68.58)
+      (xy 198.12 68.58)
     )
     (stroke
       (width 0)
@@ -5522,7 +5517,7 @@
   (wire
     (pts
       (xy 226.06 317.5)
-      (xy 243.84 317.5)
+      (xy 251.46 317.5)
     )
     (stroke
       (width 0)
@@ -5557,31 +5552,7 @@
   )
   (wire
     (pts
-      (xy 274.32 157.48)
-      (xy 279.4 157.48)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 099a057c-510a-439c-b730-d331d91d913d)
-  )
-  (wire
-    (pts
-      (xy 279.4 43.18)
-      (xy 279.4 157.48)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 9998de07-5b10-412d-ac6c-9a9517764366)
-  )
-  (wire
-    (pts
-      (xy 279.4 43.18)
+      (xy 274.32 43.18)
       (xy 325.12 43.18)
     )
     (stroke
@@ -5593,7 +5564,7 @@
   )
   (wire
     (pts
-      (xy 279.4 157.48)
+      (xy 274.32 157.48)
       (xy 325.12 157.48)
     )
     (stroke
@@ -5602,30 +5573,6 @@
       (color 0 0 0 0)
     )
     (uuid 099a057c-510a-439c-b730-d331d91d913d)
-  )
-  (wire
-    (pts
-      (xy 284.48 38.1)
-      (xy 332.74 38.1)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 5bf57ef4-613d-4603-afed-db601b08a26f)
-  )
-  (wire
-    (pts
-      (xy 284.48 152.4)
-      (xy 332.74 152.4)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 60636ed5-8f52-4090-9b4a-22684ad49e7c)
   )
   (wire
     (pts
@@ -6467,64 +6414,16 @@
     )
     (uuid 28bc0542-55d7-4a5c-9a23-8af96ca42039)
   )
-  (polyline
-    (pts
-      (xy 231.14 10.16)
-      (xy 231.14 66.04)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4cdde74d-f5ae-44d7-876e-517033357996)
-  )
-  (polyline
-    (pts
-      (xy 231.14 10.16)
-      (xy 281.94 10.16)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4cdde74d-f5ae-44d7-876e-517033357996)
-  )
-  (polyline
-    (pts
-      (xy 281.94 10.16)
-      (xy 281.94 66.04)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4cdde74d-f5ae-44d7-876e-517033357996)
-  )
-  (polyline
-    (pts
-      (xy 281.94 66.04)
-      (xy 231.14 66.04)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4cdde74d-f5ae-44d7-876e-517033357996)
-  )
-  (text
-    "Actual clock margining\nprovides no benefit in\na software emulation,\nbut retain the circuitry."
-    (at 233.68 30.48 0)
+  (label
+    "CLK_MARGIN.CLK"
+    (at 86.36 317.5 0)
     (effects
       (font
         (size 2.54 2.54)
       )
       (justify left bottom)
     )
-    (uuid ac2bec1c-16f3-4111-8d2c-85d244ca5692)
+    (uuid fc7124da-0ffa-4849-8990-676441ac6fba)
   )
   (label
     "CNS0"
@@ -6659,6 +6558,17 @@
     (uuid a274e82d-e707-4291-ab06-88f1c84c379b)
   )
   (label
+    "CLK_MARGIN.CLK"
+    (at 162.56 68.58 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid c0b11538-1153-4842-910b-5e77aaf7a763)
+  )
+  (label
     "I.CLOCK_MARGIN"
     (at 162.56 317.5 0)
     (effects
@@ -6722,7 +6632,7 @@
   (global_label
     "IOP.MARGIN_CLK~"
     (shape input)
-    (at 43.18 121.92 180)
+    (at 50.8 121.92 180)
     (fields_autoplaced)
     (effects
       (font
@@ -6735,7 +6645,7 @@
       "Intersheet References"
       "${INTERSHEET_REFS}"
       (id 0)
-      (at 5.8178 121.7613 0)
+      (at 13.4378 121.7613 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -6795,31 +6705,6 @@
     )
   )
   (global_label
-    "CLK_MARGIN.CLK"
-    (shape input)
-    (at 114.3 317.5 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify right)
-    )
-    (uuid a4342f5d-75f2-4a71-a4ee-31701d64d7d4)
-    (property
-      "Intersheet References"
-      "${INTERSHEET_REFS}"
-      (id 0)
-      (at 78.0264 317.3413 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify right)
-      )
-    )
-  )
-  (global_label
     "68K_RESET~"
     (shape output)
     (at 185.42 35.56 0)
@@ -6836,31 +6721,6 @@
       "${INTERSHEET_REFS}"
       (id 0)
       (at 213.2451 35.4013 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-  )
-  (global_label
-    "CLK_MARGIN.CLK"
-    (shape output)
-    (at 185.42 68.58 0)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left)
-    )
-    (uuid 3733e7f8-0537-4b7e-8a86-64f3e7f713ea)
-    (property
-      "Intersheet References"
-      "${INTERSHEET_REFS}"
-      (id 0)
-      (at 222.0746 68.4213 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -7102,66 +6962,6 @@
     )
   )
   (symbol
-    (lib_id "r1000:GB")
-    (at 243.84 317.5 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid efbbb760-1aed-4aea-8c12-58472a3c0ad3)
-    (property
-      "Reference"
-      "GB52"
-      (id 0)
-      (at 247.65 317.5 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Value"
-      "GB"
-      (id 1)
-      (at 243.84 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 243.84 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 243.84 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (pin
-      "1"
-      (uuid 15e13bce-37a2-49c9-a8d8-cf88961a900a)
-    )
-  )
-  (symbol
     (lib_id "r1000:PU")
     (at 246.38 101.6 0)
     (unit 1)
@@ -7284,30 +7084,29 @@
     )
   )
   (symbol
-    (lib_id "r1000:PU")
-    (at 284.48 38.1 0)
+    (lib_id "r1000:GB")
+    (at 251.46 317.5 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (fields_autoplaced)
-    (uuid 0707b66f-de76-4324-9c31-1a50f9de901c)
+    (uuid efbbb760-1aed-4aea-8c12-58472a3c0ad3)
     (property
       "Reference"
-      "#PWR0123"
+      "GB52"
       (id 0)
-      (at 284.48 38.1 0)
+      (at 255.27 317.5 0)
       (effects
         (font
-          (size 1.27 1.27)
+          (size 2.54 2.54)
         )
-        hide
+        (justify left)
       )
     )
     (property
       "Value"
-      "PU"
+      "GB"
       (id 1)
-      (at 284.48 38.1 0)
+      (at 251.46 317.5 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7319,7 +7118,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 284.48 38.1 0)
+      (at 251.46 317.5 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7331,7 +7130,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 284.48 38.1 0)
+      (at 251.46 317.5 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7341,22 +7140,21 @@
     )
     (pin
       "1"
-      (uuid cab912fe-0552-452a-aebb-9cf417664128)
+      (uuid 15e13bce-37a2-49c9-a8d8-cf88961a900a)
     )
   )
   (symbol
     (lib_id "r1000:PU")
-    (at 284.48 152.4 0)
+    (at 332.74 38.1 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (fields_autoplaced)
-    (uuid 6a51b719-b1b3-435d-b8c4-3819db46459b)
+    (uuid d14df4f4-bfef-4d01-a4a4-bca250e338ef)
     (property
       "Reference"
-      "#PWR0118"
+      "#PWR06501"
       (id 0)
-      (at 284.48 152.4 0)
+      (at 332.74 38.1 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7368,7 +7166,7 @@
       "Value"
       "PU"
       (id 1)
-      (at 284.48 152.4 0)
+      (at 332.74 38.1 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7380,7 +7178,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 284.48 152.4 0)
+      (at 332.74 38.1 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -7392,7 +7190,68 @@
       "Datasheet"
       ""
       (id 3)
-      (at 284.48 152.4 0)
+      (at 332.74 38.1 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid 36eb31ef-d828-44f5-a34b-602035330d81)
+    )
+  )
+  (symbol
+    (lib_id "r1000:PU")
+    (at 332.74 152.4 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (fields_autoplaced)
+    (uuid 6a51b719-b1b3-435d-b8c4-3819db46459b)
+    (property
+      "Reference"
+      "#PWR0118"
+      (id 0)
+      (at 332.74 152.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PU"
+      (id 1)
+      (at 332.74 152.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 332.74 152.4 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 332.74 152.4 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -8072,6 +7931,84 @@
   )
   (symbol
     (lib_id "r1000:OSC")
+    (at 259.08 45.72 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid b4284378-2193-4e2d-8830-065b0683e364)
+    (property
+      "Reference"
+      "U6506"
+      (id 0)
+      (at 261.62 40.64 0)
+    )
+    (property
+      "Value"
+      "OSC"
+      (id 1)
+      (at 255.27 53.34 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 260.35 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 260.35 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "K49"
+      (id 4)
+      (at 257.81 45.72 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "FASTCLK"
+      (id 5)
+      (at 262.89 60.96 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "8"
+      (uuid cac2c719-9748-48a1-ae07-d681d882fbf8)
+    )
+  )
+  (symbol
+    (lib_id "r1000:OSC")
     (at 259.08 160.02 0)
     (unit 1)
     (in_bom yes)
@@ -8087,7 +8024,7 @@
       "Value"
       "20000000"
       (id 1)
-      (at 257.81 154.94 0)
+      (at 255.27 167.64 0)
       (effects
         (font
           (size 2.54 2.54)

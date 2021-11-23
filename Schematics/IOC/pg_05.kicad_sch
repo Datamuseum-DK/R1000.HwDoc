@@ -7430,8 +7430,8 @@
   )
   (wire
     (pts
-      (xy 55.88 355.6)
-      (xy 81.28 355.6)
+      (xy 88.9 355.6)
+      (xy 114.3 355.6)
     )
     (stroke
       (width 0)
@@ -7442,8 +7442,8 @@
   )
   (wire
     (pts
-      (xy 55.88 360.68)
-      (xy 81.28 360.68)
+      (xy 88.9 360.68)
+      (xy 114.3 360.68)
     )
     (stroke
       (width 0)
@@ -7451,18 +7451,6 @@
       (color 0 0 0 0)
     )
     (uuid 193f751f-134e-43cc-a1f5-88e1355bbcd6)
-  )
-  (wire
-    (pts
-      (xy 63.5 342.9)
-      (xy 81.28 342.9)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 0c4842e1-2f65-48cf-badb-445ffdd5b341)
   )
   (wire
     (pts
@@ -7499,6 +7487,18 @@
       (color 0 0 0 0)
     )
     (uuid 62bc866a-50f7-43d1-9c1f-5a563f138e4b)
+  )
+  (wire
+    (pts
+      (xy 96.52 342.9)
+      (xy 114.3 342.9)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 0c4842e1-2f65-48cf-badb-445ffdd5b341)
   )
   (wire
     (pts
@@ -9691,7 +9691,7 @@
   (global_label
     "CLK.2X.B1"
     (shape input)
-    (at 55.88 355.6 180)
+    (at 88.9 355.6 180)
     (fields_autoplaced)
     (effects
       (font
@@ -9704,7 +9704,7 @@
       "Intersheet References"
       "${INTERSHEET_REFS}"
       (id 0)
-      (at 31.3206 355.4413 0)
+      (at 64.3406 355.4413 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -9716,7 +9716,7 @@
   (global_label
     "CLK.2XE~.B2"
     (shape input)
-    (at 55.88 360.68 180)
+    (at 88.9 360.68 180)
     (fields_autoplaced)
     (effects
       (font
@@ -9729,7 +9729,7 @@
       "Intersheet References"
       "${INTERSHEET_REFS}"
       (id 0)
-      (at 27.2082 360.5213 0)
+      (at 60.2282 360.5213 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -9741,7 +9741,7 @@
   (global_label
     "IOP_RESET~"
     (shape input)
-    (at 63.5 342.9 180)
+    (at 96.52 342.9 180)
     (fields_autoplaced)
     (effects
       (font
@@ -9754,7 +9754,7 @@
       "Intersheet References"
       "${INTERSHEET_REFS}"
       (id 0)
-      (at 36.6425 342.7413 0)
+      (at 69.6625 342.7413 0)
       (effects
         (font
           (size 2.54 2.54)
