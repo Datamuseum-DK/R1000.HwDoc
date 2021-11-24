@@ -4130,11 +4130,6 @@
     (color 0 0 0 0)
   )
   (junction
-    (at 48.26 101.6)
-    (diameter 0)
-    (color 0 0 0 0)
-  )
-  (junction
     (at 53.34 78.74)
     (diameter 0)
     (color 0 0 0 0)
@@ -5131,42 +5126,6 @@
   )
   (wire
     (pts
-      (xy 48.26 17.78)
-      (xy 83.82 17.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
-  )
-  (wire
-    (pts
-      (xy 48.26 101.6)
-      (xy 48.26 17.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
-  )
-  (wire
-    (pts
-      (xy 48.26 185.42)
-      (xy 48.26 101.6)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
-  )
-  (wire
-    (pts
       (xy 50.8 10.16)
       (xy 76.2 10.16)
     )
@@ -5467,7 +5426,7 @@
   )
   (wire
     (pts
-      (xy 83.82 17.78)
+      (xy 83.82 30.48)
       (xy 83.82 33.02)
     )
     (stroke
@@ -5475,55 +5434,31 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
+    (uuid eea33505-1a00-47bc-8569-c3e706af56ab)
   )
   (wire
     (pts
-      (xy 83.82 101.6)
-      (xy 48.26 101.6)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid bcaec66d-1b59-408f-b64d-153a556f227f)
-  )
-  (wire
-    (pts
+      (xy 83.82 114.3)
       (xy 83.82 116.84)
-      (xy 83.82 101.6)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid bcaec66d-1b59-408f-b64d-153a556f227f)
+    (uuid e9eedfbc-1d12-486f-a6d7-a16962e02940)
   )
   (wire
     (pts
-      (xy 83.82 185.42)
-      (xy 48.26 185.42)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
-  )
-  (wire
-    (pts
+      (xy 83.82 198.12)
       (xy 83.82 200.66)
-      (xy 83.82 185.42)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 3b61b23e-4b74-416e-9da9-e4b332f50c10)
+    (uuid e6712b35-52da-4bc6-9b81-ffc6f1b56a13)
   )
   (wire
     (pts
@@ -9849,6 +9784,186 @@
     (pin
       "1"
       (uuid abe75020-13b7-4316-bc53-1be691fa5293)
+    )
+  )
+  (symbol
+    (lib_id "r1000:PU")
+    (at 83.82 30.48 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid 04158a33-2079-416a-8d02-a0f327498ba4)
+    (property
+      "Reference"
+      "#PWR05505"
+      (id 0)
+      (at 83.82 30.48 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PU"
+      (id 1)
+      (at 83.82 30.48 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 83.82 30.48 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 83.82 30.48 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid fe763501-b855-471a-9ac3-2b7af072c497)
+    )
+  )
+  (symbol
+    (lib_id "r1000:PU")
+    (at 83.82 114.3 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid 5dbed803-16f2-4aae-9cce-1d0b892ee670)
+    (property
+      "Reference"
+      "#PWR05506"
+      (id 0)
+      (at 83.82 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PU"
+      (id 1)
+      (at 83.82 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 83.82 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 83.82 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid d8b76bfa-c6c3-4550-8da4-77a3e0e198ae)
+    )
+  )
+  (symbol
+    (lib_id "r1000:PU")
+    (at 83.82 198.12 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid a12a5d39-5a2e-4208-bd59-c96bdba39e9a)
+    (property
+      "Reference"
+      "#PWR05507"
+      (id 0)
+      (at 83.82 198.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PU"
+      (id 1)
+      (at 83.82 198.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 83.82 198.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 83.82 198.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid c656370e-b10f-4dd2-84ec-844c5f55c712)
     )
   )
   (symbol
