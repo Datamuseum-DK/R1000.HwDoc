@@ -4602,6 +4602,11 @@
     (color 0 0 0 0)
   )
   (junction
+    (at 276.86 289.56)
+    (diameter 0)
+    (color 0 0 0 0)
+  )
+  (junction
     (at 304.8 101.6)
     (diameter 0)
     (color 0 0 0 0)
@@ -6566,7 +6571,7 @@
   (wire
     (pts
       (xy 241.3 289.56)
-      (xy 340.36 289.56)
+      (xy 276.86 289.56)
     )
     (stroke
       (width 0)
@@ -6670,6 +6675,42 @@
       (color 0 0 0 0)
     )
     (uuid 493de819-28fc-4472-a09e-b8ff723c023d)
+  )
+  (wire
+    (pts
+      (xy 276.86 289.56)
+      (xy 276.86 294.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 65ced18b-40c5-4d39-96ba-68b3f4417b94)
+  )
+  (wire
+    (pts
+      (xy 276.86 289.56)
+      (xy 340.36 289.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 862adef6-0f76-4476-88bf-d5cfd176ac5a)
+  )
+  (wire
+    (pts
+      (xy 284.48 294.64)
+      (xy 276.86 294.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 65ced18b-40c5-4d39-96ba-68b3f4417b94)
   )
   (wire
     (pts
@@ -8160,7 +8201,7 @@
     (uuid 35aef416-acec-472f-bf82-28cf8f7a2a5c)
   )
   (label
-    "IO.D4"
+    "IO.DI4"
     (at 251.46 116.84 0)
     (effects
       (font
@@ -8171,7 +8212,7 @@
     (uuid 7a0db4c0-04c8-474e-ac04-66b81f773d68)
   )
   (label
-    "IO.D3"
+    "IO.DI3"
     (at 251.46 274.32 0)
     (effects
       (font
@@ -8182,7 +8223,7 @@
     (uuid 05d61a45-d964-4bfe-8832-03e3fd53d1e2)
   )
   (label
-    "IO.D5"
+    "IO.DI5"
     (at 251.46 279.4 0)
     (effects
       (font
@@ -8193,7 +8234,7 @@
     (uuid dc332ced-75d7-4185-86e8-318b97e33c64)
   )
   (label
-    "IO.D6"
+    "IO.DI6"
     (at 251.46 284.48 0)
     (effects
       (font
@@ -8204,7 +8245,7 @@
     (uuid 58eddcee-5dea-4ec7-8eb6-4ba107a5c94d)
   )
   (label
-    "IO.D7"
+    "IO.DI7"
     (at 251.46 289.56 0)
     (effects
       (font
@@ -8972,6 +9013,31 @@
           (size 2.54 2.54)
         )
         (justify right)
+      )
+    )
+  )
+  (global_label
+    "IO.DI7"
+    (shape output)
+    (at 284.48 294.64 0)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left)
+    )
+    (uuid d4b07208-f643-4cb9-bbe5-eb52360c6063)
+    (property
+      "Intersheet References"
+      "${INTERSHEET_REFS}"
+      (id 0)
+      (at 300.9356 294.4813 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
       )
     )
   )
