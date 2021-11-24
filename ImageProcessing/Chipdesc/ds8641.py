@@ -13,9 +13,9 @@ class DS8641(Chip):
     checked = "RESHA 0002"
 
     symbol = '''
-      |  |  |  |
-      |  |  |  |
-    15v12v 1v 4v
+      =  =  =  =
+      =  =  =  =
+    15=12= 1= 4=
    +--o--o--o--o--+
    |              |
    | B0 B1 B2 B3  |
