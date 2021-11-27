@@ -15,7 +15,7 @@ class CY7C128(Chip):
     symbol = '''
      |  |  |
      |  |  |
-   10v20v21v
+   18v20v21v
    +-o--o--o-+
    |         |
    | CS OE WE|
