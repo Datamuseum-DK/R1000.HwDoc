@@ -1,5 +1,5 @@
 (kicad_sch
-  (version 20210621)
+  (version 20211123)
   (generator eeschema)
   (uuid 20011966-3587-3a17-1184-369983be5f7f)
   (paper "User" 584.2 378.46)
@@ -151,9 +151,6 @@
         (circle
           (center 6.35 0)
           (radius 1.27)
-          (stroke
-            (width 0.1524)
-          )
           (stroke
             (width 0.1524)
             (type default)
@@ -327,54 +324,88 @@
     )
   )
   (junction
-    (at 175.26 226.06)
-    (diameter 0)
-    (color 0 0 0 0)
-  )
-  (junction
     (at 175.26 248.92)
     (diameter 0)
     (color 0 0 0 0)
+    (uuid 02629a86-05ce-4583-889c-ec6424837177)
   )
   (junction
     (at 175.26 271.78)
     (diameter 0)
     (color 0 0 0 0)
-  )
-  (junction
-    (at 175.26 294.64)
-    (diameter 0)
-    (color 0 0 0 0)
+    (uuid 1f937cb7-8718-4fef-8cda-baad6e1796bd)
   )
   (junction
     (at 393.7 226.06)
     (diameter 0)
     (color 0 0 0 0)
+    (uuid 40135990-1f7d-408d-a9db-355c0978a01b)
   )
   (junction
-    (at 393.7 248.92)
+    (at 175.26 294.64)
     (diameter 0)
     (color 0 0 0 0)
+    (uuid 43c06dcc-44c7-47da-afac-32f5b37d69b2)
   )
   (junction
     (at 393.7 271.78)
     (diameter 0)
     (color 0 0 0 0)
-  )
-  (junction
-    (at 393.7 294.64)
-    (diameter 0)
-    (color 0 0 0 0)
+    (uuid 56e8c8a5-5b23-4f6b-aea6-dac4b9f45c9e)
   )
   (junction
     (at 393.7 317.5)
     (diameter 0)
     (color 0 0 0 0)
+    (uuid 7ab463fb-8cc0-42c4-aca5-c93fdea88e6b)
+  )
+  (junction
+    (at 175.26 226.06)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid d3ff142c-bd48-46dc-9346-96cb9f16c8c6)
+  )
+  (junction
+    (at 393.7 294.64)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid d63c3a88-561e-4081-b579-bbc9be82edae)
+  )
+  (junction
+    (at 393.7 248.92)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid ec01822d-8d53-453a-be4c-05ceec577a2c)
   )
   (junction
     (at 393.7 340.36)
     (diameter 0)
     (color 0 0 0 0)
+    (uuid f958d197-ce80-463e-b85f-6a5612c797a4)
+  )
+  (wire
+    (pts
+      (xy 419.1 317.5)
+      (xy 441.96 317.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 12493501-39f1-4bcc-ac91-24a1ff8113af)
+  )
+  (wire
+    (pts
+      (xy 398.78 363.22)
+      (xy 393.7 363.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 18f53baf-16ec-41ee-a3cb-4525470c05c6)
   )
   (wire
     (pts
@@ -390,18 +421,6 @@
   )
   (wire
     (pts
-      (xy 175.26 226.06)
-      (xy 180.34 226.06)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid d5aa83d1-98a3-4c1d-bcb4-0d1bcefee3e7)
-  )
-  (wire
-    (pts
       (xy 175.26 248.92)
       (xy 175.26 226.06)
     )
@@ -410,19 +429,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf0)
-  )
-  (wire
-    (pts
-      (xy 175.26 248.92)
-      (xy 180.34 248.92)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 86895f4f-0332-44ce-ab1d-8f22b57b3f51)
+    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf1)
   )
   (wire
     (pts
@@ -434,19 +441,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf0)
-  )
-  (wire
-    (pts
-      (xy 175.26 271.78)
-      (xy 180.34 271.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid b849536a-3841-4f7a-a70a-d9bd44530498)
+    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf2)
   )
   (wire
     (pts
@@ -458,7 +453,31 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf0)
+    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf3)
+  )
+  (wire
+    (pts
+      (xy 175.26 317.5)
+      (xy 175.26 294.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf4)
+  )
+  (wire
+    (pts
+      (xy 180.34 317.5)
+      (xy 175.26 317.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf5)
   )
   (wire
     (pts
@@ -474,39 +493,27 @@
   )
   (wire
     (pts
-      (xy 175.26 317.5)
-      (xy 175.26 294.64)
+      (xy 419.1 294.64)
+      (xy 441.96 294.64)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf0)
+    (uuid 4ccd744b-c88e-4252-99d0-43b699dd4cd6)
   )
   (wire
     (pts
-      (xy 180.34 317.5)
-      (xy 175.26 317.5)
+      (xy 393.7 226.06)
+      (xy 398.78 226.06)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 1b1d0c64-8d5c-4b30-8348-abd40df33cf0)
-  )
-  (wire
-    (pts
-      (xy 200.66 226.06)
-      (xy 223.52 226.06)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 57514e5c-d21a-4215-b9ea-cc8635f61147)
+    (uuid 50cac204-b72b-4ee2-be60-b8a2f22fdcc9)
   )
   (wire
     (pts
@@ -522,6 +529,30 @@
   )
   (wire
     (pts
+      (xy 393.7 248.92)
+      (xy 398.78 248.92)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 55a7099a-1e32-4bfa-b539-0c844ca2b3b8)
+  )
+  (wire
+    (pts
+      (xy 200.66 226.06)
+      (xy 223.52 226.06)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 57514e5c-d21a-4215-b9ea-cc8635f61147)
+  )
+  (wire
+    (pts
       (xy 200.66 271.78)
       (xy 223.52 271.78)
     )
@@ -534,6 +565,18 @@
   )
   (wire
     (pts
+      (xy 175.26 248.92)
+      (xy 180.34 248.92)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 86895f4f-0332-44ce-ab1d-8f22b57b3f51)
+  )
+  (wire
+    (pts
       (xy 200.66 294.64)
       (xy 223.52 294.64)
     )
@@ -543,6 +586,18 @@
       (color 0 0 0 0)
     )
     (uuid 8e624a3a-5b65-47ad-bf5d-95a24835ac43)
+  )
+  (wire
+    (pts
+      (xy 393.7 294.64)
+      (xy 398.78 294.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 8edf5022-c447-4e24-aedb-bd06cf6c633b)
   )
   (wire
     (pts
@@ -578,19 +633,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
-  )
-  (wire
-    (pts
-      (xy 393.7 226.06)
-      (xy 398.78 226.06)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 50cac204-b72b-4ee2-be60-b8a2f22fdcc9)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381b)
   )
   (wire
     (pts
@@ -602,19 +645,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
-  )
-  (wire
-    (pts
-      (xy 393.7 248.92)
-      (xy 398.78 248.92)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 55a7099a-1e32-4bfa-b539-0c844ca2b3b8)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381c)
   )
   (wire
     (pts
@@ -626,19 +657,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
-  )
-  (wire
-    (pts
-      (xy 393.7 271.78)
-      (xy 398.78 271.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid e731c60e-676a-46a6-bb07-e3ed753cccbb)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381d)
   )
   (wire
     (pts
@@ -650,19 +669,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
-  )
-  (wire
-    (pts
-      (xy 393.7 294.64)
-      (xy 398.78 294.64)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 8edf5022-c447-4e24-aedb-bd06cf6c633b)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381e)
   )
   (wire
     (pts
@@ -674,19 +681,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
-  )
-  (wire
-    (pts
-      (xy 393.7 317.5)
-      (xy 398.78 317.5)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid df25f005-044c-4238-874f-4554632b9e90)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381f)
   )
   (wire
     (pts
@@ -698,7 +693,43 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de381a)
+    (uuid a327f7b1-a1a5-46fb-aff0-60a2d2de3820)
+  )
+  (wire
+    (pts
+      (xy 419.1 271.78)
+      (xy 441.96 271.78)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid a523405a-107a-4095-8ad9-b1663aa6c69b)
+  )
+  (wire
+    (pts
+      (xy 419.1 340.36)
+      (xy 441.96 340.36)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid b63637a3-1f69-4c57-807d-1064d9b3cce1)
+  )
+  (wire
+    (pts
+      (xy 175.26 271.78)
+      (xy 180.34 271.78)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid b849536a-3841-4f7a-a70a-d9bd44530498)
   )
   (wire
     (pts
@@ -714,15 +745,51 @@
   )
   (wire
     (pts
-      (xy 398.78 363.22)
-      (xy 393.7 363.22)
+      (xy 175.26 226.06)
+      (xy 180.34 226.06)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 18f53baf-16ec-41ee-a3cb-4525470c05c6)
+    (uuid d5aa83d1-98a3-4c1d-bcb4-0d1bcefee3e7)
+  )
+  (wire
+    (pts
+      (xy 393.7 317.5)
+      (xy 398.78 317.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid df25f005-044c-4238-874f-4554632b9e90)
+  )
+  (wire
+    (pts
+      (xy 419.1 363.22)
+      (xy 441.96 363.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid e1514cec-6536-4eb7-b5ab-d5a060c5b920)
+  )
+  (wire
+    (pts
+      (xy 393.7 271.78)
+      (xy 398.78 271.78)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid e731c60e-676a-46a6-bb07-e3ed753cccbb)
   )
   (wire
     (pts
@@ -748,110 +815,6 @@
     )
     (uuid fab0a5c8-3103-40d6-b4a7-90d4f7f9a20b)
   )
-  (wire
-    (pts
-      (xy 419.1 271.78)
-      (xy 441.96 271.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid a523405a-107a-4095-8ad9-b1663aa6c69b)
-  )
-  (wire
-    (pts
-      (xy 419.1 294.64)
-      (xy 441.96 294.64)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4ccd744b-c88e-4252-99d0-43b699dd4cd6)
-  )
-  (wire
-    (pts
-      (xy 419.1 317.5)
-      (xy 441.96 317.5)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 12493501-39f1-4bcc-ac91-24a1ff8113af)
-  )
-  (wire
-    (pts
-      (xy 419.1 340.36)
-      (xy 441.96 340.36)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid b63637a3-1f69-4c57-807d-1064d9b3cce1)
-  )
-  (wire
-    (pts
-      (xy 419.1 363.22)
-      (xy 441.96 363.22)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid e1514cec-6536-4eb7-b5ab-d5a060c5b920)
-  )
-  (label
-    "PD.CPU"
-    (at 208.28 226.06 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 180d78f7-7d51-46e3-8a42-e168b1f51ee3)
-  )
-  (label
-    "PD.DEV"
-    (at 208.28 248.92 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid ea363963-634a-49ec-b270-4f230a966cfd)
-  )
-  (label
-    "PD.RAM"
-    (at 208.28 271.78 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 4d895a5b-0ada-4846-8925-325aa538f6ce)
-  )
-  (label
-    "PD.IOA"
-    (at 208.28 294.64 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 2d6b3358-0f16-4f16-b9cf-04dceca74c8f)
-  )
   (label
     "PD.IOB"
     (at 208.28 317.5 0)
@@ -873,6 +836,61 @@
       (justify left bottom)
     )
     (uuid 04b8d30d-18f5-43f9-9f25-5a5307da63c4)
+  )
+  (label
+    "PD.IFC"
+    (at 426.72 340.36 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 0cd08244-a542-4a34-8818-6ef906d8035d)
+  )
+  (label
+    "PD.CPU"
+    (at 208.28 226.06 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 180d78f7-7d51-46e3-8a42-e168b1f51ee3)
+  )
+  (label
+    "PD.IOA"
+    (at 208.28 294.64 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 2d6b3358-0f16-4f16-b9cf-04dceca74c8f)
+  )
+  (label
+    "PD.TIMER"
+    (at 426.72 317.5 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 34efb8ac-0dab-4dfa-b35d-8b667ac22d93)
+  )
+  (label
+    "PD.RAM"
+    (at 208.28 271.78 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 4d895a5b-0ada-4846-8925-325aa538f6ce)
   )
   (label
     "PD.ECC"
@@ -897,39 +915,6 @@
     (uuid 5de84463-a857-4aa5-8290-6286782a1c6b)
   )
   (label
-    "PD.FIFO"
-    (at 426.72 294.64 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid feb25945-c1ff-421c-9a84-bbb32f43a6f1)
-  )
-  (label
-    "PD.TIMER"
-    (at 426.72 317.5 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 34efb8ac-0dab-4dfa-b35d-8b667ac22d93)
-  )
-  (label
-    "PD.IFC"
-    (at 426.72 340.36 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 0cd08244-a542-4a34-8818-6ef906d8035d)
-  )
-  (label
     "PD.WCS"
     (at 426.72 363.22 0)
     (effects
@@ -940,42 +925,58 @@
     )
     (uuid 7602fc0a-da9f-444b-9eaf-96c84ccdfd23)
   )
+  (label
+    "PD.DEV"
+    (at 208.28 248.92 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid ea363963-634a-49ec-b270-4f230a966cfd)
+  )
+  (label
+    "PD.FIFO"
+    (at 426.72 294.64 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid feb25945-c1ff-421c-9a84-bbb32f43a6f1)
+  )
   (symbol
-    (lib_id "r1000:PU")
-    (at 175.26 220.98 0)
+    (lib_id "r1000:F04")
+    (at 408.94 271.78 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (uuid 2a0c845d-c113-4cfb-9113-7ad28c85c33d)
+    (uuid 051c8699-0527-4533-913f-4ab8ce50b99b)
     (property
       "Reference"
-      "#PWR07001"
+      "U7008"
       (id 0)
-      (at 175.26 220.98 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
+      (at 408.94 271.78 0)
     )
     (property
       "Value"
-      "PU"
+      "F04"
       (id 1)
-      (at 175.26 220.98 0)
+      (at 410.21 276.86 0)
       (effects
         (font
-          (size 1.27 1.27)
+          (size 2.54 2.54)
         )
-        hide
+        (justify left)
       )
     )
     (property
       "Footprint"
       ""
       (id 2)
-      (at 175.26 220.98 0)
+      (at 408.94 271.78 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -987,7 +988,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 175.26 220.98 0)
+      (at 408.94 271.78 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -995,9 +996,37 @@
         hide
       )
     )
+    (property
+      "Location"
+      "F14"
+      (id 4)
+      (at 396.24 276.86 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV1C"
+      (id 5)
+      (at 408.94 266.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
     (pin
       "1"
-      (uuid 4f68cdae-6130-4b11-9adf-ec719bd67d2b)
+      (uuid 175a91d3-be6e-41ee-8175-a3f9e8b9d725)
+    )
+    (pin
+      "2"
+      (uuid 0e9c62b9-f85b-4352-98e7-6844a1eb9d78)
     )
   )
   (symbol
@@ -1058,416 +1087,6 @@
     (pin
       "1"
       (uuid 766efa01-cc87-4fd7-82e7-8812a7fe2f27)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 190.5 226.06 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid 4bb7ddbb-f0ec-4c7f-9621-bd39ca8cf63e)
-    (property
-      "Reference"
-      "U7001"
-      (id 0)
-      (at 190.5 226.06 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 191.77 231.14 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 190.5 226.06 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 190.5 226.06 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "J28"
-      (id 4)
-      (at 177.8 231.14 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV0A"
-      (id 5)
-      (at 190.5 220.98 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 683ed829-ce5b-459d-b52b-1ccdcdab72d3)
-    )
-    (pin
-      "2"
-      (uuid 5adad3e7-795b-4a43-98eb-8c6f57ce0d0c)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 190.5 248.92 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid f8a2f5f6-190d-4f0b-84cd-63e20f035536)
-    (property
-      "Reference"
-      "U7002"
-      (id 0)
-      (at 190.5 248.92 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 191.77 254 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 190.5 248.92 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 190.5 248.92 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "J28"
-      (id 4)
-      (at 177.8 254 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV0B"
-      (id 5)
-      (at 190.5 243.84 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid b35dbcfb-6611-48f5-967a-8bb06713bc5c)
-    )
-    (pin
-      "2"
-      (uuid c7f73258-3550-4e7f-b585-101d985b249d)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 190.5 271.78 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid a04cfefb-80c0-4709-adb1-f3cb89da9df3)
-    (property
-      "Reference"
-      "U7003"
-      (id 0)
-      (at 190.5 271.78 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 191.77 276.86 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 190.5 271.78 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 190.5 271.78 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "J28"
-      (id 4)
-      (at 177.8 276.86 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV0C"
-      (id 5)
-      (at 190.5 266.7 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 080c2c70-346c-4824-958e-03e826474d3f)
-    )
-    (pin
-      "2"
-      (uuid 5b7bf2ed-d363-4f03-ba47-e197d525af01)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 190.5 294.64 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid c4a2152a-fe77-4047-95d0-a544119fff26)
-    (property
-      "Reference"
-      "U7004"
-      (id 0)
-      (at 190.5 294.64 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 191.77 299.72 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 190.5 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 190.5 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "J28"
-      (id 4)
-      (at 177.8 299.72 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV0D"
-      (id 5)
-      (at 190.5 289.56 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 71908533-9de1-4056-8797-ac9ceee50c04)
-    )
-    (pin
-      "2"
-      (uuid 79ba29a1-749c-4ad0-b383-881646fc8fc9)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 190.5 317.5 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid fcead149-c381-447e-97b1-e152e3b73b76)
-    (property
-      "Reference"
-      "U7005"
-      (id 0)
-      (at 190.5 317.5 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 191.77 322.58 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 190.5 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 190.5 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "J28"
-      (id 4)
-      (at 177.8 322.58 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV0E"
-      (id 5)
-      (at 190.5 312.42 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 665ebb00-694a-4a15-a064-9bc620284ae9)
-    )
-    (pin
-      "2"
-      (uuid d05b7152-94a1-4061-9198-3747bf381929)
     )
   )
   (symbol
@@ -1553,35 +1172,41 @@
     )
   )
   (symbol
-    (lib_id "r1000:F04")
-    (at 408.94 248.92 0)
+    (lib_id "r1000:PU")
+    (at 175.26 220.98 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (uuid cb9a2363-8de1-46b6-8edb-f3d6f102be16)
+    (uuid 2a0c845d-c113-4cfb-9113-7ad28c85c33d)
     (property
       "Reference"
-      "U7007"
+      "#PWR07001"
       (id 0)
-      (at 408.94 248.92 0)
+      (at 175.26 220.98 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
     )
     (property
       "Value"
-      "F04"
+      "PU"
       (id 1)
-      (at 410.21 254 0)
+      (at 175.26 220.98 0)
       (effects
         (font
-          (size 2.54 2.54)
+          (size 1.27 1.27)
         )
-        (justify left)
+        hide
       )
     )
     (property
       "Footprint"
       ""
       (id 2)
-      (at 408.94 248.92 0)
+      (at 175.26 220.98 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1593,7 +1218,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 408.94 248.92 0)
+      (at 175.26 220.98 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1601,57 +1226,29 @@
         hide
       )
     )
-    (property
-      "Location"
-      "F14"
-      (id 4)
-      (at 396.24 254 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV1B"
-      (id 5)
-      (at 408.94 243.84 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
     (pin
       "1"
-      (uuid 77328c69-cd5f-4885-8b61-8313d5a0128f)
-    )
-    (pin
-      "2"
-      (uuid 7c2b02b8-c7d4-4e79-b7a0-f5544ab2444f)
+      (uuid 4f68cdae-6130-4b11-9adf-ec719bd67d2b)
     )
   )
   (symbol
     (lib_id "r1000:F04")
-    (at 408.94 271.78 0)
+    (at 190.5 226.06 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (uuid 051c8699-0527-4533-913f-4ab8ce50b99b)
+    (uuid 4bb7ddbb-f0ec-4c7f-9621-bd39ca8cf63e)
     (property
       "Reference"
-      "U7008"
+      "U7001"
       (id 0)
-      (at 408.94 271.78 0)
+      (at 190.5 226.06 0)
     )
     (property
       "Value"
       "F04"
       (id 1)
-      (at 410.21 276.86 0)
+      (at 191.77 231.14 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1663,7 +1260,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 408.94 271.78 0)
+      (at 190.5 226.06 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1675,7 +1272,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 408.94 271.78 0)
+      (at 190.5 226.06 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1685,9 +1282,9 @@
     )
     (property
       "Location"
-      "F14"
+      "J28"
       (id 4)
-      (at 396.24 276.86 0)
+      (at 177.8 231.14 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1697,9 +1294,9 @@
     )
     (property
       "Name"
-      "PDINV1C"
+      "PDINV0A"
       (id 5)
-      (at 408.94 266.7 0)
+      (at 190.5 220.98 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1709,175 +1306,11 @@
     )
     (pin
       "1"
-      (uuid 175a91d3-be6e-41ee-8175-a3f9e8b9d725)
+      (uuid 683ed829-ce5b-459d-b52b-1ccdcdab72d3)
     )
     (pin
       "2"
-      (uuid 0e9c62b9-f85b-4352-98e7-6844a1eb9d78)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 408.94 294.64 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid c621690a-196b-4b24-bad0-677fb7c3159f)
-    (property
-      "Reference"
-      "U7009"
-      (id 0)
-      (at 408.94 294.64 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 410.21 299.72 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 408.94 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 408.94 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "F14"
-      (id 4)
-      (at 396.24 299.72 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV1D"
-      (id 5)
-      (at 408.94 289.56 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 8563a4c8-9c4a-4805-be94-0fa3fd496831)
-    )
-    (pin
-      "2"
-      (uuid 5bff2cd0-1138-4fde-87b7-44cd0e20d4c8)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F04")
-    (at 408.94 317.5 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid a977d4c5-772b-4b65-aaeb-d347a8aef6e3)
-    (property
-      "Reference"
-      "U7010"
-      (id 0)
-      (at 408.94 317.5 0)
-    )
-    (property
-      "Value"
-      "F04"
-      (id 1)
-      (at 410.21 322.58 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 408.94 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 408.94 317.5 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "F14"
-      (id 4)
-      (at 396.24 322.58 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "PDINV1E"
-      (id 5)
-      (at 408.94 312.42 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid db588928-d563-49ca-a4f7-2156d74cd035)
-    )
-    (pin
-      "2"
-      (uuid 8aa58680-2007-4222-940d-2ed8ba4255c8)
+      (uuid 5adad3e7-795b-4a43-98eb-8c6f57ce0d0c)
     )
   )
   (symbol
@@ -2042,6 +1475,580 @@
     (pin
       "2"
       (uuid e7c19934-1fd4-4bc5-a1e9-e86d0d352b73)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 190.5 271.78 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid a04cfefb-80c0-4709-adb1-f3cb89da9df3)
+    (property
+      "Reference"
+      "U7003"
+      (id 0)
+      (at 190.5 271.78 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 191.77 276.86 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 190.5 271.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 190.5 271.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "J28"
+      (id 4)
+      (at 177.8 276.86 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV0C"
+      (id 5)
+      (at 190.5 266.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 080c2c70-346c-4824-958e-03e826474d3f)
+    )
+    (pin
+      "2"
+      (uuid 5b7bf2ed-d363-4f03-ba47-e197d525af01)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 408.94 317.5 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid a977d4c5-772b-4b65-aaeb-d347a8aef6e3)
+    (property
+      "Reference"
+      "U7010"
+      (id 0)
+      (at 408.94 317.5 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 410.21 322.58 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 408.94 317.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 408.94 317.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "F14"
+      (id 4)
+      (at 396.24 322.58 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV1E"
+      (id 5)
+      (at 408.94 312.42 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid db588928-d563-49ca-a4f7-2156d74cd035)
+    )
+    (pin
+      "2"
+      (uuid 8aa58680-2007-4222-940d-2ed8ba4255c8)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 190.5 294.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid c4a2152a-fe77-4047-95d0-a544119fff26)
+    (property
+      "Reference"
+      "U7004"
+      (id 0)
+      (at 190.5 294.64 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 191.77 299.72 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 190.5 294.64 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 190.5 294.64 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "J28"
+      (id 4)
+      (at 177.8 299.72 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV0D"
+      (id 5)
+      (at 190.5 289.56 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 71908533-9de1-4056-8797-ac9ceee50c04)
+    )
+    (pin
+      "2"
+      (uuid 79ba29a1-749c-4ad0-b383-881646fc8fc9)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 408.94 294.64 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid c621690a-196b-4b24-bad0-677fb7c3159f)
+    (property
+      "Reference"
+      "U7009"
+      (id 0)
+      (at 408.94 294.64 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 410.21 299.72 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 408.94 294.64 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 408.94 294.64 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "F14"
+      (id 4)
+      (at 396.24 299.72 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV1D"
+      (id 5)
+      (at 408.94 289.56 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 8563a4c8-9c4a-4805-be94-0fa3fd496831)
+    )
+    (pin
+      "2"
+      (uuid 5bff2cd0-1138-4fde-87b7-44cd0e20d4c8)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 408.94 248.92 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid cb9a2363-8de1-46b6-8edb-f3d6f102be16)
+    (property
+      "Reference"
+      "U7007"
+      (id 0)
+      (at 408.94 248.92 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 410.21 254 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 408.94 248.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 408.94 248.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "F14"
+      (id 4)
+      (at 396.24 254 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV1B"
+      (id 5)
+      (at 408.94 243.84 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 77328c69-cd5f-4885-8b61-8313d5a0128f)
+    )
+    (pin
+      "2"
+      (uuid 7c2b02b8-c7d4-4e79-b7a0-f5544ab2444f)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 190.5 248.92 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid f8a2f5f6-190d-4f0b-84cd-63e20f035536)
+    (property
+      "Reference"
+      "U7002"
+      (id 0)
+      (at 190.5 248.92 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 191.77 254 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 190.5 248.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 190.5 248.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "J28"
+      (id 4)
+      (at 177.8 254 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV0B"
+      (id 5)
+      (at 190.5 243.84 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid b35dbcfb-6611-48f5-967a-8bb06713bc5c)
+    )
+    (pin
+      "2"
+      (uuid c7f73258-3550-4e7f-b585-101d985b249d)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F04")
+    (at 190.5 317.5 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid fcead149-c381-447e-97b1-e152e3b73b76)
+    (property
+      "Reference"
+      "U7005"
+      (id 0)
+      (at 190.5 317.5 0)
+    )
+    (property
+      "Value"
+      "F04"
+      (id 1)
+      (at 191.77 322.58 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 190.5 317.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 190.5 317.5 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "J28"
+      (id 4)
+      (at 177.8 322.58 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "PDINV0E"
+      (id 5)
+      (at 190.5 312.42 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 665ebb00-694a-4a15-a064-9bc620284ae9)
+    )
+    (pin
+      "2"
+      (uuid d05b7152-94a1-4061-9198-3747bf381929)
     )
   )
 )
