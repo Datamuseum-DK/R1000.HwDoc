@@ -8997,6 +8997,17 @@
     )
     (uuid f711e2cf-5d5b-4415-aac4-0bec52f78613)
   )
+  (text
+    "PA116\n=====\n\n0x00______ Supervisor Data		IOP.DEVSEL0=1\n0x00______ Supervisor Program	IOP.DEVSEL0=1\n\n0x10______ Supervisor Data		IOP.IO_SEL=1\n\n0x20______ Supervisor Data		IOP.DEVSEL0=1, IOP.DEVSEL1=1\n\n0x7c______ CPU Space			IOP.IACK_SEL=1\n0x7c______ Supervisor Data		IOP.DEVSEL1=1\n\n0x80______ Supervisor Data		TRY_MEM_REF~=0, SUPER_MEM_REF=1\n0x80______ Supervisor Program	TRY_MEM_REF~=0, SUPER_MEM_REF=1\n0x80______ User Data			TRY_MEM_REF~=0, USER_REF=1\n0x80______ User Program			TRY_MEM_REF~=0, USER_REF=1\n\n\n"
+    (at 218.44 280.67 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 8dd462f2-e1c7-44c0-98e3-801ca84f6184)
+  )
   (label
     "ILLEGAL_MEM_REF"
     (at 208.28 304.8 0)
