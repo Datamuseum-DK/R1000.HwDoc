@@ -978,22 +978,16 @@
     )
   )
   (junction
-    (at 340.36 91.44)
-    (diameter 2.032)
+    (at 381 63.5)
+    (diameter 0)
     (color 0 0 0 0)
-    (uuid 0150a597-9ca4-4081-88d2-6ff7d09ea1a2)
+    (uuid 5cb9ccdb-c986-4446-9961-1e029c538a8f)
   )
   (junction
     (at 226.06 101.6)
     (diameter 2.032)
     (color 0 0 0 0)
     (uuid 6e2190a8-0a8f-4569-8c96-006456c6e6b2)
-  )
-  (junction
-    (at 332.74 60.96)
-    (diameter 2.032)
-    (color 0 0 0 0)
-    (uuid 8afd9c35-4e4d-476d-9e26-4a9f78600246)
   )
   (junction
     (at 226.06 142.24)
@@ -1032,7 +1026,7 @@
   (wire
     (pts
       (xy 373.38 63.5)
-      (xy 426.72 63.5)
+      (xy 381 63.5)
     )
     (stroke
       (width 0)
@@ -1055,6 +1049,18 @@
   )
   (wire
     (pts
+      (xy 381 63.5)
+      (xy 426.72 63.5)
+    )
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (uuid 305164a6-53e3-4509-ac91-5da4b02eda02)
+  )
+  (wire
+    (pts
       (xy 307.34 91.44)
       (xy 340.36 91.44)
     )
@@ -1064,54 +1070,6 @@
       (color 0 0 0 0)
     )
     (uuid 35dcf315-113e-4893-bbf9-5ffe89cc6b0f)
-  )
-  (wire
-    (pts
-      (xy 340.36 91.44)
-      (xy 350.52 91.44)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 35dcf315-113e-4893-bbf9-5ffe89cc6b10)
-  )
-  (wire
-    (pts
-      (xy 373.38 88.9)
-      (xy 411.48 88.9)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 455b563f-113d-44d5-aceb-069dfd1473d7)
-  )
-  (wire
-    (pts
-      (xy 332.74 60.96)
-      (xy 332.74 86.36)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 478b3478-d35b-4870-aec5-e8026cbd385c)
-  )
-  (wire
-    (pts
-      (xy 332.74 86.36)
-      (xy 350.52 86.36)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 478b3478-d35b-4870-aec5-e8026cbd385d)
   )
   (wire
     (pts
@@ -1139,6 +1097,18 @@
   )
   (wire
     (pts
+      (xy 411.48 88.9)
+      (xy 381 88.9)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 634e83a5-e0d5-409e-beda-9dcf1f8ab4f5)
+  )
+  (wire
+    (pts
       (xy 340.36 66.04)
       (xy 340.36 91.44)
     )
@@ -1163,19 +1133,19 @@
   )
   (wire
     (pts
-      (xy 210.82 60.96)
-      (xy 332.74 60.96)
+      (xy 381 88.9)
+      (xy 381 63.5)
     )
     (stroke
       (width 0)
-      (type solid)
+      (type default)
       (color 0 0 0 0)
     )
-    (uuid bfff1e9d-f227-4933-945b-d7df7227cf8d)
+    (uuid 77d045e1-ba1b-403a-b50b-1e891a81a72e)
   )
   (wire
     (pts
-      (xy 332.74 60.96)
+      (xy 210.82 60.96)
       (xy 350.52 60.96)
     )
     (stroke
@@ -1343,7 +1313,7 @@
     )
   )
   (global_label
-    "I.BUZZ_OFF~.B2"
+    "I.BUZZ_OFF~.B0"
     (shape output)
     (at 411.48 88.9 0)
     (fields_autoplaced)
@@ -1811,90 +1781,6 @@
     (pin
       "6"
       (uuid cd6fe644-bb46-46c8-b094-c37f0b3f35e4)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F37")
-    (at 358.14 86.36 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid f146b91d-28f4-405f-ae49-2b3a5f4df5cb)
-    (property
-      "Reference"
-      "U6904"
-      (id 0)
-      (at 373.38 86.36 0)
-    )
-    (property
-      "Value"
-      "F37"
-      (id 1)
-      (at 360.045 91.44 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 358.14 73.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 358.14 73.66 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "A47"
-      (id 4)
-      (at 360.045 86.36 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-      )
-    )
-    (property
-      "Name"
-      "BODRV0C"
-      (id 5)
-      (at 360.68 99.06 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid dca88cff-86b0-4e58-8794-9ffb96437c5c)
-    )
-    (pin
-      "2"
-      (uuid 03eaedd3-cf09-478f-baae-6e595092e0ac)
-    )
-    (pin
-      "3"
-      (uuid 5b23b1b8-b025-43aa-9d54-1f58f3bbcc87)
     )
   )
   (symbol
