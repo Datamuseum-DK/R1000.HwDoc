@@ -3961,18 +3961,6 @@
     (uuid 7f088750-04ef-49c2-9c6b-a8c381692bfa)
   )
   (junction
-    (at 411.48 73.66)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid 7f8e45dc-badb-4836-a0e7-93baf76d8db5)
-  )
-  (junction
-    (at 335.28 203.2)
-    (diameter 2.032)
-    (color 0 0 0 0)
-    (uuid 86b3ecc5-4919-498e-a5fc-2c1b3a23f15b)
-  )
-  (junction
     (at 411.48 96.52)
     (diameter 2.032)
     (color 0 0 0 0)
@@ -3995,6 +3983,12 @@
     (diameter 2.032)
     (color 0 0 0 0)
     (uuid d8c0e789-67a5-4efb-8d5d-4cc7fee8d39a)
+  )
+  (junction
+    (at 411.48 228.6)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid eab83aaf-d9c4-4e39-a1e9-39d3f8e651bb)
   )
   (junction
     (at 411.48 119.38)
@@ -4386,18 +4380,6 @@
   )
   (wire
     (pts
-      (xy 335.28 226.06)
-      (xy 335.28 203.2)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 0e7de431-7fca-4648-b83c-8079a2eb2250)
-  )
-  (wire
-    (pts
       (xy 342.9 226.06)
       (xy 335.28 226.06)
     )
@@ -4758,7 +4740,7 @@
   )
   (wire
     (pts
-      (xy 325.12 66.04)
+      (xy 317.5 66.04)
       (xy 335.28 66.04)
     )
     (stroke
@@ -5286,18 +5268,6 @@
   )
   (wire
     (pts
-      (xy 411.48 58.42)
-      (xy 411.48 73.66)
-    )
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (uuid 7bc35775-49f6-46e3-87b0-4bda34268284)
-  )
-  (wire
-    (pts
       (xy 411.48 73.66)
       (xy 411.48 96.52)
     )
@@ -5670,18 +5640,6 @@
   )
   (wire
     (pts
-      (xy 403.86 58.42)
-      (xy 411.48 58.42)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid a480765d-3b57-486e-87ce-b6f2e7740a18)
-  )
-  (wire
-    (pts
       (xy 256.54 325.12)
       (xy 297.18 325.12)
     )
@@ -5995,7 +5953,7 @@
   (wire
     (pts
       (xy 411.48 233.68)
-      (xy 411.48 210.82)
+      (xy 411.48 228.6)
     )
     (stroke
       (width 0)
@@ -6063,6 +6021,18 @@
       (color 0 0 0 0)
     )
     (uuid bb1aa1da-4fd4-48a8-be10-06dc0111093c)
+  )
+  (wire
+    (pts
+      (xy 411.48 228.6)
+      (xy 411.48 210.82)
+    )
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (uuid bdf18fc1-05f1-40db-a69a-f3fb0e6251c1)
   )
   (wire
     (pts
@@ -6282,20 +6252,20 @@
   )
   (wire
     (pts
-      (xy 340.36 231.14)
-      (xy 340.36 233.68)
+      (xy 411.48 228.6)
+      (xy 416.56 228.6)
     )
     (stroke
       (width 0)
       (type solid)
       (color 0 0 0 0)
     )
-    (uuid d71dc63d-b369-4332-8f72-dd0ff7ca2f0c)
+    (uuid d6de3ad0-6328-4315-a2a4-692f9dbda15d)
   )
   (wire
     (pts
+      (xy 335.28 231.14)
       (xy 342.9 231.14)
-      (xy 340.36 231.14)
     )
     (stroke
       (width 0)
@@ -6595,7 +6565,7 @@
   (wire
     (pts
       (xy 365.76 228.6)
-      (xy 416.56 228.6)
+      (xy 411.48 228.6)
     )
     (stroke
       (width 0)
@@ -7297,6 +7267,31 @@
     )
   )
   (global_label
+    "BP.2X.B0"
+    (shape input)
+    (at 335.28 231.14 180)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify right)
+    )
+    (uuid 3d863838-3f2c-485d-8e0d-bd40e2221894)
+    (property
+      "Intersheet References"
+      "${INTERSHEET_REFS}"
+      (id 0)
+      (at 312.7768 230.9813 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify right)
+      )
+    )
+  )
+  (global_label
     "TCB_TOP3"
     (shape output)
     (at 179.07 314.96 0)
@@ -7974,7 +7969,7 @@
   (global_label
     "STATE_CLK.EN~"
     (shape input)
-    (at 325.12 66.04 180)
+    (at 335.28 226.06 180)
     (fields_autoplaced)
     (effects
       (font
@@ -7987,7 +7982,7 @@
       "Intersheet References"
       "${INTERSHEET_REFS}"
       (id 0)
-      (at 292.475 65.8813 0)
+      (at 302.635 225.9013 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -8043,31 +8038,6 @@
           (size 2.54 2.54)
         )
         (justify left)
-      )
-    )
-  )
-  (global_label
-    "BP.2X~.B0"
-    (shape input)
-    (at 403.86 58.42 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify right)
-    )
-    (uuid bc571e48-13ff-48ef-8552-c2dcf31d62bb)
-    (property
-      "Intersheet References"
-      "${INTERSHEET_REFS}"
-      (id 0)
-      (at 375.5692 58.2613 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify right)
       )
     )
   )
@@ -9301,66 +9271,6 @@
     )
   )
   (symbol
-    (lib_id "r1000:PD")
-    (at 340.36 233.68 0)
-    (unit 1)
-    (in_bom no)
-    (on_board yes)
-    (uuid 3fbb8d99-8573-4096-b319-23619312067f)
-    (property
-      "Reference"
-      "#PWR05405"
-      (id 0)
-      (at 340.36 233.68 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Value"
-      "PD"
-      (id 1)
-      (at 340.36 233.68 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 340.36 233.68 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 340.36 233.68 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (pin
-      "1"
-      (uuid e1d66657-15ac-486e-80a1-8348fca5201d)
-    )
-  )
-  (symbol
     (lib_id "r1000:PBxxx")
     (at 119.38 215.9 0)
     (unit 1)
@@ -9807,6 +9717,66 @@
     (pin
       "3"
       (uuid 9b7a99c0-d8ec-4ab0-94bc-ac587ba0c8a8)
+    )
+  )
+  (symbol
+    (lib_id "r1000:PD")
+    (at 317.5 66.04 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (uuid 63d08514-fb62-43f0-9f39-59a9d35d3d04)
+    (property
+      "Reference"
+      "#PWR0123"
+      (id 0)
+      (at 317.5 66.04 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PD"
+      (id 1)
+      (at 317.5 66.04 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 317.5 66.04 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 317.5 66.04 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid 37ae7e58-cc4d-419a-9c14-49a0c8d19bb4)
     )
   )
   (symbol
