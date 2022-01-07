@@ -3115,12 +3115,6 @@
     (uuid 4730213f-fecd-4d57-8774-30198ac3be94)
   )
   (junction
-    (at 93.98 312.42)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid 496e64ba-6e02-48ce-95c3-8caba5f906c5)
-  )
-  (junction
     (at 279.4 88.9)
     (diameter 0)
     (color 0 0 0 0)
@@ -3155,12 +3149,6 @@
     (diameter 0)
     (color 0 0 0 0)
     (uuid 8e42a765-7221-4fea-a4e3-8a63da4d86b7)
-  )
-  (junction
-    (at 99.06 266.7)
-    (diameter 0)
-    (color 0 0 0 0)
-    (uuid a681347c-2da8-48f2-88a6-f192a29fe2c6)
   )
   (junction
     (at 337.82 149.86)
@@ -3203,30 +3191,6 @@
     (diameter 0)
     (color 0 0 0 0)
     (uuid fc95e3c4-abd9-4e4f-9838-bf55ff3c4d47)
-  )
-  (wire
-    (pts
-      (xy 93.98 312.42)
-      (xy 93.98 271.78)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 00f939df-bf6d-4e51-a1c4-76e5065f8e0c)
-  )
-  (wire
-    (pts
-      (xy 104.14 312.42)
-      (xy 93.98 312.42)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 00f939df-bf6d-4e51-a1c4-76e5065f8e0d)
   )
   (wire
     (pts
@@ -3530,8 +3494,8 @@
   )
   (wire
     (pts
+      (xy 93.98 271.78)
       (xy 93.98 340.36)
-      (xy 93.98 312.42)
     )
     (stroke
       (width 0)
@@ -3555,18 +3519,6 @@
   (wire
     (pts
       (xy 55.88 266.7)
-      (xy 99.06 266.7)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 4b68bceb-b92a-4649-a788-64055e3dfe1f)
-  )
-  (wire
-    (pts
-      (xy 99.06 266.7)
       (xy 104.14 266.7)
     )
     (stroke
@@ -3574,7 +3526,7 @@
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 4b68bceb-b92a-4649-a788-64055e3dfe20)
+    (uuid 4b68bceb-b92a-4649-a788-64055e3dfe1f)
   )
   (wire
     (pts
@@ -4070,30 +4022,6 @@
   )
   (wire
     (pts
-      (xy 99.06 307.34)
-      (xy 99.06 266.7)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 86b1c2cb-374c-4948-b128-a1b3ed02ddd2)
-  )
-  (wire
-    (pts
-      (xy 104.14 307.34)
-      (xy 99.06 307.34)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 86b1c2cb-374c-4948-b128-a1b3ed02ddd3)
-  )
-  (wire
-    (pts
       (xy 58.42 345.44)
       (xy 106.68 345.44)
     )
@@ -4271,18 +4199,6 @@
       (color 0 0 0 0)
     )
     (uuid ba250a37-6e56-4e52-ac18-b0ff74165687)
-  )
-  (wire
-    (pts
-      (xy 127 309.88)
-      (xy 139.7 309.88)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid bae701c0-7239-439b-a300-9f82d5c2bf1d)
   )
   (wire
     (pts
@@ -5139,31 +5055,6 @@
     )
   )
   (global_label
-    "WCS.WE~1"
-    (shape output)
-    (at 139.7 309.88 0)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left)
-    )
-    (uuid 68167eb1-155d-41bc-a9d2-5c38aea220d1)
-    (property
-      "Intersheet References"
-      "${INTERSHEET_REFS}"
-      (id 0)
-      (at 162.8412 309.7213 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-  )
-  (global_label
     "VAR.SCLK"
     (shape output)
     (at 441.96 76.2 0)
@@ -5768,90 +5659,6 @@
     (pin
       "2"
       (uuid 11b5d6a3-dd46-4a36-85c9-91aeea85ccd7)
-    )
-  )
-  (symbol
-    (lib_id "r1000:F37")
-    (at 111.76 307.34 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid 0f37d2db-35a6-4632-b25d-34c0e46fbb90)
-    (property
-      "Reference"
-      "U6402"
-      (id 0)
-      (at 127 307.34 0)
-    )
-    (property
-      "Value"
-      "F37"
-      (id 1)
-      (at 113.665 312.42 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 111.76 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 111.76 294.64 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "L48"
-      (id 4)
-      (at 113.665 307.34 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-      )
-    )
-    (property
-      "Name"
-      "CKDR5B"
-      (id 5)
-      (at 114.3 320.04 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid 9e051d64-edd6-4f9e-a6f7-deb8b85e84ab)
-    )
-    (pin
-      "2"
-      (uuid 70218cac-ffd1-4003-9bca-d26d4c0b6a0a)
-    )
-    (pin
-      "3"
-      (uuid e3189895-39da-4b60-97d6-389feb81e090)
     )
   )
   (symbol

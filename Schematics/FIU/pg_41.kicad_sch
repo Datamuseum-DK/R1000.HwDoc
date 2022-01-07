@@ -14,6 +14,121 @@
   )
   (lib_symbols
     (symbol
+      "r1000:DELAY"
+      (pin_numbers hide)
+      (pin_names hide)
+      (in_bom yes)
+      (on_board yes)
+      (property
+        "Reference"
+        "U"
+        (id 0)
+        (at -2.54 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property
+        "Value"
+        "DELAY"
+        (id 1)
+        (at 2.54 -2.54 0)
+        (effects
+          (font
+            (size 2.54 2.54)
+          )
+        )
+      )
+      (property
+        "Footprint"
+        ""
+        (id 2)
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (property
+        "Datasheet"
+        ""
+        (id 3)
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          hide
+        )
+      )
+      (symbol
+        "DELAY_0_1"
+        (rectangle
+          (start -5.08 3.81)
+          (end 10.16 -3.81)
+          (stroke
+            (width 0.1524)
+            (type default)
+            (color 0 0 0 0)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol
+        "DELAY_1_1"
+        (pin
+          input
+          line
+          (at -7.62 0 0)
+          (length 2.54)
+          (name
+            "In"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+          (number
+            "1"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+        )
+        (pin
+          output
+          line
+          (at 12.7 0 180)
+          (length 2.54)
+          (name
+            "OUT"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+          (number
+            "2"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol
       "r1000:F00"
       (pin_numbers hide)
       (pin_names hide)
@@ -4883,6 +4998,18 @@
   )
   (wire
     (pts
+      (xy 213.36 302.26)
+      (xy 220.98 302.26)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 710cecb3-6bef-4bdb-a1ac-2ec4e239eb3b)
+  )
+  (wire
+    (pts
       (xy 180.34 55.88)
       (xy 185.42 55.88)
     )
@@ -5651,6 +5778,18 @@
   )
   (wire
     (pts
+      (xy 187.96 302.26)
+      (xy 193.04 302.26)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid bc7b4694-7b42-440b-9739-f7edb85f2751)
+  )
+  (wire
+    (pts
       (xy 325.12 162.56)
       (xy 342.9 162.56)
     )
@@ -5853,18 +5992,6 @@
     )
     (uuid d4b57619-f300-4a25-9709-289f1b8a57c7)
   )
-  (wire
-    (pts
-      (xy 187.96 302.26)
-      (xy 220.98 302.26)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid dc9126ea-78b6-4afe-b0e9-5868ceec3af6)
-  )
   (bus
     (pts
       (xy 45.72 66.04)
@@ -6056,6 +6183,17 @@
       (color 0 0 0 0)
     )
     (uuid fd054c97-bb07-4ae6-9502-adfbfad50a95)
+  )
+  (text
+    "TEST_INC_MAR.FIU\n"
+    (at 195.58 294.64 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid bfbdc11f-3eea-454a-9df0-e128930e8c6a)
   )
   (label
     "TFIU_SEL~"
@@ -7691,6 +7829,63 @@
     (pin
       "3"
       (uuid 0c12b2da-83d5-4afc-8554-4bee85d99a49)
+    )
+  )
+  (symbol
+    (lib_id "r1000:DELAY")
+    (at 200.66 302.26 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid 83f4e7e8-c00d-4d60-9566-6971a9661a60)
+    (property
+      "Reference"
+      "U4221"
+      (id 0)
+      (at 198.12 299.72 0)
+    )
+    (property
+      "Value"
+      "DELAY"
+      (id 1)
+      (at 203.2 304.8 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 200.66 302.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 200.66 302.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid 976ad847-a33d-4b73-a940-5e7e9e484091)
+    )
+    (pin
+      "2"
+      (uuid 0d381ca4-0986-43f0-ab78-2b099a8facf6)
     )
   )
   (symbol
