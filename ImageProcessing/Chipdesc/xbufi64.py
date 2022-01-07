@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 
-''' 74x240 - Octal Buffers, Inverting Outputs '''
+''' 64 bit inverting buffer '''
 
 from Chipdesc.chip import Chip
 
 class XBUFI64(Chip):
 
-    ''' 74x240 - Octal Buffers, Inverting Outputs '''
+    ''' 64 bit inverting buffer '''
 
     symbol_name = "XBUFI64"
-
-    checked = "RESHA 0002"
 
     symbol = '''
         |
