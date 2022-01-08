@@ -3518,6 +3518,18 @@
   )
   (wire
     (pts
+      (xy 279.4 40.64)
+      (xy 287.02 40.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 4815b2ad-a453-4ae5-8177-60efa0ed5112)
+  )
+  (wire
+    (pts
       (xy 55.88 266.7)
       (xy 104.14 266.7)
     )
@@ -3551,6 +3563,18 @@
       (color 0 0 0 0)
     )
     (uuid 4ebdd569-04c8-4526-b5d4-fc0026f69155)
+  )
+  (wire
+    (pts
+      (xy 269.24 35.56)
+      (xy 287.02 35.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 513a9a20-5d7c-4c2c-977d-728986832f97)
   )
   (wire
     (pts
@@ -3707,6 +3731,18 @@
       (color 0 0 0 0)
     )
     (uuid 68698928-c942-4e86-95ce-b50ab76c053e)
+  )
+  (wire
+    (pts
+      (xy 279.4 53.34)
+      (xy 279.4 40.64)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 6a6c0edf-76a7-4375-9a74-f8be8f316f70)
   )
   (wire
     (pts
@@ -4406,6 +4442,18 @@
   )
   (wire
     (pts
+      (xy 309.88 38.1)
+      (xy 337.82 38.1)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid e7cf4c15-8f61-4578-a5d2-c9382be7dbf0)
+  )
+  (wire
+    (pts
       (xy 279.4 182.88)
       (xy 279.4 160.02)
     )
@@ -4427,18 +4475,6 @@
       (color 0 0 0 0)
     )
     (uuid ef09ddd5-9b09-4b55-89ea-335d16dfc9ab)
-  )
-  (wire
-    (pts
-      (xy 337.82 38.1)
-      (xy 314.96 38.1)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid f08ce30f-45d5-4cfa-9040-ec4c257a0725)
   )
   (wire
     (pts
@@ -5405,31 +5441,6 @@
     )
   )
   (global_label
-    "F.CLK.2X~"
-    (shape input)
-    (at 314.96 38.1 180)
-    (fields_autoplaced)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify right)
-    )
-    (uuid d3c13263-712c-4f32-b39e-8af278cb0a34)
-    (property
-      "Intersheet References"
-      "${INTERSHEET_REFS}"
-      (id 0)
-      (at 286.8597 37.9413 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify right)
-      )
-    )
-  )
-  (global_label
     "STATE_CLK.EN~"
     (shape input)
     (at 266.7 53.34 180)
@@ -5546,6 +5557,31 @@
       "${INTERSHEET_REFS}"
       (id 0)
       (at 68.6616 103.9813 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify right)
+      )
+    )
+  )
+  (global_label
+    "F.CLK.2X"
+    (shape input)
+    (at 269.24 35.56 180)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify right)
+    )
+    (uuid f893d727-99d0-4d51-8957-cd04112c05b3)
+    (property
+      "Intersheet References"
+      "${INTERSHEET_REFS}"
+      (id 0)
+      (at 247.8435 35.4013 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -6484,6 +6520,91 @@
     (pin
       "3"
       (uuid c9589ca0-4df3-4205-b613-0cfd1ed68cd6)
+    )
+  )
+  (symbol
+    (lib_id "r1000:F02")
+    (at 294.64 35.56 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid 86e9de56-e475-4187-ae3c-a04b52396067)
+    (property
+      "Reference"
+      "U6402"
+      (id 0)
+      (at 306.8 34.925 0)
+    )
+    (property
+      "Value"
+      "F02"
+      (id 1)
+      (at 293.37 40.005 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 294.64 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 294.64 35.56 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "x99"
+      (id 4)
+      (at 297.18 35.56 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+      )
+    )
+    (property
+      "Name"
+      "X6301"
+      (id 5)
+      (at 297.18 48.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 47c12e75-f186-4029-811b-bfd8b4f58fe5)
+    )
+    (pin
+      "2"
+      (uuid 95682e7b-ac2e-4f86-b702-d222e44e2764)
+    )
+    (pin
+      "3"
+      (uuid 4003192b-9f93-4ae7-90a4-24c976c280db)
     )
   )
   (symbol
