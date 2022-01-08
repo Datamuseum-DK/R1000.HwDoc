@@ -10760,6 +10760,12 @@
     (uuid 5409cc31-4322-4031-ade5-4014b3199ad7)
   )
   (junction
+    (at 508 22.86)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 7823bf28-b787-4048-9931-df8e3f2c425a)
+  )
+  (junction
     (at 243.84 246.38)
     (diameter 0)
     (color 0 0 0 0)
@@ -11381,6 +11387,18 @@
   )
   (wire
     (pts
+      (xy 508 22.86)
+      (xy 508 109.22)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 0353fdaf-3036-4b48-a7ed-3edb4ccc885e)
+  )
+  (wire
+    (pts
       (xy 340.36 162.56)
       (xy 350.52 162.56)
     )
@@ -11598,7 +11616,7 @@
   (wire
     (pts
       (xy 528.32 22.86)
-      (xy 474.98 22.86)
+      (xy 508 22.86)
     )
     (stroke
       (width 0)
@@ -14393,30 +14411,6 @@
   )
   (wire
     (pts
-      (xy 462.28 119.38)
-      (xy 508 119.38)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid e8302b94-48cb-4ea3-b864-8a33efa283c5)
-  )
-  (wire
-    (pts
-      (xy 508 109.22)
-      (xy 508 119.38)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid e8302b94-48cb-4ea3-b864-8a33efa283c6)
-  )
-  (wire
-    (pts
       (xy 528.32 109.22)
       (xy 508 109.22)
     )
@@ -14858,6 +14852,18 @@
       (color 0 0 0 0)
     )
     (uuid fd6aeab3-58ac-4068-8923-e22704b9e1e3)
+  )
+  (wire
+    (pts
+      (xy 508 22.86)
+      (xy 474.98 22.86)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid fdfc31d2-a80b-4a10-9d38-a325f7b87f08)
   )
   (bus
     (pts
@@ -15530,17 +15536,6 @@
       (justify left bottom)
     )
     (uuid 9f21614e-24f5-40ef-962a-5d9d94b0ea61)
-  )
-  (label
-    "Q4~"
-    (at 462.28 119.38 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid a7d0ac99-c0b3-4341-9419-74372493f1ed)
   )
   (label
     "DP7"
