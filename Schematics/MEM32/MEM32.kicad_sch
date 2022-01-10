@@ -1,5 +1,5 @@
 (kicad_sch
-  (version 20210621)
+  (version 20211123)
   (generator eeschema)
   (uuid 20011966-487c-2cfb-5da0-3540af989df7)
   (paper "User" 584.2 378.46)
@@ -392,18 +392,6 @@
   )
   (wire
     (pts
-      (xy 66.04 238.76)
-      (xy 66.04 243.84)
-    )
-    (stroke
-      (width 0)
-      (type default)
-      (color 0 0 0 0)
-    )
-    (uuid 2998f141-cd47-4014-9e8a-fdada3627b0c)
-  )
-  (wire
-    (pts
       (xy 66.04 256.54)
       (xy 66.04 261.62)
     )
@@ -413,6 +401,18 @@
       (color 0 0 0 0)
     )
     (uuid 1c5054e4-3437-4915-a00f-e0b0ce281f8b)
+  )
+  (wire
+    (pts
+      (xy 66.04 238.76)
+      (xy 66.04 243.84)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 2998f141-cd47-4014-9e8a-fdada3627b0c)
   )
   (text
     "01: TOP LEVEL BLOCK DIAGRAM\n02: BACKPLANE CONNECTIONS - FRONTPLANE CONNECTIONS - BYPASS CAPACITORS\n03: AXCVR - TYPE AND CHECKBITS\n04: AXCVR - VALUE\n05: BXCVR - TYPE AND CHECKBITS\n06: BXCVR - VAL AND VAL_PARITY\n07: BXCVR - TYPE & CHKBIT DIAG REG\n08: BXCVR - VAL & VAL_PAR DIAG REG\n09: TAGA RAMS - 0:40, 56:63, P0:P5, P7\n10: TAGARAMS - LRU BYTE 49:55, P6\n11: TAG A RAMS - TRANCEIVERS\n12: TAGB RAMS - 0:40, 56:63, P0:P5, P7\n13: TAGB RAMS - LRU BYTE 49:55, P6\n14: TAG B RAMS - TRANSCEIVERS\n15: TAGA COMPARATORS - MATCH\n16: TAGACOMP - PARITY\n17: TABG COMPARATORS - MATCH\n18: TAGBCOMP - PARITY\n19: LRU LOGIC - PLANE A_EARLY\n20: LRU LOGIC - PLANE A_LATE\n21: LRU LOGIC - PLANE B_EARLY\n22: LRU LOGIC - PLANE B_LATE\n23: ADDRESS - MAR REGISTER\n24: ADDRESS - PARITY AND HASH\n25: ADDRESS - LAR AND SET REGISTERS\n26: TAG STORE ADDRESS BUFFERS\n27: BUS CONTROL\n28: HIT LOGIC\n29: CONTROL - COMMAND + WDR CLOCKS\n30: CONTROL - TAGSTORE CONTROL - RDR CLOCK GENERATION\n31: DIAGNOSTIC AND CONTROL - CLOCK GENERATION\n32: DIAGNOSTIC AND CONTROL - DIAGNOSTIC PROCESSOR\n33: DIAGNOSTIC AND CONTROL - DIAG FINITE STATE MACHINE\n34: TRACE RAMS - DIAGNOSTIC COUNTER\n35: PLANEA DYNAMIC RAMS - TYPE BITS 0-31 - CHECK BITS 0-2\n36: PLANE A DYNAMIC RAMS - TYPE BITS 32-63 - CHECK BITS 3-4\n37: PLANEA DYNAMIC RAMS - VAL BITS 0 - 31 - CHECK BITS 5 - 6\n38: PLANEA DYNAMIC RAMS - VAL BITS 32 - 63 - CHECK BITS 7 - 8\n39: PLANE A - DRAM ADDRESS BUFFERS\n40: PLANEA - RAS, CAS, WE GENERATION\n41: PLANEB DYNAMIC RAMS - TYPE BITS 0-31 - CHECK BITS 0-2\n42: PLANEB DYNAMIC RAMS - TYPE BITS 32-63 - CHECK BITS 3-4\n43: PLANEB DYNAMIC RAMS - VAL BITS 0-31 - CHECK BITS 5-6\n44: PLANEB DYNAMIC RAMS -  VAL BITS 32-63 - CHECK BITS 7-8\n45: PLANE B - DRAM ADDRESS BUFFERS\n46: PLANEB - RAS, CAS, WE GENERATION\n"
@@ -424,59 +424,6 @@
       (justify left bottom)
     )
     (uuid f24a09dd-14a9-4cee-b672-8de9234270df)
-  )
-  (symbol
-    (lib_id "r1000:Pull_Up")
-    (at 66.04 243.84 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid 5ac97325-e0ee-4133-99da-af8924b89a5e)
-    (property
-      "Reference"
-      "U101"
-      (id 0)
-      (at 66.04 243.84 0)
-    )
-    (property
-      "Value"
-      "Pull_Up"
-      (id 1)
-      (at 66.04 247.65 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 66.04 243.84 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 66.04 243.84 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (pin
-      "1"
-      (uuid b8084c5a-f16d-4754-ab0e-fa18c99794d5)
-    )
   )
   (symbol
     (lib_id "r1000:Pull_Down")
@@ -532,41 +479,34 @@
     )
   )
   (symbol
-    (lib_id "r1000:PU")
-    (at 66.04 238.76 0)
+    (lib_id "r1000:Pull_Up")
+    (at 66.04 243.84 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
-    (uuid f0ccfb13-6f25-40c3-85a1-cf69813bac20)
+    (uuid 5ac97325-e0ee-4133-99da-af8924b89a5e)
     (property
       "Reference"
-      "#PWR0101"
+      "U101"
       (id 0)
-      (at 66.04 238.76 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
+      (at 66.04 243.84 0)
     )
     (property
       "Value"
-      "PU"
+      "Pull_Up"
       (id 1)
-      (at 66.04 238.76 0)
+      (at 66.04 247.65 0)
       (effects
         (font
-          (size 1.27 1.27)
+          (size 2.54 2.54)
         )
-        hide
       )
     )
     (property
       "Footprint"
       ""
       (id 2)
-      (at 66.04 238.76 0)
+      (at 66.04 243.84 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -578,7 +518,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 66.04 238.76 0)
+      (at 66.04 243.84 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -588,7 +528,7 @@
     )
     (pin
       "1"
-      (uuid b4eaf893-bf0c-47b9-9acc-fb7d14e3d5de)
+      (uuid b8084c5a-f16d-4754-ab0e-fa18c99794d5)
     )
   )
   (symbol
@@ -651,8 +591,68 @@
       (uuid f8231a3d-b5e4-4c63-883c-828e4482c268)
     )
   )
+  (symbol
+    (lib_id "r1000:PU")
+    (at 66.04 238.76 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid f0ccfb13-6f25-40c3-85a1-cf69813bac20)
+    (property
+      "Reference"
+      "#PWR0101"
+      (id 0)
+      (at 66.04 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PU"
+      (id 1)
+      (at 66.04 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 66.04 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 66.04 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid b4eaf893-bf0c-47b9-9acc-fb7d14e3d5de)
+    )
+  )
   (sheet
-    (at 38.1 12.7)
+    (at 139.7 83.82)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -663,12 +663,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-21fa-663a-1532-3c85d8c8f023)
+    (uuid 20011966-0366-3cf2-04e4-19456e48afb8)
     (property
       "Sheet name"
-      "Page 1"
+      "Page 25"
       (id 0)
-      (at 38.1 11.7 0)
+      (at 139.7 82.82 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -678,9 +678,9 @@
     )
     (property
       "Sheet file"
-      "pg_01.kicad_sch"
+      "pg_25.kicad_sch"
       (id 1)
-      (at 38.1 34.02 0)
+      (at 139.7 105.14 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -690,7 +690,7 @@
     )
   )
   (sheet
-    (at 12.7 48.26)
+    (at 241.3 83.82)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -701,12 +701,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-64d1-48fe-410c-75cfcb561e80)
+    (uuid 20011966-06b9-6783-5be4-50c7038aedbc)
     (property
       "Sheet name"
-      "Page 10"
+      "Page 29"
       (id 0)
-      (at 12.7 47.26 0)
+      (at 241.3 82.82 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -716,9 +716,9 @@
     )
     (property
       "Sheet file"
-      "pg_10.kicad_sch"
+      "pg_29.kicad_sch"
       (id 1)
-      (at 12.7 69.58 0)
+      (at 241.3 105.14 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -728,7 +728,7 @@
     )
   )
   (sheet
-    (at 38.1 48.26)
+    (at 139.7 119.38)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -739,12 +739,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-1441-5f26-01a2-3f09c54bd6c8)
+    (uuid 20011966-06ce-4acd-3c13-32a74416e2ff)
     (property
       "Sheet name"
-      "Page 11"
+      "Page 35"
       (id 0)
-      (at 38.1 47.26 0)
+      (at 139.7 118.38 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -754,9 +754,9 @@
     )
     (property
       "Sheet file"
-      "pg_11.kicad_sch"
+      "pg_35.kicad_sch"
       (id 1)
-      (at 38.1 69.58 0)
+      (at 139.7 140.7 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -766,7 +766,7 @@
     )
   )
   (sheet
-    (at 63.5 48.26)
+    (at 215.9 12.7)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -777,12 +777,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-7399-7712-1f61-03bdc0b61a9e)
+    (uuid 20011966-1163-13fa-6bfe-71b3d0f91a49)
     (property
       "Sheet name"
-      "Page 12"
+      "Page 8"
       (id 0)
-      (at 63.5 47.26 0)
+      (at 215.9 11.7 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -792,313 +792,9 @@
     )
     (property
       "Sheet file"
-      "pg_12.kicad_sch"
+      "pg_08.kicad_sch"
       (id 1)
-      (at 63.5 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 88.9 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-67d0-65b7-7855-6987c36cae12)
-    (property
-      "Sheet name"
-      "Page 13"
-      (id 0)
-      (at 88.9 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_13.kicad_sch"
-      (id 1)
-      (at 88.9 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 114.3 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-1888-6eb9-10ea-7895b1aa9bc8)
-    (property
-      "Sheet name"
-      "Page 14"
-      (id 0)
-      (at 114.3 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_14.kicad_sch"
-      (id 1)
-      (at 114.3 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 139.7 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-1314-24ae-5427-160425faf38a)
-    (property
-      "Sheet name"
-      "Page 15"
-      (id 0)
-      (at 139.7 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_15.kicad_sch"
-      (id 1)
-      (at 139.7 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 165.1 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-609b-2406-4986-4a24544ae163)
-    (property
-      "Sheet name"
-      "Page 16"
-      (id 0)
-      (at 165.1 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_16.kicad_sch"
-      (id 1)
-      (at 165.1 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 190.5 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-52e4-6082-405e-0e9c04641b9b)
-    (property
-      "Sheet name"
-      "Page 17"
-      (id 0)
-      (at 190.5 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_17.kicad_sch"
-      (id 1)
-      (at 190.5 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 215.9 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-2a46-0815-0532-102df82b5af7)
-    (property
-      "Sheet name"
-      "Page 18"
-      (id 0)
-      (at 215.9 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_18.kicad_sch"
-      (id 1)
-      (at 215.9 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 241.3 48.26)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-360e-1e8e-70d0-0e397a02da82)
-    (property
-      "Sheet name"
-      "Page 19"
-      (id 0)
-      (at 241.3 47.26 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_19.kicad_sch"
-      (id 1)
-      (at 241.3 69.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 63.5 12.7)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-25b4-4225-7fcb-01a5b9dfc023)
-    (property
-      "Sheet name"
-      "Page 2"
-      (id 0)
-      (at 63.5 11.7 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_02.kicad_sch"
-      (id 1)
-      (at 63.5 34.02 0)
+      (at 215.9 34.02 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1146,7 +842,7 @@
     )
   )
   (sheet
-    (at 38.1 83.82)
+    (at 139.7 48.26)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1157,12 +853,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-1a6e-185f-0cc8-6105dbb27090)
+    (uuid 20011966-1314-24ae-5427-160425faf38a)
     (property
       "Sheet name"
-      "Page 21"
+      "Page 15"
       (id 0)
-      (at 38.1 82.82 0)
+      (at 139.7 47.26 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1172,9 +868,9 @@
     )
     (property
       "Sheet file"
-      "pg_21.kicad_sch"
+      "pg_15.kicad_sch"
       (id 1)
-      (at 38.1 105.14 0)
+      (at 139.7 69.58 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1184,7 +880,7 @@
     )
   )
   (sheet
-    (at 63.5 83.82)
+    (at 38.1 48.26)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1195,12 +891,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-17c5-2cec-227c-0232bf6aae8a)
+    (uuid 20011966-1441-5f26-01a2-3f09c54bd6c8)
     (property
       "Sheet name"
-      "Page 22"
+      "Page 11"
       (id 0)
-      (at 63.5 82.82 0)
+      (at 38.1 47.26 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1210,9 +906,9 @@
     )
     (property
       "Sheet file"
-      "pg_22.kicad_sch"
+      "pg_11.kicad_sch"
       (id 1)
-      (at 63.5 105.14 0)
+      (at 38.1 69.58 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1222,7 +918,7 @@
     )
   )
   (sheet
-    (at 88.9 83.82)
+    (at 88.9 154.94)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1233,12 +929,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-3948-2c35-5ce4-24adaca00218)
+    (uuid 20011966-160c-3595-2632-2be07035ae79)
     (property
       "Sheet name"
-      "Page 23"
+      "Page 43"
       (id 0)
-      (at 88.9 82.82 0)
+      (at 88.9 153.94 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1248,161 +944,9 @@
     )
     (property
       "Sheet file"
-      "pg_23.kicad_sch"
+      "pg_43.kicad_sch"
       (id 1)
-      (at 88.9 105.14 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 114.3 83.82)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-4a85-2167-7d50-379289888ef0)
-    (property
-      "Sheet name"
-      "Page 24"
-      (id 0)
-      (at 114.3 82.82 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_24.kicad_sch"
-      (id 1)
-      (at 114.3 105.14 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 139.7 83.82)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-0366-3cf2-04e4-19456e48afb8)
-    (property
-      "Sheet name"
-      "Page 25"
-      (id 0)
-      (at 139.7 82.82 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_25.kicad_sch"
-      (id 1)
-      (at 139.7 105.14 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 165.1 83.82)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-76a2-22bf-7373-0e768569ced5)
-    (property
-      "Sheet name"
-      "Page 26"
-      (id 0)
-      (at 165.1 82.82 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_26.kicad_sch"
-      (id 1)
-      (at 165.1 105.14 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 190.5 83.82)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-6bfb-2226-2237-5440c00516fc)
-    (property
-      "Sheet name"
-      "Page 27"
-      (id 0)
-      (at 190.5 82.82 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_27.kicad_sch"
-      (id 1)
-      (at 190.5 105.14 0)
+      (at 88.9 176.26 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1450,7 +994,7 @@
     )
   )
   (sheet
-    (at 241.3 83.82)
+    (at 63.5 83.82)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1461,12 +1005,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-06b9-6783-5be4-50c7038aedbc)
+    (uuid 20011966-17c5-2cec-227c-0232bf6aae8a)
     (property
       "Sheet name"
-      "Page 29"
+      "Page 22"
       (id 0)
-      (at 241.3 82.82 0)
+      (at 63.5 82.82 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1476,9 +1020,503 @@
     )
     (property
       "Sheet file"
-      "pg_29.kicad_sch"
+      "pg_22.kicad_sch"
       (id 1)
-      (at 241.3 105.14 0)
+      (at 63.5 105.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 114.3 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-1888-6eb9-10ea-7895b1aa9bc8)
+    (property
+      "Sheet name"
+      "Page 14"
+      (id 0)
+      (at 114.3 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_14.kicad_sch"
+      (id 1)
+      (at 114.3 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 38.1 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-197d-69fd-3e2c-398108920437)
+    (property
+      "Sheet name"
+      "Page 41"
+      (id 0)
+      (at 38.1 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_41.kicad_sch"
+      (id 1)
+      (at 38.1 176.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 38.1 83.82)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-1a6e-185f-0cc8-6105dbb27090)
+    (property
+      "Sheet name"
+      "Page 21"
+      (id 0)
+      (at 38.1 82.82 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_21.kicad_sch"
+      (id 1)
+      (at 38.1 105.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 63.5 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-1a7d-0487-06d6-37ca497ea680)
+    (property
+      "Sheet name"
+      "Page 42"
+      (id 0)
+      (at 63.5 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_42.kicad_sch"
+      (id 1)
+      (at 63.5 176.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 241.3 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-1d35-0d1d-01aa-577b35b2d0d1)
+    (property
+      "Sheet name"
+      "Page 9"
+      (id 0)
+      (at 241.3 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_09.kicad_sch"
+      (id 1)
+      (at 241.3 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 139.7 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-1f7f-4588-6245-64ac65b44a95)
+    (property
+      "Sheet name"
+      "Page 45"
+      (id 0)
+      (at 139.7 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_45.kicad_sch"
+      (id 1)
+      (at 139.7 176.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 38.1 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-21fa-663a-1532-3c85d8c8f023)
+    (property
+      "Sheet name"
+      "Page 1"
+      (id 0)
+      (at 38.1 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_01.kicad_sch"
+      (id 1)
+      (at 38.1 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 63.5 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-25b4-4225-7fcb-01a5b9dfc023)
+    (property
+      "Sheet name"
+      "Page 2"
+      (id 0)
+      (at 63.5 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_02.kicad_sch"
+      (id 1)
+      (at 63.5 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 215.9 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-2a46-0815-0532-102df82b5af7)
+    (property
+      "Sheet name"
+      "Page 18"
+      (id 0)
+      (at 215.9 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_18.kicad_sch"
+      (id 1)
+      (at 215.9 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 215.9 119.38)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-2eec-749e-1a66-7344151493c7)
+    (property
+      "Sheet name"
+      "Page 38"
+      (id 0)
+      (at 215.9 118.38 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_38.kicad_sch"
+      (id 1)
+      (at 215.9 140.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 241.3 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-360e-1e8e-70d0-0e397a02da82)
+    (property
+      "Sheet name"
+      "Page 19"
+      (id 0)
+      (at 241.3 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_19.kicad_sch"
+      (id 1)
+      (at 241.3 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 88.9 83.82)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-3948-2c35-5ce4-24adaca00218)
+    (property
+      "Sheet name"
+      "Page 23"
+      (id 0)
+      (at 88.9 82.82 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_23.kicad_sch"
+      (id 1)
+      (at 88.9 105.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 190.5 119.38)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-3c88-6e3b-1201-52dcdaff2120)
+    (property
+      "Sheet name"
+      "Page 37"
+      (id 0)
+      (at 190.5 118.38 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_37.kicad_sch"
+      (id 1)
+      (at 190.5 140.7 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1564,7 +1602,7 @@
     )
   )
   (sheet
-    (at 38.1 119.38)
+    (at 114.3 119.38)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1575,12 +1613,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-56ab-769b-6ada-3f85c78f4c03)
+    (uuid 20011966-4783-4341-16ac-589ebf001ca9)
     (property
       "Sheet name"
-      "Page 31"
+      "Page 34"
       (id 0)
-      (at 38.1 118.38 0)
+      (at 114.3 118.38 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1590,9 +1628,9 @@
     )
     (property
       "Sheet file"
-      "pg_31.kicad_sch"
+      "pg_34.kicad_sch"
       (id 1)
-      (at 38.1 140.7 0)
+      (at 114.3 140.7 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1602,7 +1640,7 @@
     )
   )
   (sheet
-    (at 63.5 119.38)
+    (at 114.3 83.82)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1613,12 +1651,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-6c3f-17e1-2185-2214326f9c11)
+    (uuid 20011966-4a85-2167-7d50-379289888ef0)
     (property
       "Sheet name"
-      "Page 32"
+      "Page 24"
       (id 0)
-      (at 63.5 118.38 0)
+      (at 114.3 82.82 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1628,9 +1666,9 @@
     )
     (property
       "Sheet file"
-      "pg_32.kicad_sch"
+      "pg_24.kicad_sch"
       (id 1)
-      (at 63.5 140.7 0)
+      (at 114.3 105.14 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -1678,7 +1716,7 @@
     )
   )
   (sheet
-    (at 114.3 119.38)
+    (at 190.5 48.26)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -1689,12 +1727,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-4783-4341-16ac-589ebf001ca9)
+    (uuid 20011966-52e4-6082-405e-0e9c04641b9b)
     (property
       "Sheet name"
-      "Page 34"
+      "Page 17"
       (id 0)
-      (at 114.3 118.38 0)
+      (at 190.5 47.26 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -1704,579 +1742,9 @@
     )
     (property
       "Sheet file"
-      "pg_34.kicad_sch"
+      "pg_17.kicad_sch"
       (id 1)
-      (at 114.3 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 139.7 119.38)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-06ce-4acd-3c13-32a74416e2ff)
-    (property
-      "Sheet name"
-      "Page 35"
-      (id 0)
-      (at 139.7 118.38 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_35.kicad_sch"
-      (id 1)
-      (at 139.7 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 165.1 119.38)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-61c5-5fd9-3635-0a7f8a666dff)
-    (property
-      "Sheet name"
-      "Page 36"
-      (id 0)
-      (at 165.1 118.38 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_36.kicad_sch"
-      (id 1)
-      (at 165.1 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 190.5 119.38)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-3c88-6e3b-1201-52dcdaff2120)
-    (property
-      "Sheet name"
-      "Page 37"
-      (id 0)
-      (at 190.5 118.38 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_37.kicad_sch"
-      (id 1)
-      (at 190.5 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 215.9 119.38)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-2eec-749e-1a66-7344151493c7)
-    (property
-      "Sheet name"
-      "Page 38"
-      (id 0)
-      (at 215.9 118.38 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_38.kicad_sch"
-      (id 1)
-      (at 215.9 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 241.3 119.38)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-5826-2c81-461a-18e43ac99fdb)
-    (property
-      "Sheet name"
-      "Page 39"
-      (id 0)
-      (at 241.3 118.38 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_39.kicad_sch"
-      (id 1)
-      (at 241.3 140.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 114.3 12.7)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-764b-0a71-1cf1-26e28c5caed8)
-    (property
-      "Sheet name"
-      "Page 4"
-      (id 0)
-      (at 114.3 11.7 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_04.kicad_sch"
-      (id 1)
-      (at 114.3 34.02 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 12.7 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-751a-616b-0de1-342df8e0e809)
-    (property
-      "Sheet name"
-      "Page 40"
-      (id 0)
-      (at 12.7 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_40.kicad_sch"
-      (id 1)
-      (at 12.7 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 38.1 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-197d-69fd-3e2c-398108920437)
-    (property
-      "Sheet name"
-      "Page 41"
-      (id 0)
-      (at 38.1 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_41.kicad_sch"
-      (id 1)
-      (at 38.1 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 63.5 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-1a7d-0487-06d6-37ca497ea680)
-    (property
-      "Sheet name"
-      "Page 42"
-      (id 0)
-      (at 63.5 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_42.kicad_sch"
-      (id 1)
-      (at 63.5 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 88.9 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-160c-3595-2632-2be07035ae79)
-    (property
-      "Sheet name"
-      "Page 43"
-      (id 0)
-      (at 88.9 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_43.kicad_sch"
-      (id 1)
-      (at 88.9 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 114.3 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-778e-6f9b-0232-06cfdaf89e31)
-    (property
-      "Sheet name"
-      "Page 44"
-      (id 0)
-      (at 114.3 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_44.kicad_sch"
-      (id 1)
-      (at 114.3 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 139.7 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-1f7f-4588-6245-64ac65b44a95)
-    (property
-      "Sheet name"
-      "Page 45"
-      (id 0)
-      (at 139.7 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_45.kicad_sch"
-      (id 1)
-      (at 139.7 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 165.1 154.94)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-7362-0915-2a3b-0495f36e5145)
-    (property
-      "Sheet name"
-      "Page 46"
-      (id 0)
-      (at 165.1 153.94 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_46.kicad_sch"
-      (id 1)
-      (at 165.1 176.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 139.7 12.7)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-5937-6f7f-2ee7-37f08851176d)
-    (property
-      "Sheet name"
-      "Page 5"
-      (id 0)
-      (at 139.7 11.7 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_05.kicad_sch"
-      (id 1)
-      (at 139.7 34.02 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left top)
-      )
-    )
-  )
-  (sheet
-    (at 165.1 12.7)
-    (size 20.32 20.32)
-    (fields_autoplaced)
-    (stroke
-      (width 0)
-      (type solid)
-      (color 0 0 0 0)
-    )
-    (fill
-      (color 0 0 0 0.0000)
-    )
-    (uuid 20011966-66fa-14bb-61d4-411bbe681671)
-    (property
-      "Sheet name"
-      "Page 6"
-      (id 0)
-      (at 165.1 11.7 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left bottom)
-      )
-    )
-    (property
-      "Sheet file"
-      "pg_06.kicad_sch"
-      (id 1)
-      (at 165.1 34.02 0)
+      (at 190.5 69.58 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -2324,7 +1792,7 @@
     )
   )
   (sheet
-    (at 215.9 12.7)
+    (at 38.1 119.38)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -2335,12 +1803,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-1163-13fa-6bfe-71b3d0f91a49)
+    (uuid 20011966-56ab-769b-6ada-3f85c78f4c03)
     (property
       "Sheet name"
-      "Page 8"
+      "Page 31"
       (id 0)
-      (at 215.9 11.7 0)
+      (at 38.1 118.38 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -2350,9 +1818,9 @@
     )
     (property
       "Sheet file"
-      "pg_08.kicad_sch"
+      "pg_31.kicad_sch"
       (id 1)
-      (at 215.9 34.02 0)
+      (at 38.1 140.7 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -2362,7 +1830,7 @@
     )
   )
   (sheet
-    (at 241.3 12.7)
+    (at 241.3 119.38)
     (size 20.32 20.32)
     (fields_autoplaced)
     (stroke
@@ -2373,12 +1841,12 @@
     (fill
       (color 0 0 0 0.0000)
     )
-    (uuid 20011966-1d35-0d1d-01aa-577b35b2d0d1)
+    (uuid 20011966-5826-2c81-461a-18e43ac99fdb)
     (property
       "Sheet name"
-      "Page 9"
+      "Page 39"
       (id 0)
-      (at 241.3 11.7 0)
+      (at 241.3 118.38 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -2388,9 +1856,541 @@
     )
     (property
       "Sheet file"
-      "pg_09.kicad_sch"
+      "pg_39.kicad_sch"
       (id 1)
-      (at 241.3 34.02 0)
+      (at 241.3 140.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 139.7 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-5937-6f7f-2ee7-37f08851176d)
+    (property
+      "Sheet name"
+      "Page 5"
+      (id 0)
+      (at 139.7 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_05.kicad_sch"
+      (id 1)
+      (at 139.7 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 165.1 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-609b-2406-4986-4a24544ae163)
+    (property
+      "Sheet name"
+      "Page 16"
+      (id 0)
+      (at 165.1 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_16.kicad_sch"
+      (id 1)
+      (at 165.1 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 165.1 119.38)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-61c5-5fd9-3635-0a7f8a666dff)
+    (property
+      "Sheet name"
+      "Page 36"
+      (id 0)
+      (at 165.1 118.38 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_36.kicad_sch"
+      (id 1)
+      (at 165.1 140.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 12.7 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-64d1-48fe-410c-75cfcb561e80)
+    (property
+      "Sheet name"
+      "Page 10"
+      (id 0)
+      (at 12.7 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_10.kicad_sch"
+      (id 1)
+      (at 12.7 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 165.1 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-66fa-14bb-61d4-411bbe681671)
+    (property
+      "Sheet name"
+      "Page 6"
+      (id 0)
+      (at 165.1 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_06.kicad_sch"
+      (id 1)
+      (at 165.1 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 88.9 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-67d0-65b7-7855-6987c36cae12)
+    (property
+      "Sheet name"
+      "Page 13"
+      (id 0)
+      (at 88.9 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_13.kicad_sch"
+      (id 1)
+      (at 88.9 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 190.5 83.82)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-6bfb-2226-2237-5440c00516fc)
+    (property
+      "Sheet name"
+      "Page 27"
+      (id 0)
+      (at 190.5 82.82 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_27.kicad_sch"
+      (id 1)
+      (at 190.5 105.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 63.5 119.38)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-6c3f-17e1-2185-2214326f9c11)
+    (property
+      "Sheet name"
+      "Page 32"
+      (id 0)
+      (at 63.5 118.38 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_32.kicad_sch"
+      (id 1)
+      (at 63.5 140.7 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 165.1 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-7362-0915-2a3b-0495f36e5145)
+    (property
+      "Sheet name"
+      "Page 46"
+      (id 0)
+      (at 165.1 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_46.kicad_sch"
+      (id 1)
+      (at 165.1 176.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 63.5 48.26)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-7399-7712-1f61-03bdc0b61a9e)
+    (property
+      "Sheet name"
+      "Page 12"
+      (id 0)
+      (at 63.5 47.26 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_12.kicad_sch"
+      (id 1)
+      (at 63.5 69.58 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 12.7 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-751a-616b-0de1-342df8e0e809)
+    (property
+      "Sheet name"
+      "Page 40"
+      (id 0)
+      (at 12.7 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_40.kicad_sch"
+      (id 1)
+      (at 12.7 176.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 114.3 12.7)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-764b-0a71-1cf1-26e28c5caed8)
+    (property
+      "Sheet name"
+      "Page 4"
+      (id 0)
+      (at 114.3 11.7 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_04.kicad_sch"
+      (id 1)
+      (at 114.3 34.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 165.1 83.82)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-76a2-22bf-7373-0e768569ced5)
+    (property
+      "Sheet name"
+      "Page 26"
+      (id 0)
+      (at 165.1 82.82 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_26.kicad_sch"
+      (id 1)
+      (at 165.1 105.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+  )
+  (sheet
+    (at 114.3 154.94)
+    (size 20.32 20.32)
+    (fields_autoplaced)
+    (stroke
+      (width 0)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 0 0 0 0.0000)
+    )
+    (uuid 20011966-778e-6f9b-0232-06cfdaf89e31)
+    (property
+      "Sheet name"
+      "Page 44"
+      (id 0)
+      (at 114.3 153.94 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left bottom)
+      )
+    )
+    (property
+      "Sheet file"
+      "pg_44.kicad_sch"
+      (id 1)
+      (at 114.3 176.26 0)
       (effects
         (font
           (size 1.27 1.27)
