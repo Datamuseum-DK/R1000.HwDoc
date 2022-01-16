@@ -1776,7 +1776,7 @@
           )
         )
         (pin
-          input
+          tri_state
           line
           (at -20.32 48.26 0)
           (length 6.35)
@@ -2238,7 +2238,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 119.38 180)
           (length 6.35)
@@ -2260,7 +2260,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 114.3 180)
           (length 6.35)
@@ -2282,7 +2282,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 109.22 180)
           (length 6.35)
@@ -2304,7 +2304,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 104.14 180)
           (length 6.35)
@@ -2326,7 +2326,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 99.06 180)
           (length 6.35)
@@ -2348,7 +2348,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 93.98 180)
           (length 6.35)
@@ -2370,7 +2370,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 88.9 180)
           (length 6.35)
@@ -2392,7 +2392,7 @@
           )
         )
         (pin
-          output
+          tri_state
           line
           (at 27.94 83.82 180)
           (length 6.35)
@@ -9596,6 +9596,12 @@
     )
   )
   (junction
+    (at 45.72 58.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid 02c4171a-f36f-438d-a415-c44ac2a35509)
+  )
+  (junction
     (at 200.66 193.04)
     (diameter 0)
     (color 0 0 0 0)
@@ -11047,6 +11053,18 @@
     )
     (uuid 391bfd1b-e608-4e49-b26f-aa3bf1e09394)
   )
+  (wire
+    (pts
+      (xy 50.8 170.18)
+      (xy 83.82 170.18)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 393609d0-f362-4acf-969c-cae7a6be440d)
+  )
   (bus
     (pts
       (xy 281.94 210.82)
@@ -12306,6 +12324,18 @@
       (color 0 0 0 0)
     )
     (uuid 8d352514-61cb-42ed-8fe3-a79e1cb22dad)
+  )
+  (wire
+    (pts
+      (xy 45.72 58.42)
+      (xy 53.34 58.42)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 8dc7c414-e304-44a9-a973-25008e5c4a65)
   )
   (bus
     (pts
@@ -14217,17 +14247,6 @@
     (uuid 0f5aa5fe-0a69-4009-8a96-445b7ce6d938)
   )
   (label
-    "V.RESET~"
-    (at 53.34 50.8 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid 140c0ddc-8819-4f78-82c3-99ceb08f7da6)
-  )
-  (label
     "DP9"
     (at 269.24 233.68 0)
     (effects
@@ -14261,7 +14280,7 @@
     (uuid 1822319d-a2a4-45c7-95e7-5f2fa78a4e14)
   )
   (label
-    "DIAG.D[0..7]"
+    "DIAG.D[0..15]"
     (at 543.56 208.28 0)
     (effects
       (font
@@ -14789,7 +14808,7 @@
     (uuid 8e1a9746-7838-45b2-8d54-6d639781783a)
   )
   (label
-    "CLK.2XE~.B0"
+    "CLK.2X~"
     (at 45.72 154.94 0)
     (effects
       (font
@@ -15260,7 +15279,32 @@
     )
   )
   (global_label
-    "CLK.2XE~.B0"
+    "V.RESET~"
+    (shape output)
+    (at 53.34 58.42 0)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left)
+    )
+    (uuid 18db2aae-fc3a-4304-b497-84a363c4f032)
+    (property
+      "Intersheet References"
+      "${INTERSHEET_REFS}"
+      (id 0)
+      (at 74.8574 58.2613 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+  )
+  (global_label
+    "CLK.2X~"
     (shape input)
     (at 279.4 45.72 180)
     (fields_autoplaced)
