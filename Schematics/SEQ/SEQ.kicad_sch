@@ -392,8 +392,8 @@
   )
   (wire
     (pts
-      (xy 332.74 256.54)
-      (xy 332.74 261.62)
+      (xy 223.52 340.36)
+      (xy 223.52 345.44)
     )
     (stroke
       (width 0)
@@ -404,8 +404,8 @@
   )
   (wire
     (pts
-      (xy 332.74 236.22)
-      (xy 332.74 241.3)
+      (xy 223.52 320.04)
+      (xy 223.52 325.12)
     )
     (stroke
       (width 0)
@@ -414,9 +414,20 @@
     )
     (uuid ba080abf-dc57-49f2-9451-e7d1b884ecf8)
   )
+  (text
+    "01: MICROSEQUENCER\n02: CLOCKS AND DIAGNOSTICS\n03: DISPLAY\n04: CONTROL STACK DISPLAY REGS\n05: RESOLVER\n06: CODE_REG\n07: DATA_IO\n08: MICRO SEQUENCING LOGIC\n09: MACRO SEQUENCING LOGIC\n10: MICRO-INSTRUCTION LOGIC\n11: MICRO_CNTL\n12: CS DISPLAY REGISTER CONTROL\n13: CS DISPLAY REGISTER CONTROL\n14: CODE REGISTER CONTROL\n15: ADDRESS LOGIC CONTROL\n16: RESOLVE ADDRESS GENERATION\n17: RESOLVE LEX VALID\n18: RESOLVE NAME RAM\n19: RESOLVE OFFSET RAM\n20: RESOLVE ALU BITS (37:48)\n21: RESOLVE ALU BITS (49:56)\n22: TOS OPTIMIZING REGISTER\n23: CONTROL STACK REF DRIVE\n24: CURRENT CONTROL STACK NAME\n25: CONTROL MUX\n26: SAVED OFFSET REGISTER\n27: CONTROL TOP REGISTER\n28: CONTROL PREDECESSOR\n29: CODE DRIVER\n30: MACRO MUX\n31: MACRO PC\n32: RETURN MACRO PC\n33: MACRO PC BRANCH ADDER\n34: CODE REGISTER OUTPUT MUX\n35: MEMORY ADDRESS MUX\n36: ADDRESS BUS DRIVERS\n37: MEMORY ADDRESS PARITY\n38: TYPE BUS TRANCEIVER - DATA PORTION\n39: TYPE BUS TRANCEIVER - PARITY + BUS DRIVE LOGIC\n40: VALUE BUS TRANCEIVERS - DATA PORTION\n41: VALUE BUS TRANCEIVER - PARITY + BUS DRIVE LOGIC\n42: FIU BUS TRANCEIVER - DATA PORTION\n43: FIU BUS TRANCEIVER - PARITY + BUS DRIVE LOGIC\n44: MACRO CONTROL\n45: DECODING INSTRUCTION DRIVER\n46: IBUFF OE'S & DISP SELECT\n47: INSTRUCTION BUFFER\n48: CURRENT MACRO INSTRUCTION\n49: DECODE RAMS & ADDRESSING\n50: DIAGNOSTIC DECODER INPUT\n51: EARLY MACRO EVENTS\n52: LATE MACRO EVENTS\n53: LATE MACRO EVENT ADDR GEN.\n54: SEQUENCE CONDITION SELECT\n55: R1000 CONDITION SELECT\n56: CASE BRANCH ADDER\n57: CURRENT MACRO ADDRESS\n58: FIELD CHECK MICRO EVENT\n59: MICRO EVENT GENERATION\n60: MICRO STACK CONTROL\n61: MICRO STACK INPUT MUX & RAMS\n62: BRANCH TYPE DECODE & UADR OE\n63: UADR MUX - BITS (0:6)\n64: UADR MUX - BITS (7:15)\n65: OTHER UADR - BITS (0:6)\n66: OTHER UADR - BITS (7:14)\n67: BAD HINT MICRO ADDRESS\n68: MICRO ADDRESS DRIVE & PARITY\n69: WCS DRIVERS\n70: WRITABLE CONTROL STORE\n71: WRITABLE CONTROL STORE\n72: WRITABLE CONTROL STORE\n73: WRITABLE CONTROL STORE\n74: MICRO INSTRUCTION REGISTER\n75: PRE-DECODE AND PARITY CHECK\n76: BAD HINT UIR CONTROL\n77: INTERNAL READ DECODING\n78: RANDOM FIELD DECODING\n79: CLOCK GENERATION\n80: CLOCK MODE GENERATION\n81: DIAGNOSTIC PROCESSOR\n82: DIAGNOSTIC PROCESSOR\n83: DIAGNOSTIC LOOP COUNTER\n84: DIAGNOSTIC REGISTER\n85: DIAGNOSTIC REGISTER\n86: POWER AND GROUND FINGERS - & BYPASS CAPACITORS\n"
+    (at 284.48 363.22 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left bottom)
+    )
+    (uuid 4842cce9-6f3d-4b91-bf06-02c1acbc5b3e)
+  )
   (symbol
     (lib_id "r1000:Pull_Down")
-    (at 332.74 256.54 0)
+    (at 223.52 340.36 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
@@ -425,13 +436,13 @@
       "Reference"
       "U102"
       (id 0)
-      (at 332.74 256.54 0)
+      (at 223.52 340.36 0)
     )
     (property
       "Value"
       "Pull_Down"
       (id 1)
-      (at 332.74 252.73 0)
+      (at 223.52 336.55 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -442,7 +453,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 332.74 256.54 0)
+      (at 223.52 340.36 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -454,7 +465,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 332.74 256.54 0)
+      (at 223.52 340.36 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -469,7 +480,7 @@
   )
   (symbol
     (lib_id "r1000:PU")
-    (at 332.74 236.22 0)
+    (at 223.52 320.04 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
@@ -478,7 +489,7 @@
       "Reference"
       "#PWR0104"
       (id 0)
-      (at 332.74 236.22 0)
+      (at 223.52 320.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -490,7 +501,7 @@
       "Value"
       "PU"
       (id 1)
-      (at 332.74 236.22 0)
+      (at 223.52 320.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -502,7 +513,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 332.74 236.22 0)
+      (at 223.52 320.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -514,7 +525,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 332.74 236.22 0)
+      (at 223.52 320.04 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -529,7 +540,7 @@
   )
   (symbol
     (lib_id "r1000:Pull_Up")
-    (at 332.74 241.3 0)
+    (at 223.52 325.12 0)
     (unit 1)
     (in_bom yes)
     (on_board yes)
@@ -538,13 +549,13 @@
       "Reference"
       "U101"
       (id 0)
-      (at 332.74 241.3 0)
+      (at 223.52 325.12 0)
     )
     (property
       "Value"
       "Pull_Up"
       (id 1)
-      (at 332.74 245.11 0)
+      (at 223.52 328.93 0)
       (effects
         (font
           (size 2.54 2.54)
@@ -555,7 +566,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 332.74 241.3 0)
+      (at 223.52 325.12 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -567,7 +578,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 332.74 241.3 0)
+      (at 223.52 325.12 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -582,7 +593,7 @@
   )
   (symbol
     (lib_id "r1000:PD")
-    (at 332.74 261.62 0)
+    (at 223.52 345.44 0)
     (unit 1)
     (in_bom no)
     (on_board yes)
@@ -591,7 +602,7 @@
       "Reference"
       "#PWR0108"
       (id 0)
-      (at 332.74 261.62 0)
+      (at 223.52 345.44 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -603,7 +614,7 @@
       "Value"
       "PD"
       (id 1)
-      (at 332.74 261.62 0)
+      (at 223.52 345.44 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -615,7 +626,7 @@
       "Footprint"
       ""
       (id 2)
-      (at 332.74 261.62 0)
+      (at 223.52 345.44 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -627,7 +638,7 @@
       "Datasheet"
       ""
       (id 3)
-      (at 332.74 261.62 0)
+      (at 223.52 345.44 0)
       (effects
         (font
           (size 1.27 1.27)
@@ -6129,13 +6140,6 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/d77a892d-a13c-4809-9f54-19aa0999e619"
-      (reference "#PWR08001")
-      (unit 1)
-      (value "PU")
-      (footprint "")
-    )
-    (path
       "/20011966-3b0f-4764-2123-5358ecbebc42/80f1b6b9-2af2-4907-aad0-66c6b860872b"
       (reference "#PWR08002")
       (unit 1)
@@ -7494,36 +7498,57 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/a3d973fd-fec8-42c9-bc62-ae0ebb2cee4b"
-      (reference "GB295")
-      (unit 1)
-      (value "GB")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/77e446d5-c7c8-4c01-8671-f4c296d9d266"
+      "/20011966-3b0f-4764-2123-5358ecbebc42/e8d8f40c-88d5-494d-9d44-d21dff92d13b"
       (reference "GB301")
       (unit 1)
       (value "GB")
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/e05a53dd-8bd3-4838-8a7f-56df4ad1d3cf"
+      "/20011966-3b0f-4764-2123-5358ecbebc42/e0353a4d-43c0-416f-8c70-d701e302f972"
       (reference "GB302")
       (unit 1)
       (value "GB")
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/c65e0342-3267-4845-9049-c59c5d93ca5d"
+      "/20011966-3b0f-4764-2123-5358ecbebc42/c1a237b7-6a87-41bf-a987-22bcc98c9b47"
       (reference "GB303")
       (unit 1)
       (value "GB")
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/22115435-e325-4c1f-9985-8fcab8388aa1"
+      "/20011966-3b0f-4764-2123-5358ecbebc42/75947f6c-3e27-46aa-aed0-55e582bd7f28"
       (reference "GB304")
+      (unit 1)
+      (value "GB")
+      (footprint "")
+    )
+    (path
+      "/20011966-3b0f-4764-2123-5358ecbebc42/77e446d5-c7c8-4c01-8671-f4c296d9d266"
+      (reference "GB306")
+      (unit 1)
+      (value "GB")
+      (footprint "")
+    )
+    (path
+      "/20011966-3b0f-4764-2123-5358ecbebc42/0f54d39c-0a07-4861-9b72-b532e815ea98"
+      (reference "GB308")
+      (unit 1)
+      (value "GB")
+      (footprint "")
+    )
+    (path
+      "/20011966-3b0f-4764-2123-5358ecbebc42/c65e0342-3267-4845-9049-c59c5d93ca5d"
+      (reference "GB310")
+      (unit 1)
+      (value "GB")
+      (footprint "")
+    )
+    (path
+      "/20011966-3b0f-4764-2123-5358ecbebc42/50d540cf-f963-4dc5-870a-0a9a6564eb5b"
+      (reference "GB312")
       (unit 1)
       (value "GB")
       (footprint "")
@@ -14445,48 +14470,6 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/a2aa68d6-bbfc-4577-8221-34dc07b47be7"
-      (reference "U8001")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/00ccbea3-0563-42fb-bc6d-2baa7022d5c0"
-      (reference "U8002")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/47f837c4-8474-4ab9-8398-6f0c8dd3dd5a"
-      (reference "U8003")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/bf14a59e-fa8b-4174-b89e-97cc1b5d9f63"
-      (reference "U8004")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/07a6174a-be46-4c00-8d6e-8adec7a93479"
-      (reference "U8005")
-      (unit 1)
-      (value "F113")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/f01110d5-317c-4094-ad05-31505fef8501"
-      (reference "U8006")
-      (unit 1)
-      (value "F113")
-      (footprint "")
-    )
-    (path
       "/20011966-3b0f-4764-2123-5358ecbebc42/4376650f-9ec2-4940-8749-cb77cc0d0b1b"
       (reference "U8007")
       (unit 1)
@@ -14515,13 +14498,6 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/7c35b0dc-93e0-43f7-8575-a2f38d0f6473"
-      (reference "U8011")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
       "/20011966-3b0f-4764-2123-5358ecbebc42/72f3f6d9-5b24-45aa-bdd2-3ae4a88e57e2"
       (reference "U8012")
       (unit 1)
@@ -14536,29 +14512,8 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/3e5bd778-098d-44e1-b124-aed26d4730cb"
-      (reference "U8014")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/d45cc342-721f-4a49-9300-15768df5b161"
-      (reference "U8015")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
       "/20011966-3b0f-4764-2123-5358ecbebc42/3717a97d-a948-42ce-9baf-47a3d978153e"
       (reference "U8016")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/24e10ce6-f838-427b-b00c-49f385c8d497"
-      (reference "U8017")
       (unit 1)
       (value "F37")
       (footprint "")
@@ -14578,10 +14533,10 @@
       (footprint "")
     )
     (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/4df3c142-4efd-4fa4-8ca0-afd76487bec5"
+      "/20011966-3b0f-4764-2123-5358ecbebc42/fa33f326-d717-4f56-9dd3-46d2002ad058"
       (reference "U8020")
       (unit 1)
-      (value "F04")
+      (value "F00")
       (footprint "")
     )
     (path
@@ -14594,20 +14549,6 @@
     (path
       "/20011966-3b0f-4764-2123-5358ecbebc42/2aa07af7-b38b-43f1-a4e8-d0395a2ceea3"
       (reference "U8022")
-      (unit 1)
-      (value "F20")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/11e63aa4-a506-4e15-bd97-87aa64e67b0c"
-      (reference "U8023")
-      (unit 1)
-      (value "F20")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/1048bd81-debd-42fe-a957-ff8604dfced0"
-      (reference "U8024")
       (unit 1)
       (value "F20")
       (footprint "")
@@ -14652,20 +14593,6 @@
       (reference "U8030")
       (unit 1)
       (value "F30")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/ae6336b7-c162-4ef4-82fe-3ef4439a35c8"
-      (reference "U8031")
-      (unit 1)
-      (value "F37")
-      (footprint "")
-    )
-    (path
-      "/20011966-3b0f-4764-2123-5358ecbebc42/b401c72a-3fe2-405b-b2d4-2f07dad58216"
-      (reference "U8032")
-      (unit 1)
-      (value "F37")
       (footprint "")
     )
     (path
