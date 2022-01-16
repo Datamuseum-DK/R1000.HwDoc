@@ -1006,18 +1006,21 @@
             (type none)
           )
         )
-        (text
-          "0"
-          (at -5.08 33.02 0)
-          (effects
-            (font
-              (size 2.54 2.54)
-            )
+        (circle
+          (center 5.08 42.545)
+          (radius 0.635)
+          (stroke
+            (width 0)
+            (type default)
+            (color 0 0 0 0)
+          )
+          (fill
+            (type none)
           )
         )
         (text
           "0"
-          (at 7.62 40.64 0)
+          (at -5.08 33.02 0)
           (effects
             (font
               (size 2.54 2.54)
@@ -1367,15 +1370,6 @@
           )
         )
         (text
-          "="
-          (at 5.08 40.64 0)
-          (effects
-            (font
-              (size 2.54 2.54)
-            )
-          )
-        )
-        (text
           "C"
           (at -5.08 38.1 0)
           (effects
@@ -1552,6 +1546,28 @@
           )
           (number
             "1"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+        )
+        (pin
+          input
+          line
+          (at 5.08 48.26 270)
+          (length 5.08)
+          (name
+            "OE_"
+            (effects
+              (font
+                (size 2.54 2.54)
+              )
+            )
+          )
+          (number
+            "11"
             (effects
               (font
                 (size 2.54 2.54)
@@ -7460,6 +7476,18 @@
   )
   (wire
     (pts
+      (xy 520.7 27.94)
+      (xy 525.78 27.94)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid 9081b8ec-f66e-4f68-91b8-759605f9391a)
+  )
+  (wire
+    (pts
       (xy 325.12 251.46)
       (xy 365.76 251.46)
     )
@@ -9473,7 +9501,7 @@
     (uuid 2c54934d-46ae-4457-9113-7fd4805936a3)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 30.48 297.18 0)
     (effects
       (font
@@ -9605,7 +9633,7 @@
     (uuid 3de271b0-265e-483a-a6ad-50a4f960e2ef)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 177.8 210.82 0)
     (effects
       (font
@@ -9693,7 +9721,7 @@
     (uuid 493a16cf-872b-46e7-ab0d-5cca77c242fb)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 177.8 297.18 0)
     (effects
       (font
@@ -9737,7 +9765,7 @@
     (uuid 53b76ef8-15b2-48e8-9817-18ad8add938b)
   )
   (label
-    "Q2~B1"
+    "Q2~B0"
     (at 459.74 25.4 0)
     (effects
       (font
@@ -10067,7 +10095,7 @@
     (uuid 72674035-f73f-44c4-8303-5ae120c86906)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 325.12 210.82 0)
     (effects
       (font
@@ -10892,7 +10920,7 @@
     (uuid ddf74091-030f-4c6d-bc8d-accd91607e4c)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 30.48 124.46 0)
     (effects
       (font
@@ -10980,7 +11008,7 @@
     (uuid e4280bd5-43d2-4c91-9968-beb2e39a8e97)
   )
   (label
-    "Q4~B1"
+    "Q4~B0"
     (at 30.48 210.82 0)
     (effects
       (font
@@ -11608,7 +11636,7 @@
     )
   )
   (global_label
-    "Q2~B1"
+    "Q2~B0"
     (shape input)
     (at 35.56 15.24 180)
     (fields_autoplaced)
@@ -11808,7 +11836,7 @@
     )
   )
   (global_label
-    "Q4~B1"
+    "Q4~B0"
     (shape input)
     (at 35.56 30.48 180)
     (fields_autoplaced)
@@ -13691,6 +13719,66 @@
     )
   )
   (symbol
+    (lib_id "r1000:PD")
+    (at 525.78 27.94 0)
+    (unit 1)
+    (in_bom no)
+    (on_board yes)
+    (uuid 6ac3c4e0-e2b9-49e5-ba6b-9a85dbc0d5f1)
+    (property
+      "Reference"
+      "#PWR03411"
+      (id 0)
+      (at 525.78 27.94 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Value"
+      "PD"
+      (id 1)
+      (at 525.78 27.94 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 525.78 27.94 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 525.78 27.94 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (pin
+      "1"
+      (uuid 8b1ec6b2-04e8-4ed8-baa5-f399408f60d7)
+    )
+  )
+  (symbol
     (lib_id "r1000:P2K8R")
     (at 91.44 187.96 0)
     (unit 1)
@@ -14587,6 +14675,10 @@
     (pin
       "1"
       (uuid 1f21fc34-4461-47e9-bf4d-eebd60512f6e)
+    )
+    (pin
+      "11"
+      (uuid deff8269-27cc-4b54-ba9b-6717472cdefc)
     )
     (pin
       "16"
