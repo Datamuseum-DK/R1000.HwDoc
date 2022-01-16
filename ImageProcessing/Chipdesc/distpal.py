@@ -11,11 +11,11 @@ class DISTPAL(Chip):
     symbol_name = "DISTPAL"
 
     symbol = '''
-      |   
-      |   
-     1v11 
-   +--+-----+
-   |  v  =0 |
+      |  |
+      |  |
+     1v11v
+   +--+--o--+
+   |  v     |
    | CLK OE |
   2|        |19
 -->+I0    Q0+-->
