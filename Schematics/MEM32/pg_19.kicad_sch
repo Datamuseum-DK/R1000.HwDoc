@@ -6456,7 +6456,7 @@
       )
     )
     (symbol
-      "r1000:MUXLPAL"
+      "r1000:MUXEPAL"
       (pin_numbers hide)
       (pin_names
         (offset 1.016)
@@ -6477,7 +6477,7 @@
       )
       (property
         "Value"
-        "MUXLPAL"
+        "MUXEPAL"
         (id 1)
         (at -6.35 -7.62 0)
         (effects
@@ -6536,7 +6536,7 @@
         )
       )
       (symbol
-        "MUXLPAL_1_1"
+        "MUXEPAL_1_1"
         (rectangle
           (start -8.89 41.91)
           (end 11.43 -8.89)
@@ -14312,6 +14312,152 @@
     )
   )
   (symbol
+    (lib_id "r1000:MUXEPAL")
+    (at 386.08 86.36 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (uuid 27952ed7-7cc4-4b04-b094-1876ccf640da)
+    (property
+      "Reference"
+      "U2006"
+      (id 0)
+      (at 388.62 81.28 0)
+    )
+    (property
+      "Value"
+      "MUXEPAL"
+      (id 1)
+      (at 379.73 93.98 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Footprint"
+      ""
+      (id 2)
+      (at 387.35 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Datasheet"
+      ""
+      (id 3)
+      (at 387.35 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        hide
+      )
+    )
+    (property
+      "Location"
+      "N12"
+      (id 4)
+      (at 384.81 86.36 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify left)
+      )
+    )
+    (property
+      "Name"
+      "MUAEPAL"
+      (id 5)
+      (at 387.35 101.6 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify bottom)
+      )
+    )
+    (pin
+      "1"
+      (uuid 3ce36a2e-52f8-4ff1-86e4-7b80edea79a8)
+    )
+    (pin
+      "11"
+      (uuid a757195d-dcd7-4fe0-81e4-cd1d56f07a80)
+    )
+    (pin
+      "12"
+      (uuid 6aeae69d-9ba5-4109-8073-f8e67c5416f9)
+    )
+    (pin
+      "13"
+      (uuid 5999c531-4211-49b6-9884-4f174640d57f)
+    )
+    (pin
+      "14"
+      (uuid 54f1a7d3-a5ac-459a-91c4-a08cc64d11b1)
+    )
+    (pin
+      "15"
+      (uuid 85c5468d-36f3-44ad-b66b-de1030ced43f)
+    )
+    (pin
+      "16"
+      (uuid b57b9826-c4ab-4fa7-bcd5-08c136bc6aeb)
+    )
+    (pin
+      "17"
+      (uuid 650e48ae-2f31-4cb4-9d78-ff8822778d04)
+    )
+    (pin
+      "18"
+      (uuid f080cadd-e35c-47e3-bb78-10db51436ff9)
+    )
+    (pin
+      "19"
+      (uuid 2750331d-93b9-4e8c-90b6-0a9920055e4b)
+    )
+    (pin
+      "2"
+      (uuid d5a03c4e-a74d-40b6-8588-7747440e7e5e)
+    )
+    (pin
+      "3"
+      (uuid 3ccb4595-378f-4413-aa1e-31abc1e78c8c)
+    )
+    (pin
+      "4"
+      (uuid 42a3f38c-7fa9-4794-82a5-48aa4054fc06)
+    )
+    (pin
+      "5"
+      (uuid 09661b39-5cfe-4b03-a2ab-11f03651c8fe)
+    )
+    (pin
+      "6"
+      (uuid e2d8e394-793f-4f0e-941d-4e2f93065bc7)
+    )
+    (pin
+      "7"
+      (uuid f9a4bb4d-eaf4-43d1-a818-dec1d7dd2562)
+    )
+    (pin
+      "8"
+      (uuid 321e3a78-231c-4057-9669-4a1797ae8814)
+    )
+    (pin
+      "9"
+      (uuid 391b0767-efa6-49f5-ab2f-4f7ce3407757)
+    )
+  )
+  (symbol
     (lib_id "r1000:PD")
     (at 396.24 38.1 0)
     (unit 1)
@@ -14721,152 +14867,6 @@
     (pin
       "9"
       (uuid ad835d3e-5795-49fe-9056-8b31073cce8d)
-    )
-  )
-  (symbol
-    (lib_id "r1000:MUXLPAL")
-    (at 386.08 86.36 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (uuid 8683b5e0-d32c-4d13-a85a-54a9fd5cd729)
-    (property
-      "Reference"
-      "U2006"
-      (id 0)
-      (at 388.62 81.28 0)
-    )
-    (property
-      "Value"
-      "MUXLPAL"
-      (id 1)
-      (at 379.73 93.98 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Footprint"
-      ""
-      (id 2)
-      (at 387.35 87.63 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Datasheet"
-      ""
-      (id 3)
-      (at 387.35 87.63 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        hide
-      )
-    )
-    (property
-      "Location"
-      "N12"
-      (id 4)
-      (at 384.81 86.36 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify left)
-      )
-    )
-    (property
-      "Name"
-      "MUAEPAL"
-      (id 5)
-      (at 387.35 101.6 0)
-      (effects
-        (font
-          (size 2.54 2.54)
-        )
-        (justify bottom)
-      )
-    )
-    (pin
-      "1"
-      (uuid b3eb63cd-6c48-4567-b716-6df419842f6b)
-    )
-    (pin
-      "11"
-      (uuid ff0ac31c-2f91-4b73-919d-78e1f915d0a6)
-    )
-    (pin
-      "12"
-      (uuid d63bfc8b-c542-42d7-a580-fe5a2cf0b5a5)
-    )
-    (pin
-      "13"
-      (uuid f2baf298-3d86-4618-abd8-8e655f31aae2)
-    )
-    (pin
-      "14"
-      (uuid 98e01ccb-6bc6-4fa1-8639-139a05d9cd07)
-    )
-    (pin
-      "15"
-      (uuid c689e9d1-569f-49cd-9539-2d187ebde470)
-    )
-    (pin
-      "16"
-      (uuid e08c5a3f-8d83-4dfe-8ddc-27e9aed686be)
-    )
-    (pin
-      "17"
-      (uuid 48ccaf7b-2571-48f3-8da3-864e2e372b8a)
-    )
-    (pin
-      "18"
-      (uuid 1e8ec456-6009-433e-9fe0-4ac24e8e3577)
-    )
-    (pin
-      "19"
-      (uuid 4b5bc028-1e03-4043-9a31-c2785996cd54)
-    )
-    (pin
-      "2"
-      (uuid a593d758-0f26-4b36-b9ad-17352bcc268a)
-    )
-    (pin
-      "3"
-      (uuid 8650acf5-7fd5-4c2d-a82d-a75f93b6d7fa)
-    )
-    (pin
-      "4"
-      (uuid 97999751-f82a-4303-8a1f-c54cb248ebe1)
-    )
-    (pin
-      "5"
-      (uuid a2626cb4-e381-4a95-b26a-ed632b7060ad)
-    )
-    (pin
-      "6"
-      (uuid 6ecddc6c-01d8-472e-81ea-2668986abf1a)
-    )
-    (pin
-      "7"
-      (uuid 9d822623-82b9-4ada-b41e-9639ede7340c)
-    )
-    (pin
-      "8"
-      (uuid 08bef27d-73d2-458e-b8f6-49da6887dcff)
-    )
-    (pin
-      "9"
-      (uuid e94fdda3-25fa-4c47-8506-236f3282df41)
     )
   )
   (symbol
