@@ -4443,15 +4443,15 @@
   )
   (wire
     (pts
-      (xy 33.02 73.66)
-      (xy 71.12 73.66)
+      (xy 60.96 60.96)
+      (xy 66.04 60.96)
     )
     (stroke
       (width 0)
       (type default)
       (color 0 0 0 0)
     )
-    (uuid 25049fd0-56f7-403e-8aea-9a0812c93516)
+    (uuid 2224576d-986e-4cfb-b9bc-14b9f3e4a332)
   )
   (bus
     (pts
@@ -6123,6 +6123,18 @@
   )
   (wire
     (pts
+      (xy 66.04 60.96)
+      (xy 66.04 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid b402290b-22c3-46f2-8d76-cabb6a37a460)
+  )
+  (wire
+    (pts
       (xy 76.2 22.86)
       (xy 99.06 22.86)
     )
@@ -6528,6 +6540,18 @@
       (color 0 0 0 0)
     )
     (uuid dacd7e6c-87c5-4d41-8c80-11b5c90c66d6)
+  )
+  (wire
+    (pts
+      (xy 66.04 73.66)
+      (xy 71.12 73.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+      (color 0 0 0 0)
+    )
+    (uuid dcf9a52a-6901-4b37-b8ec-0c8a515b51c1)
   )
   (bus
     (pts
@@ -6965,7 +6989,7 @@
     (uuid 14fc79bf-5ec4-4ccb-a24e-ccbf01e50c82)
   )
   (label
-    "C_LIT~3"
+    "C_LIT~5"
     (at 172.72 287.02 0)
     (effects
       (font
@@ -7603,17 +7627,6 @@
     (uuid cf744adf-8aba-4162-9c84-f348eb4690ce)
   )
   (label
-    "C_LIT~6"
-    (at 33.02 73.66 0)
-    (effects
-      (font
-        (size 2.54 2.54)
-      )
-      (justify left bottom)
-    )
-    (uuid d0c84948-7e0b-4494-924a-5679969a2bb1)
-  )
-  (label
     "UIR.RAND0"
     (at 464.82 208.28 0)
     (effects
@@ -8099,6 +8112,31 @@
       "${INTERSHEET_REFS}"
       (id 0)
       (at 145.034 312.2613 0)
+      (effects
+        (font
+          (size 2.54 2.54)
+        )
+        (justify right)
+      )
+    )
+  )
+  (global_label
+    "UIR.FRAME4"
+    (shape input)
+    (at 60.96 60.96 180)
+    (fields_autoplaced)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify right)
+    )
+    (uuid 63ff3fc1-516e-4e50-aa3f-af937e0823b4)
+    (property
+      "Intersheet References"
+      "${INTERSHEET_REFS}"
+      (id 0)
+      (at 33.9997 60.8013 0)
       (effects
         (font
           (size 2.54 2.54)
