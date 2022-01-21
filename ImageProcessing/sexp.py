@@ -34,17 +34,27 @@ S-Expressions
 
 class SExp():
     ''' Painfully primitive s-exp handling '''
-    def __init__(self, name=None, *vals):
+    def __init__(self, name, *vals):
         self.name = name
-        self.simple = True
-        self.members = []
-        for i in vals:
-            self += i
+        self.recursive = False
+        if len(vals) == 1 and vals[0] is None:
+            self.members = None
+        else:
+            self.members = []
+            for i in vals:
+                self += i
+
+    def __str__(self):
+        if self.members is None:
+            return self.name
+        return "(" + self.name + " <%d>)" % len(self.members)
 
     def __iadd__(self, child):
-        if isinstance(child, SExp):
-            self.simple = False
+        if isinstance(child, str):
+            child = SExp(child, None)
+        assert isinstance(child, SExp)
         self.members.append(child)
+        self.recursive |= child.members is not None
         return self
 
     def __isub__(self, child):
@@ -58,74 +68,83 @@ class SExp():
         return self.members[idx]
 
     def pop(self, idx):
+        ''' pop a member '''
         return self.members.pop(idx)
 
     def __iter__(self):
         yield from self.members
 
-    def parse(self, src, pfx=""):
+    def find(self, name):
+        ''' iter members named ... '''
+        names = name.split(".", 1)
+        for i in self:
+            if i.name == names[0]:
+                if len(names) == 1:
+                    yield i
+                else:
+                    yield from i.find(names[1])
+
+    def find_first(self, name):
+        ''' find the first member named ... '''
+        for i in self.find(name):
+            return i
+
+    def parse(self, src):
         ''' Parse sexp string '''
         begin = 0
+
         while src[begin] in " \t\n":
             begin += 1
-        assert src[begin] == '('
+
+        if src[begin] == '"':
+            end = begin + 1
+            while True:
+                while src[end] not in '\\"':
+                    end += 1
+                if src[end] == '"':
+                    end += 1
+                    break
+                assert src[end:end+2] in ('\\\\', '\\"', '\\n')
+                end += 2
+            self.name = src[begin:end]
+            self.members = None
+            return end
+
+        if src[begin] != '(':
+            end = begin
+            while src[end] not in " \t\n)":
+                end += 1
+            self.name = src[begin:end]
+            self.members = None
+            return end
+
         begin += 1
         end = begin
         while src[end] not in " \t\n)":
             end += 1
         self.name = src[begin:end]
-        begin = end
         while True:
-            while src[begin] in " \t\n":
-                begin += 1
-            if src[begin] == ')':
-                return begin + 1
-            if src[begin] == '(':
-                sexp = SExp()
-                self.members.append(sexp)
-                self.simple = False
-                begin += sexp.parse(src[begin:], pfx = pfx + "  ")
-                continue
-            if src[begin] == '"':
-                end = begin + 1
-                while True:
-                    while src[end] not in '\\"':
-                        end += 1
-                    if src[end] == '"':
-                        end += 1
-                        break
-                    assert src[end:end+2] in ('\\\\', '\\"', '\\n')
-                    end += 2
-            else:
-                end = begin
-                while src[end] not in " \t\n)":
-                    end += 1
-            self.members.append(src[begin:end])
-            begin = end
+            while src[end] in " \t\n":
+                end += 1
+            if src[end] == ')':
+                break
+            sexp = SExp(None)
+            end += sexp.parse(src[end:])
+            self += sexp
+        return end + 1
 
-    def serialize(self):
+    def serialize(self, indent="  "):
         ''' Serialize recursively '''
-        if self.simple:
-            yield '(' + " ".join([self.name] + self.members) + ')'
-        else:
+        if self.members is None:
+            yield self.name
+        elif self.recursive:
             yield '(' + self.name
             for i in self.members:
-                if isinstance(i, SExp):
-                    for j in i.serialize():
-                        yield "  " + j
-                else:
-                    yield "  " + i
+                for j in i.serialize(indent):
+                    yield indent + j
             yield ')'
-
-def main():
-    ''' ... '''
-    sexp = SExp()
-    sexp.parse(open("/critter/R1K/W/SEQ/SEQ_PROJ/SEQ_PROJ.kicad_sch").read())
-
-    with open("/tmp/_8", "w") as file:
-        for i in sexp.serialize():
-            print(i)
-            file.write(i + "\n")
-
-if __name__ == "__main__":
-    main()
+        elif len(self.members) == 0:
+            yield '(' + self.name + ')'
+        else:
+            i = ' '.join(x.name for x in self.members)
+            yield '(' + self.name + ' ' + i + ')'
