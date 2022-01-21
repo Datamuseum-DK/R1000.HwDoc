@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Preparations for the image processing
+# Rebuild the KICAD symbol file
 #
 
 set -e
