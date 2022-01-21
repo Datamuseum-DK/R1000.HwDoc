@@ -34,17 +34,25 @@ S-Expressions
 
 class SExp():
     ''' Painfully primitive s-exp handling '''
-    def __init__(self, name=None, *vals):
+    def __init__(self, name, *vals):
         self.name = name
-        self.simple = True
-        self.members = []
-        for i in vals:
-            self += i
+        self.recursive = False
+        if len(vals) == 1 and vals[0] is None:
+            self.members = None
+        else:
+            self.members = []
+            for i in vals:
+                self += i
+
+    def __str__(self):
+        if self.members is None:
+             return self.name
+        return "(" + self.name + " <%d>)" % len(self.members)
 
     def __iadd__(self, child):
-        if isinstance(child, SExp):
-            self.simple = False
+        assert isinstance(child, SExp)
         self.members.append(child)
+        self.recursive |= child.members is not None
         return self
 
     def __isub__(self, child):
@@ -58,74 +66,161 @@ class SExp():
         return self.members[idx]
 
     def pop(self, idx):
+        ''' pop a member '''
         return self.members.pop(idx)
 
     def __iter__(self):
         yield from self.members
 
-    def parse(self, src, pfx=""):
+    def parse(self, src):
         ''' Parse sexp string '''
         begin = 0
+
         while src[begin] in " \t\n":
             begin += 1
-        assert src[begin] == '('
+
+        if src[begin] == '"':
+            end = begin + 1
+            while True:
+                while src[end] not in '\\"':
+                    end += 1
+                if src[end] == '"':
+                    end += 1
+                    break
+                assert src[end:end+2] in ('\\\\', '\\"', '\\n')
+                end += 2
+            self.name = src[begin:end]
+            self.members = None
+            return end
+
+        if src[begin] != '(':
+            end = begin
+            while src[end] not in " \t\n)":
+                end += 1
+            self.name = src[begin:end]
+            self.members = None
+            return end
+
         begin += 1
         end = begin
         while src[end] not in " \t\n)":
             end += 1
         self.name = src[begin:end]
-        begin = end
         while True:
-            while src[begin] in " \t\n":
-                begin += 1
-            if src[begin] == ')':
-                return begin + 1
-            if src[begin] == '(':
-                sexp = SExp()
-                self.members.append(sexp)
-                self.simple = False
-                begin += sexp.parse(src[begin:], pfx = pfx + "  ")
-                continue
-            if src[begin] == '"':
-                end = begin + 1
-                while True:
-                    while src[end] not in '\\"':
-                        end += 1
-                    if src[end] == '"':
-                        end += 1
-                        break
-                    assert src[end:end+2] in ('\\\\', '\\"', '\\n')
-                    end += 2
-            else:
-                end = begin
-                while src[end] not in " \t\n)":
-                    end += 1
-            self.members.append(src[begin:end])
-            begin = end
+            while src[end] in " \t\n":
+                end += 1
+            if src[end] == ')':
+                break
+            sexp = SExp(None)
+            end += sexp.parse(src[end:])
+            self += sexp
+        return end + 1
 
-    def serialize(self):
+    def serialize(self, indent="  "):
         ''' Serialize recursively '''
-        if self.simple:
-            yield '(' + " ".join([self.name] + self.members) + ')'
-        else:
+        if self.members is None:
+            yield self.name
+        elif self.recursive:
             yield '(' + self.name
             for i in self.members:
-                if isinstance(i, SExp):
-                    for j in i.serialize():
-                        yield "  " + j
-                else:
-                    yield "  " + i
+                for j in i.serialize(indent):
+                    yield indent + j
             yield ')'
+        elif len(self.members) == 0:
+            yield '(' + self.name + ')'
+        else:
+            i = ' '.join(x.name for x in self.members)
+            yield '(' + self.name + ' ' + i + ')'
+
+def sortkey(s):
+    if s.name == "sheet":
+        for i in s:
+            if i.name == "property":
+                if i[0].name == '"Sheet file"':
+                    return s.name + " " + i[1].name
+    for i in s:
+        if i.name == "uuid":
+            s -= i
+            break
+    for i in s:
+        if i.name == "stroke":
+            if " ".join(i.serialize('')) == "(stroke (width 0) (type default) (color 0 0 0 0) )":
+                s -= i
+                break
+    low_x = 9e9
+    low_y = 9e9
+    coord = False
+    for i in s:
+        if i.name == "diameter":
+            if i[0].name != "0":
+                i[0].name = "0"
+        if i.name in (
+            "at",
+            "xy",
+        ):
+            low_x = min(low_x, float(i[0].name))
+            low_y = min(low_y, float(i[1].name))
+            coord = True
+    if coord:
+        t = "* %8.2f" % low_x + "%8.2f " % low_y + s.name
+        return t
+
+    return ' '.join(s.serialize())
+
+def polish_kicad_sch(fn):
+    print(fn)
+    sexp = SExp(None)
+    sexp.parse(open(fn).read())
+
+    m = sexp.members[4:]
+    sexp.members = sexp.members[:4]
+
+    for j in (
+        "title_block",
+        "lib_symbols",
+    ):
+        for i in m:
+            if i.name == j:
+                i.members = list(sorted(i.members, key=sortkey))
+                sexp += i
+
+    for i in sorted(m, key=sortkey):
+        if i.name not in (
+            "lib_symbols",
+            "title_block",
+            "sheet_instances",
+            "symbol_instances",
+        ):
+            sexp += i
+    last = None
+    if False:
+        for n, i in enumerate(sexp):
+            if i.name != last:
+                print("   ", n, i)
+                last = i.name
+    with open(fn, "w") as file:
+        file.write('(' + sexp.name + '\n')
+        for i in sexp:
+            if i.name in (
+                "lib_symbols",
+            ):
+                file.write('  (' + i.name + '\n')
+                for j in i:
+                    file.write('    ' + ' '.join(j.serialize("")) + '\n')
+                file.write('  )\n')
+            else:
+                file.write('  ' + ' '.join(i.serialize("")) + '\n')
+        file.write(')\n')
 
 def main():
     ''' ... '''
-    sexp = SExp()
-    sexp.parse(open("/critter/R1K/W/SEQ/SEQ_PROJ/SEQ_PROJ.kicad_sch").read())
 
-    with open("/tmp/_8", "w") as file:
-        for i in sexp.serialize():
-            print(i)
-            file.write(i + "\n")
+    import glob
+
+    for fn in sorted(glob.glob("/home/phk/Proj/R1000.HwDoc/Schematics/*/*.kicad_sch")):
+        polish_kicad_sch(fn)
+    for fn in sorted(glob.glob("/tmp/F/R1000.HwDoc/Schematics/*/*.kicad_sch")):
+        polish_kicad_sch(fn)
 
 if __name__ == "__main__":
     main()
