@@ -38,10 +38,11 @@ sys.path.append("../ImageProcessing")
 from sexp import SExp
 
 BRANCH = subprocess.check_output(["git", "branch"])
-BRANCH = BRANCH.split(b'\n')[0].decode("utf-8")
+BRANCH = BRANCH.split(b'\n', maxsplit=1)[0].decode("utf-8")
 BRANCH = BRANCH.split()[-1]
 
 def delete_matching(sexp, name, text):
+    ''' delete leave `name` if it matches the `text` '''
     for i in sexp:
         if i.name == name:
             if " ".join(i.serialize('')) == text:
@@ -49,6 +50,7 @@ def delete_matching(sexp, name, text):
                 return
 
 def delete_defaults(sexp):
+    ''' delete certain default value leaves '''
     delete_matching(
         sexp,
         "stroke",
@@ -61,6 +63,7 @@ def delete_defaults(sexp):
     )
 
 class KiCadSheet():
+    ''' A Kicad `.kicad_sch` file '''
     def __init__(self, filename):
         self.fullname = filename
         self.filename = filename.split("/")[-1]
@@ -74,15 +77,18 @@ class KiCadSheet():
         self.sort_lib_symbols()
 
     def delete(self, name):
+        ''' delete all leaves named `name` '''
         for i in list(self.sexp.find(name)):
             self.sexp -= i
 
     def sort_lib_symbols(self):
+        ''' Sort the symbols in lib_symbols '''
         i = self.sexp.find_first("lib_symbols")
         if i is not None:
             i.members = list(sorted(i.members, key=lambda x: x[0].name))
 
     def write(self):
+        ''' Write back to file (atomically) '''
         with open(self.fullname + "_", "w") as file:
             file.write('(' + self.sexp.name + '\n')
             for i in self.sexp:
@@ -100,13 +106,19 @@ class KiCadSheet():
         os.rename(self.fullname + "_", self.fullname)
 
 class Element():
+    ''' A schematic element, used for sorting them '''
     def __init__(self, sexp):
         self.sexp = sexp
+        self.create_sort_key()
 
+    def create_sort_key(self):
         low_x = 9e9
         low_y = 9e9
         coord = False
-        for i in sexp:
+        siz = None
+        for i in self.sexp:
+            if i.name == "size":
+                siz = "|".join(i.serialize(""))
             if i.name == "diameter":
                 if i[0].name != "0":
                     i[0].name = "0"
@@ -121,11 +133,14 @@ class Element():
             self.key = "* %8.2f" % low_x + "%8.2f " % low_y + self.sexp.name
         else:
             self.key = "|".join(self.sexp.serialize(""))
+        if siz:
+            self.key += "|" + siz
 
     def __lt__(self, other):
         return self.key < other.key
 
 class Board():
+    ''' A Kicad project directory '''
     def __init__(self, directory):
         self.dir = directory
         self.name = self.dir.split("/")[-1]
@@ -141,6 +156,7 @@ class Board():
             i.write()
 
     def read_files(self):
+        ''' Read the `.kicad_sch` files '''
         self.top = KiCadSheet(self.dir + "/" + self.name + ".kicad_sch")
         # polish_kicad_sch(self.dir + "/" + self.name + ".kicad_sch")
         self.pages = {}
@@ -150,6 +166,7 @@ class Board():
             self.pages[pgno] = sexp
 
     def fix_top_sheet(self):
+        ''' ... '''
         self.top.delete("symbol_instances")
         self.top.delete("sheet_instances")
         self.top.delete("text")
@@ -245,11 +262,15 @@ class Board():
                 coor_x += 10 * 25.4
 
     def fix_page_sheet(self, sexp):
+        ''' ... '''
         elems = []
         tmp = sexp.members
         sexp.members = []
         for i in tmp:
             delete_defaults(i)
+            for j in list(i.find("pin")):
+                for k in list(j.find("uuid")):
+                    j -= k
             for j in list(i.find("uuid")):
                 i -= j
             if i.name in (
@@ -269,8 +290,12 @@ class Board():
 def main():
     ''' ... '''
 
-    for i in sys.argv[1:]:
-        Board(i)
+    if len(sys.argv) > 1:
+        for i in sys.argv[1:]:
+            Board(i)
+    else:
+        for i in ("FIU", "IOC", "MEM32", "SEQ", "TYP", "VAL"):
+            Board(i)
 
 if __name__ == "__main__":
     main()
