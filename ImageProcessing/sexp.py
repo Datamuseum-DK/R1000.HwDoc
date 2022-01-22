@@ -139,14 +139,14 @@ class SExp():
         ''' Serialize recursively '''
         if self.members is None:
             yield self.name
+        elif len(self.members) == 0:
+            yield '(' + self.name + ')'
         elif self.recursive:
             yield '(' + self.name
             for i in self.members:
                 for j in i.serialize(indent):
                     yield indent + j
             yield ')'
-        elif len(self.members) == 0:
-            yield '(' + self.name + ')'
         else:
             i = ' '.join(x.name for x in self.members)
             yield '(' + self.name + ' ' + i + ')'
