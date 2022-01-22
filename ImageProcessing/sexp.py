@@ -123,9 +123,11 @@ class SExp():
         while src[end] not in " \t\n)":
             end += 1
         self.name = src[begin:end]
-        while True:
+        while end < len(src):
             while src[end] in " \t\n":
                 end += 1
+                if end == len(src):
+                    return end + 1
             if src[end] == ')':
                 break
             sexp = SExp(None)
