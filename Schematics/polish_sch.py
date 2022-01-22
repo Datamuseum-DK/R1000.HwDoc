@@ -37,9 +37,16 @@ sys.path.append("../ImageProcessing")
 
 from sexp import SExp
 
-BRANCH = subprocess.check_output(["git", "branch"])
-BRANCH = BRANCH.split(b'\n', maxsplit=1)[0].decode("utf-8")
-BRANCH = BRANCH.split()[-1]
+def find_branch():
+    ''' Ask git what branch we are on '''
+    gboutput = subprocess.check_output(["git", "branch"]).decode("utf-8")
+    for i in gboutput.split("\n"):
+        j = i.split()
+        if j[0] == "*":
+            return j[1]
+    return "UNKNOWN"
+
+BRANCH = find_branch()
 
 def delete_matching(sexp, name, text):
     ''' delete leave `name` if it matches the `text` '''
@@ -112,6 +119,7 @@ class Element():
         self.create_sort_key()
 
     def create_sort_key(self):
+        ''' To get deterministic order of items '''
         low_x = 9e9
         low_y = 9e9
         coord = False
