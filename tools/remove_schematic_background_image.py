@@ -7,7 +7,7 @@ from ImageProcessing import sexp
 def main():
      for fname in sorted(glob.glob("Schematics/*/*.kicad_sch")):
          print(fname)
-         pcb = sexp.SExp()
+         pcb = sexp.SExp(None)
          pcb.parse(open(fname).read())
          for i in pcb:
              if i.name == "image":
