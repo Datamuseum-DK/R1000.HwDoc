@@ -36,7 +36,6 @@ class SExp():
     ''' Painfully primitive s-exp handling '''
     def __init__(self, name, *vals):
         self.name = name
-        self.recursive = False
         if len(vals) == 1 and vals[0] is None:
             self.members = None
         else:
@@ -54,7 +53,6 @@ class SExp():
             child = SExp(child, None)
         assert isinstance(child, SExp)
         self.members.append(child)
-        self.recursive |= child.members is not None
         return self
 
     def __isub__(self, child):
@@ -62,6 +60,8 @@ class SExp():
         return self
 
     def __len__(self):
+        if self.members is None:
+            return 0
         return len(self.members)
 
     def __getitem__(self, idx):
@@ -141,7 +141,7 @@ class SExp():
             yield self.name
         elif len(self.members) == 0:
             yield '(' + self.name + ')'
-        elif self.recursive:
+        elif sum(len(x) for x in self.members):
             yield '(' + self.name
             for i in self.members:
                 for j in i.serialize(indent):
