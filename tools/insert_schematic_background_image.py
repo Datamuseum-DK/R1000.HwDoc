@@ -24,7 +24,7 @@ def main():
          sheet = i[-2]
          page_no = page_number(i[-3], i[-2])
          print(imgfile, "->", board, page_no)
-         pcb = SExp()
+         pcb = SExp(None)
          sch_name = "Schematics/%s/pg_%02d.kicad_sch" % (board, page_no)
          pcb.parse(open(sch_name).read())
          img = open(imgfile, "rb").read()
