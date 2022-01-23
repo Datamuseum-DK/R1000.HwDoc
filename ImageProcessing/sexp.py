@@ -32,6 +32,8 @@
 S-Expressions
 '''
 
+import sys
+
 class SExp():
     ''' Painfully primitive s-exp handling '''
     def __init__(self, name, *vals):
@@ -150,3 +152,12 @@ class SExp():
         else:
             i = ' '.join(x.name for x in self.members)
             yield '(' + self.name + ' ' + i + ')'
+
+def main():
+    ''' Beautification pipe '''
+    sexp = SExp(None)
+    sexp.parse(sys.stdin.read())
+    sys.stdout.write("\n".join(x for x in sexp.serialize()))
+
+if __name__ == "__main__":
+    main()
