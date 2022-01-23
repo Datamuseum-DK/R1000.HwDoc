@@ -5,6 +5,11 @@
 import os
 import sys
 
+# Setting PICTURE_PERFECT to Tru will hide KiCads pin numbers and names and draw
+# them explicitly, matching the original scanned schematics as closely as possible.
+
+PICTURE_PERFECT = False
+
 class Pin():
     def __init__(self, up, side, coord, direction, invert):
         self.up = up
@@ -45,10 +50,15 @@ class Pin():
             self.angle,
             length
         )
-        pname = self.name.replace('~', '_')
-        pname = pname.replace('>', 'CLK')
-        if pname[-1] != '_' and self.invert:
-            pname += "_"
+        if PICTURE_PERFECT:
+            pname = self.name.replace('~', '_')
+            pname = pname.replace('>', 'CLK')
+            if pname[-1] != '_' and self.invert:
+                pname += "_"
+        else:
+            pname = self.name.replace('>', 'CLK')
+            pname = pname.replace("~","")
+
         yield '      (name "%s" (effects (font (size 2.54 2.54))))' % pname
         yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
         yield '    )'
@@ -83,13 +93,6 @@ class PinTop(Pin):
                 x1 += 1
             self.number = "".join(lines[y][coord + 1: x1 + 1])
 
-    def _kicad_symbol(self):
-        coords = self.up.kicad_coords(self.coord, self.up.top - 3)
-        yield '    (pin %s line (at %.2f %.2f 270) (length 7.68)' % (self.direction, *coords)
-        yield '      (name "%s" (effects (font (size 2.54 2.54))))' % self.name
-        yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
-        yield '    )'
-
 class PinBottom(Pin):
     def __init__(self, up, coord, direction, invert, lines, numbers_left):
         super().__init__(up, "B", coord, direction, invert)
@@ -120,14 +123,6 @@ class PinBottom(Pin):
                 x1 += 1
             self.number = "".join(lines[y][coord + 1: x1 + 1])
 
-    def _kicad_symbol(self):
-        coords = self.up.kicad_coords(self.coord, self.up.bottom + 3)
-        yield '    (pin %s line (at %.2f %.2f 90) (length 7.68)' % (self.direction, *coords)
-        yield '      (name "%s" (effects (font (size 2.54 2.54))))' % self.name
-        yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
-        yield '    )'
-
-
 class PinLeft(Pin):
     def __init__(self, up, coord, direction, invert, lines):
         super().__init__(up, "L", coord, direction, invert)
@@ -149,13 +144,6 @@ class PinLeft(Pin):
             s.pop(-1)
         self.number = "".join(s)
 
-    def _kicad_symbol(self):
-        coords = self.up.kicad_coords(self.up.left - 3, self.coord)
-        yield '    (pin %s line (at %.2f %.2f 0) (length 7.68)' % (self.direction, *coords)
-        yield '      (name "%s" (effects (font (size 2.54 2.54))))' % self.name
-        yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
-        yield '    )'
-
 class PinRight(Pin):
     def __init__(self, up, coord, direction, invert, lines):
         super().__init__(up, "R", coord, direction, invert)
@@ -176,13 +164,6 @@ class PinRight(Pin):
         while s[-1] == ' ':
             s.pop(-1)
         self.number = "".join(s)
-
-    def _kicad_symbol(self):
-        coords = self.up.kicad_coords(self.up.right + 3, self.coord)
-        yield '    (pin %s line (at %.2f %.2f 180) (length 7.68)' % (self.direction, *coords)
-        yield '      (name "%s" (effects (font (size 2.54 2.54))))' % self.name
-        yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
-        yield '    )'
 
 class Chip():
 
@@ -401,7 +382,10 @@ class Chip():
 
     def kicad_symbol(self):
         yield '  (symbol "%s"' % self.symbol_name
-        yield '    (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)'
+        if PICTURE_PERFECT:
+            yield '    (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)'
+        else:
+            yield '     (pin_names (offset 1.016)) (in_bom yes) (on_board yes)'
         yield '    (property "Reference" "U" (id 0) (at %.2f %.2f 0)' % (
             *self.kicad_coords(self.xnn[0] + 1, self.xnn[1] - 2),
         )
@@ -430,20 +414,23 @@ class Chip():
         yield '      (effects (font (size 2.54 2.54)) (justify bottom))'
         yield '    )'
 
-        for a, x, y in sorted(self.alpha):
-            yield '    (text "%s" (at %.2f %.2f 0)' % (a, *self.kicad_coords(x, y))
-            yield '      (effects (font (size 2.54 2.54)))'
-            yield '    )'
-        #yield '    )'
+        yield '    (symbol \"%s_1_1\"' % self.symbol_name
 
-        yield '    (rectangle (start %.2f %.2f) (end %.2f %.2f)' % (
+        if PICTURE_PERFECT:
+            for a, x, y in sorted(self.alpha):
+                yield '      (text "%s" (at %.2f %.2f 0)' % (a, *self.kicad_coords(x, y))
+                yield '        (effects (font (size 2.54 2.54)))'
+                yield '      )'
+
+        yield '      (rectangle (start %.2f %.2f) (end %.2f %.2f)' % (
             *self.kicad_coords(self.left + .5, self.top + .5),
             *self.kicad_coords(self.right - .5, self.bottom - .5),
         )
-        yield '      (stroke (width 0)) (fill (type none))'
-        yield '    )'
+        yield '        (stroke (width 0)) (fill (type none))'
+        yield '      )'
         for i in self.pins:
             yield from i.kicad_symbol()
+        yield '    )'
         yield '  )'
 
     def signature(self):
