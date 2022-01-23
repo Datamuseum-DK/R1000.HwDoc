@@ -73,6 +73,7 @@ class KiCadSheet():
     ''' A Kicad `.kicad_sch` file '''
     def __init__(self, filename):
         self.fullname = filename
+        self.dir = filename.split("/")[-2]
         self.filename = filename.split("/")[-1]
         self.sexp = SExp(None)
         self.sexp.parse(open(filename).read())
@@ -80,7 +81,7 @@ class KiCadSheet():
         self.title = self.title.replace("\\\\n", "\n")
         self.title = self.title.replace('"', '')
         self.uuid = self.sexp.find_first("uuid")[0].name
-        print("R", self.filename, [self.uuid], [self.title])
+        print("R", self.dir, self.filename, [self.title])
         self.sort_lib_symbols()
 
     def delete(self, name):
