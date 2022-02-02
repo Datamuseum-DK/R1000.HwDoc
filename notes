@@ -1,0 +1,16 @@
+Clockstops
+----------
+
+		SEQ             TYP             VAL             FIU             IOC
+	---------------------------------------------------------------------------------------
+	GB226   Q.ECC_STOP.EN   T.ECC_STOP.EN   VCC.ECC_STOP.EN F.ERCC_EN       >I.ECC_STOP.EN
+	GB274   Q.STOP~0        T.MER_STOP~     V.MEM_STOP~     >F.CLOCKSTOP~0  I.CLOCKSTOP~0
+	GB275   Q.STOP~1        T.SYS_STOP~     V.SYS_STOP~     F.CLOCKSTOP~1   >I.CLOCKSTOP~1
+	GB276   Q.STOP~2        T.SPARE_STOP~   V.SPARE_STOP~   F.CLOCKSTOP~2   I.CLOCKSTOP~2
+	GB277   Q.STOP~3        >T.TYPE0_STOP~  V.TYPE0_STOP~   F.CLOCKSTOP~3   I.CLOCKSTOP~3
+	GB278   Q.STOP~4        >T.TYPE1_STOP~  V.TYPE1_STOP~   F.CLOCKSTOP~4   I.CLOCKSTOP~4
+	GB281   >Q.STOP~5       T.FIELD_STOP~   V.FIELD_STOP~   F.CLOCKSTOP~5   I.CLOCKSTOP~5
+	GB282   >Q.STOP~6       T.MICRO_STOP~   V.MICRO_STOP~   F.CLOCKSTOP~6   I.CLOCKSTOP~6
+	GB283   >Q.STOP~7       T.DHMAC_STOP~   V.BHMAC_STOP~   F.CLOCKSTOP~7   I.CLOCKSTOP~7
+	GB284   Q.ECC_CLKSTOP   T.ECC_STOP      V.ECC_STOP      F.LATE_CLKSTP   >I.ECC_ERROR
+
