@@ -7,6 +7,7 @@ help:
 	@echo "	RemoveImages	- Remove background images from schematics"
 	@echo "	AddImages	- Add background images to schematics"
 	@echo "	RebuildSymbols	- Rebuild KiCad Symbols"
+	@echo "	NetLists	- Rebuild KiCad Netlists"
 	@echo
 	@echo "If you want the bulk storage elsewhere, create symlinks"
 	@echo "to CacheDir and WorkDir first."
@@ -69,6 +70,13 @@ AddImages:
 RebuildSymbols:
 	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
 
+NetLists:
+	(cd Schematics/FIU && eeschema_do netlist FIU.kicad_sch .)
+	(cd Schematics/IOC && eeschema_do netlist IOC.kicad_sch .)
+	(cd Schematics/MEM32 && eeschema_do netlist MEM32.kicad_sch .)
+	(cd Schematics/SEQ && eeschema_do netlist SEQ.kicad_sch .)
+	(cd Schematics/TYP && eeschema_do netlist TYP.kicad_sch .)
+	(cd Schematics/VAL && eeschema_do netlist VAL.kicad_sch .)
 
 t_fetch:
 	[ -s CacheDir/${ARTIFACT}.${EXT} ] || ( \
