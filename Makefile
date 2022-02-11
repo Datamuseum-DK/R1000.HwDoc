@@ -70,13 +70,15 @@ AddImages:
 RebuildSymbols:
 	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
 
+EE_DO_OPTS = --wait_start 10
+
 NetLists:
-	(cd Schematics/FIU && eeschema_do netlist FIU.kicad_sch .)
-	(cd Schematics/IOC && eeschema_do netlist IOC.kicad_sch .)
-	(cd Schematics/MEM32 && eeschema_do netlist MEM32.kicad_sch .)
-	(cd Schematics/SEQ && eeschema_do netlist SEQ.kicad_sch .)
-	(cd Schematics/TYP && eeschema_do netlist TYP.kicad_sch .)
-	(cd Schematics/VAL && eeschema_do netlist VAL.kicad_sch .)
+	(cd Schematics/FIU && eeschema_do ${EE_DO_OPTS} netlist FIU.kicad_sch .)
+	(cd Schematics/IOC && eeschema_do ${EE_DO_OPTS} netlist IOC.kicad_sch .)
+	(cd Schematics/MEM32 && eeschema_do ${EE_DO_OPTS} netlist MEM32.kicad_sch .)
+	(cd Schematics/SEQ && eeschema_do ${EE_DO_OPTS} netlist SEQ.kicad_sch .)
+	(cd Schematics/TYP && eeschema_do ${EE_DO_OPTS} netlist TYP.kicad_sch .)
+	(cd Schematics/VAL && eeschema_do ${EE_DO_OPTS} netlist VAL.kicad_sch .)
 
 t_fetch:
 	[ -s CacheDir/${ARTIFACT}.${EXT} ] || ( \
