@@ -70,7 +70,7 @@ AddImages:
 RebuildSymbols:
 	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
 
-EE_DO_OPTS = --wait_start 10
+EE_DO_OPTS = --wait_start 20
 
 NetLists:
 	(cd Schematics/FIU && eeschema_do ${EE_DO_OPTS} netlist FIU.kicad_sch .)
