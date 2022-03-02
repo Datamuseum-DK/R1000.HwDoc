@@ -722,7 +722,7 @@
   (bus_entry (at 86.36 340.36) (size -2.54 2.54) )
   (bus_entry (at 86.36 345.44) (size -2.54 2.54) )
   (bus_entry (at 86.36 350.52) (size -2.54 2.54) )
-  (label "T.ADR.SPACE[0..2]" (at 93.98 15.24 0) (effects (font (size 2.54 2.54) ) (justify left bottom) ) )
+  (global_label "T.ADR.SPACE[0..2]" (shape bidirectional) (at 93.98 15.24 0) (fields_autoplaced) (effects (font (size 2.54 2.54) ) (justify left) ) (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 133.0355 15.0813 0) (effects (font (size 2.54 2.54) ) (justify left) ) ) )
   (label "T.ADR.NAME[0..31]" (at 93.98 116.84 0) (effects (font (size 2.54 2.54) ) (justify left bottom) ) )
   (label "T.ADR.OFFS[0..31]" (at 93.98 274.32 0) (effects (font (size 2.54 2.54) ) (justify left bottom) ) )
   (text "ADDRESS SPACE ENCODINGS\n-----------------------\n000 RESERVED	100 DATA\n001 CONTROL		101 IMPORT\n010 TYPE		110 CODE\n011 QUEUE		111 SYSTEM" (at 99.06 48.26 0) (effects (font (size 2.54 2.54) ) (justify left bottom) ) )
