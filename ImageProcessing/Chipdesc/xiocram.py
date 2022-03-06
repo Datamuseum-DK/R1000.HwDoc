@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-''' 64 bit '374-style register '''
+''' 32Kx8x4 SRAM '''
 
 from Chipdesc.chip import Chip
 
 class XIOCRAM(Chip):
 
-    ''' 64 bit '374-style register '''
+    ''' 32Kx8x4 SRAM '''
 
     symbol_name = "XIOCRAM"
 

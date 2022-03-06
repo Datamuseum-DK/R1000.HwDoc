@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-''' 64 bit '374-style register '''
+''' 1024x64 SRAM '''
 
 from Chipdesc.chip import Chip
 
 class XRFRAM(Chip):
 
-    ''' 64 bit '374-style register '''
+    ''' 1024x64 SRAM '''
 
     symbol_name = "XRFRAM"
 
