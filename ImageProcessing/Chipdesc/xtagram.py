@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-''' 1024x64 SRAM '''
+''' 16K x 64 SRAM '''
 
 from Chipdesc.chip import Chip
 
 class XTAGRAM(Chip):
 
-    ''' 1024x64 SRAM '''
+    ''' 16K x 64 SRAM '''
 
     symbol_name = "XTAGRAM"
 
