@@ -200,8 +200,20 @@ class Chip():
         for i in self.kicad_symbol():
             fo.write(i + "\n")
 
-        if not self.checked:
+        with open("/tmp/%s_pins.hh" % self.symbol_name, "w") as file:
+            for pin in self.pins:
+                file.write("#define %s_PIN_%s pin%s\n" % (self.symbol_name, pin.name, pin.number))
+            file.write("#ifdef ANON_PINS\n")
+            for pin in self.pins:
+                file.write("    #define PIN_%s %s_PIN_%s\n" % (pin.name, self.symbol_name, pin.name))
+            file.write("#endif\n")
+            self.other_macros(file)
+
+        if False and not self.checked:
             print(self.pyfn, self.symbol_name, "NOT CHECKED")
+
+    def other_macros(self, file):
+        return
 
     def lex_symbol(self):
         verbose = False
@@ -221,6 +233,27 @@ class Chip():
             lines.pop(0)
         while len(lines[-1]) == 0:
             lines.pop(-1)
+
+        apin = 1
+        for lineno, line in enumerate(lines):
+             for a, b, c, d in (
+                 ("%|", " %|", "  %|", "%d|"),
+                 ("%v", " %v", "  %v", "%dv"),
+                 ("|%", "|%", "|%", "|%d"),
+             ):
+                 if apin < 10:
+                     while a in line:
+                         line = line.replace(a, d % apin, 1)
+                         apin += 1
+                 if apin < 100:
+                     while a in line:
+                         line = line.replace(b, d % apin, 1)
+                         apin += 1
+                 else:
+                     while b in line:
+                         line = line.replace(c, d % apin, 1)
+                         apin += 1
+             lines[lineno] = line
 
         # Split to list of chars
         i = []
