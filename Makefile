@@ -8,6 +8,7 @@ help:
 	@echo "	AddImages	- Add background images to schematics"
 	@echo "	RebuildSymbols	- Rebuild KiCad Symbols"
 	@echo "	NetLists	- Rebuild KiCad Netlists"
+	@echo "	NetListSeq (&c)	- Rebuild KiCad Netlist for single board"
 	@echo
 	@echo "If you want the bulk storage elsewhere, create symlinks"
 	@echo "to CacheDir and WorkDir first."
@@ -72,12 +73,25 @@ RebuildSymbols:
 
 EE_DO_OPTS = --wait_start 20
 
-NetLists:
+NetLists: NetListFiu NetListIoc NetListMem32 NetListSeq NetListTyp NetListVal
+	@true
+
+NetListFiu:
 	(cd Schematics/FIU && eeschema_do ${EE_DO_OPTS} netlist FIU.kicad_sch .)
+
+NetListIoc:
 	(cd Schematics/IOC && eeschema_do ${EE_DO_OPTS} netlist IOC.kicad_sch .)
+
+NetListMem32:
 	(cd Schematics/MEM32 && eeschema_do ${EE_DO_OPTS} netlist MEM32.kicad_sch .)
+
+NetListSeq:
 	(cd Schematics/SEQ && eeschema_do ${EE_DO_OPTS} netlist SEQ.kicad_sch .)
+
+NetListTyp:
 	(cd Schematics/TYP && eeschema_do ${EE_DO_OPTS} netlist TYP.kicad_sch .)
+
+NetListVal:
 	(cd Schematics/VAL && eeschema_do ${EE_DO_OPTS} netlist VAL.kicad_sch .)
 
 t_fetch:
