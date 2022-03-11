@@ -24,7 +24,7 @@ class XREG(Chip):
                 self.symbol += '  %|    xnn    |%\n'
             else:
                 self.symbol += '  %|           |%\n'
-            self.symbol += '-->+%-4s   %4s+===\n' % ("I%d" % i, "Y%d" % i)
+            self.symbol += '-->+%-4s   %4s+===\n' % ("I%d" % (i-1), "Y%d" % (i-1))
         self.symbol += '   |    _      |\n'
         self.symbol += '   +-----------+\n'
         super().__init__()
@@ -41,7 +41,7 @@ class XREG(Chip):
         file.write("#ifdef ANON_PINS\n")
         file.write("#define PIN_PAIRS(macro)")
         for i in range(1, self.xreg_npins + 1):
-            file.write(" \\\n\tmacro(%d, PIN_I%d, PIN_Y%d)" % (self.xreg_npins - i, i, i))
+            file.write(" \\\n\tmacro(%d, PIN_I%d, PIN_Y%d)" % (self.xreg_npins - i, (i-1), (i-1)))
         file.write("\n")
         file.write("#endif\n")
            
