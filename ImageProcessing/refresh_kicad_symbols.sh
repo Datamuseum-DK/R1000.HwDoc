@@ -5,6 +5,8 @@
 
 set -e
 
+rm -f KiCadFiles/*_.txt
+
 # Rebuild Chipdesc/chipdict.py
 
 (
@@ -38,13 +40,13 @@ if __name__ == "__main__":
             print("Chip Sig Collision:", j)
 ' >> Chipdesc/chipdict.py
 
-env PYTHONPATH=. python3 Chipdesc/chipdict.py
-
 # Rebuild Kicad symbol library
 (
 	cd KiCadFiles
-	sh -x build.sh
+	sh build.sh
 )
+
+# env PYTHONPATH=. python3 Chipdesc/chipdict.py
 
 cp KiCadFiles/R1000.kicad_sym ../Schematics
 
