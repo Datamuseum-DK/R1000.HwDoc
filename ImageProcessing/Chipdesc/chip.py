@@ -201,6 +201,7 @@ class Chip():
             fo.write(i + "\n")
 
         with open("/tmp/%s_pins.hh" % self.symbol_name, "w") as file:
+            file.write("// Machine-generated, see R1000.HwDoc/ImageProcessing/Chipdesc/chip.py\n")
             for pin in self.pins:
                 file.write("#define %s_PIN_%s pin%s\n" % (self.symbol_name, pin.name, pin.number))
             file.write("#ifdef ANON_PINS\n")
