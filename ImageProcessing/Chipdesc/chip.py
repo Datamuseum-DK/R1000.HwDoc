@@ -44,6 +44,9 @@ class Pin():
         ):
             retval = retval.replace(a, b)
         return retval
+        if not self.invert:
+            return self.name
+        return self.name + "_"
 
     def kicad_symbol(self):
         length = 2.5 * 2.54
