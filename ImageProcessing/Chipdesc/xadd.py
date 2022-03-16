@@ -43,11 +43,25 @@ class XADD(Chip):
         file.write("\n")
         file.write("\n")
         file.write("#ifdef ANON_PINS\n")
-        file.write("#define PIN_SETS_IN(macro)")
+
+        file.write("\n")
+        file.write("#define PIN_SETS_A(macro)")
         for i in range(0, self.xreg_npins):
             file.write(" \\\n\tmacro(%d, PIN_A%d)" % (self.xreg_npins - (i+1), i))
+        file.write("\n")
+
+        file.write("\n")
+        file.write("#define PIN_SETS_B(macro)")
+        for i in range(0, self.xreg_npins):
             file.write(" \\\n\tmacro(%d, PIN_B%d)" % (self.xreg_npins - (i+1), i))
+
+        file.write("\n")
+        file.write("#define PIN_SETS_IN(macro)")
+        file.write(" \\\n\tPIN_SETS_A(macro)")
+        file.write(" \\\n\tPIN_SETS_B(macro)")
         file.write(" \\\n\tmacro(0, PIN_CI)\n")
+        file.write("\n")
+
         file.write("\n")
         file.write("#define PIN_SETS_OUT(macro)")
         file.write(" \\\n\tmacro(%d, PIN_CO)" % self.xreg_npins)
