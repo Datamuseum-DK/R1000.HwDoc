@@ -33,8 +33,6 @@ import glob
 import sys
 import subprocess
 
-sys.path.append("../ImageProcessing")
-
 from sexp import SExp
 
 def find_branch():
