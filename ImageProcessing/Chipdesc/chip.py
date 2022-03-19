@@ -62,7 +62,7 @@ class Pin():
                 pname += "_"
         else:
             pname = self.name.replace('>', 'CLK')
-            pname = pname.replace("~","")
+            # pname = pname.replace("~","")
 
         yield '      (name "%s" (effects (font (size 2.54 2.54))))' % pname
         yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
@@ -140,7 +140,7 @@ class PinLeft(Pin):
         for x1 in range(x0 + 1, up.right):
             if lines[coord][x1] == ' ':
                 break
-        self.name = "".join(lines[coord][x0:x1])
+        self.name = "".join(lines[coord][x0:x1]).replace("xnn","")
 
         s = list(lines[coord - 1][:up.left])
         while s[0] == ' ':
@@ -161,7 +161,7 @@ class PinRight(Pin):
         for x0 in range(x1 - 1, up.left, -1):
             if lines[coord][x0] == ' ':
                 break
-        self.name = "".join(lines[coord][x0+1:x1+1])
+        self.name = "".join(lines[coord][x0+1:x1+1]).replace("xnn","")
 
         s = list(lines[coord - 1][up.right + 1:])
         while s[0] == ' ':
@@ -182,6 +182,9 @@ class Chip():
         self.value = None
 
         self.lex_symbol()
+        i = [x.name for x in self.pins]
+        if len(set(i)) != len(self.pins):
+            print("DUPLICATE PIN NAMES", self.symbol_name, list(sorted(i)))
 
     def __str__(self):
         return "<Chip " + self.symbol_name + ">"
