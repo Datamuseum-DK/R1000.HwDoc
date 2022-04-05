@@ -20,7 +20,7 @@ class F579(Chip):
    |  v        |
    | CLK CS OE |
    |           |15
- 20|        C0 o-->
+ 20|        CO o-->
 -->oMR         |
  19|           |10
 -->oSR      IO0+===

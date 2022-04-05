@@ -62,14 +62,12 @@ class Pin():
             self.angle,
             length
         )
+        pname = self.name
         if PICTURE_PERFECT:
-            pname = self.name.replace('~', '_')
+            pname = pname.replace('~', '_')
             pname = pname.replace('>', 'CLK')
             if pname[-1] != '_' and self.invert:
                 pname += "_"
-        else:
-            pname = self.name.replace('>', 'CLK')
-            # pname = pname.replace("~","")
 
         yield '      (name "%s" (effects (font (size 2.54 2.54))))' % pname
         yield '      (number "%s" (effects (font (size 2.54 2.54))))' % self.number
