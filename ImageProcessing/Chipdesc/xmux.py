@@ -12,27 +12,33 @@ class XMUX(Chip):
         self.xreg_npins = npins
         self.symbol_name = "XMUX%d" % npins
         self.symbol = ''
-        self.symbol += '      |  |\n'
-        self.symbol += '      |  |\n'
-        self.symbol += '     %v %v\n'
-        self.symbol += '   +--+--o--+\n'
+        self.symbol += '   +--------+\n'
         self.symbol += '   |        |\n'
-        self.symbol += '   |  S  E  |\n'
 
         for i in range(npins):
-            if not i:
+            if i == 0:
                 self.symbol += '  %|        |%\n'
                 self.symbol += '-->+%-4s INVo<--\n' % ("A%d" % i)
+            elif i == 1:
+                self.symbol += '  %|        |%\n'
+                self.symbol += '-->+%-4s   S+<--\n' % ("A%d" % i)
+            elif i == 2:
+                self.symbol += '  %|        |%\n'
+                self.symbol += '-->+%-4s   Eo<--\n' % ("A%d" % i)
+            elif i == 3:
+                self.symbol += '  %|        |%\n'
+                self.symbol += '-->+%-4s  OEo<--\n' % ("A%d" % i)
+            elif i == (npins - 2):
+                self.symbol += '  %|    xnn |\n'
+                self.symbol += '-->+%-4s    |\n' % ("A%d" % i)
             else:
                 self.symbol += '  %|        |\n'
                 self.symbol += '-->+%-4s    |\n' % ("A%d" % i)
         self.symbol += '   |        |\n'
         for i in range(npins):
-            if i == npins - 1:
-                self.symbol += '  %|  xnn   |%\n'
-            else:
-                self.symbol += '  %|        |%\n'
-            self.symbol += '-->+%-3s  %3s+-->\n' % (("B%d" % i), ("Y%d" % i))
+            self.symbol += '  %|        |%\n'
+            self.symbol += '-->+%-3s  %3s+===\n' % (("B%d" % i), ("Y%d" % i))
+        self.symbol += '   |        |\n'
         self.symbol += '   |  _     |\n'
         self.symbol += '   +--------+\n'
         super().__init__()
@@ -57,3 +63,6 @@ if __name__ == "__main__":
     XMUX(6).main()
     XMUX(7).main()
     XMUX(16).main()
+    XMUX(20).main()
+    XMUX(24).main()
+    XMUX(32).main()

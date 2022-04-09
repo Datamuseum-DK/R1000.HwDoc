@@ -4,56 +4,70 @@
 
 from Chipdesc.chip import Chip, Pin
 
-class XALU8(Chip):
+class XALUN(Chip):
 
-    ''' two 74x181 - Arithmetic Logic Unit '''
+    ''' N 74x181 - Arithmetic Logic Unit '''
 
-    symbol_name = "XALU8"
+    def __init__(self, width):
+        self.symbol_name = "XALU%d" % width
+        right = [
+            "   |%",
+            " COo-->",
+            "   |%",
+            "A=B+-->",
+            "   |",
+            "   |%",
+            "  M+<--",
+            "   |%",
+            " S0+<--",
+            "   |%",
+            " S1+<--",
+            "   |%",
+            " S2+<--",
+            "   |%",
+            " S3+<--",
+        ]
+        left = [
+            "   |   ",
+            "   |   ",
+            "   |   ",
+        ]
+        for i in range(width):
+            left.append("  %|   ")
+            left.append("-->+A%-2d" % i)
 
-    checked = "VAL 0040"
+        left.append("   |   ")
 
-    symbol = '''
-   +--------------+
-   |              |26
-   |            COo-->
-   |              |27
-  1|           A=B+-->
--->+A0            |
-  2|              |28
--->+A1           M+<---
-  3|              |29
--->+A2          S0+<---
-  4|              |30
--->+A3          S1+<---
-  5|              |31
--->+A4          S2+<---
-  6|              |32
--->+A5          S3+<---
-  7|              |
--->+A6            |17
-  8|            Y0+-->
--->+A7            |18
-   |            Y1+-->
-  9|              |19
--->+B0          Y2+-->
- 10|              |20
--->+B1          Y3+-->
- 11|              |21
--->+B2          Y4+-->
- 12|              |22
--->+B3          Y5+-->
- 13|              |23
--->+B4          Y6+-->
- 14|              |24
--->+B5          Y7+-->
- 15|              |
--->+B6            |
- 16|     xnn      |25
--->+B7          CIo<--
-   |              |
-   |    _         |
-   +--------------+
-'''
+        for i in range(width):
+            left.append("  %|   ")
+            left.append("-->+B%-2d" % i)
+
+        while len(right) < len(left) - (2 * width + 4):
+            right.append("   |")
+
+        for i in range(width):
+            right.append("   |%   ")
+            right.append("%3s+-->" % ("Y%d" % i))
+
+        right.append("   |")
+        right.append("   |")
+        right.append("   |%")
+        right.append(" CIo<--")
+
+        self.symbol = ['   +--------------+']
+        for i, j in zip(left, right):
+            self.symbol.append(i + "        " + j)
+        self.symbol.append('   |              |')
+        self.symbol.append('   |   _          |')
+        self.symbol.append('   +--------------+')
+
+        self.symbol[-5] = self.symbol[-5][:9] + "xnn" + self.symbol[-5][12:]
+
+        self.symbol = "\n".join(self.symbol)
+
+        super().__init__()
 
 if __name__ == "__main__":
-    XALU8().main()
+    XALUN(8).main()
+    XALUN(16).main()
+    XALUN(20).main()
