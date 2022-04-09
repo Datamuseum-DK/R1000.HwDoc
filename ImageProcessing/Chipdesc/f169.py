@@ -8,35 +8,41 @@ class F169(Chip):
 
     ''' 74x169 - Synchronous 4-Bit Bidirectional Counters '''
 
-    symbol_name = "F169"
+    def __init__(self, width):
 
-    checked = "TYP 0018"
+        if width == 4:
+            self.symbol_name = "F169"
+        else:
+            self.symbol_name = "F169X%d" % (width // 4)
 
-    symbol = '''
-      |  |  |
-      |  |  |
-     2v 9v 1v
-   +--+--o--+--+
-   |  v        |
-   | CLK LD UP |
-   |           |15
-   |         COo-->
-  6|           |11
--->+D0       Q0+-->
-  5|           |12
--->+D1       Q1+-->
-  4|           |13
--->+D2       Q2+-->
-  3|           |14
--->+D3       Q3+-->
-  7|           |
--->oENP        |
- 10|           |
--->oENT xnn    |
-   |           |
-   |    _      |
-   +-----------+
-'''
+        self.checked = "TYP 0018"
+
+        lines = []
+        lines.append("      |  |  |")
+        lines.append("      |  |  |")
+        lines.append("     %v %v %v")
+        lines.append("   +--+--o--+--+")
+        lines.append("   |  v        |")
+        lines.append("   | CLK LD UP |")
+        lines.append("   |           |%")
+        lines.append("   |         COo-->")
+        for i in range(width):
+            lines.append("  %|           |%")
+            lines.append("-->+D%-2d     %3s+-->" % (i, "Q%d" % i))
+        lines.append("  %|           |")
+        lines.append("-->oENP        |")
+        lines.append("  %|           |")
+        lines.append("-->oENT xnn    |")
+        lines.append("   |           |")
+        lines.append("   |    _      |")
+        lines.append("   +-----------+")
+
+        self.symbol = "\n".join(lines)
+
+        super().__init__()
 
 if __name__ == "__main__":
-    F169().main()
+    F169(4).main()
+    F169(8).main()
+    F169(16).main()
+    F169(20).main()

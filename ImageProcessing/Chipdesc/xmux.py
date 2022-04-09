@@ -62,6 +62,7 @@ class XMUX(Chip):
 if __name__ == "__main__":
     XMUX(6).main()
     XMUX(7).main()
+    XMUX(12).main()
     XMUX(16).main()
     XMUX(20).main()
     XMUX(24).main()
