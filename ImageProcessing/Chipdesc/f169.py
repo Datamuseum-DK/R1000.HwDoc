@@ -44,5 +44,6 @@ class F169(Chip):
 if __name__ == "__main__":
     F169(4).main()
     F169(8).main()
+    F169(12).main()
     F169(16).main()
     F169(20).main()
