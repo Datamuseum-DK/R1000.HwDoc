@@ -331,6 +331,7 @@ class Chip():
                     "^|v": "bidirectional",
                     "^||": "output",
                     "===": "tri_state",
+                    "ooo": "open_collector",
                 }[s]
                 lines[self.top-3][x] = lines[self.top-2][x] = lines[self.top-1][x] = ' '
                 self.pins.append(PinTop(self, x, dir, i, lines, top_numbers_left))
@@ -346,6 +347,7 @@ class Chip():
                     "^|v": "bidirectional",
                     "||v": "output",
                     "===": "tri_state",
+                    "ooo": "open_collector",
                 }[s]
                 lines[self.bottom+1][x] = lines[self.bottom+2][x] = lines[self.bottom+3][x] = ' '
                 self.pins.append(PinBottom(self, x, dir, i, lines, bottom_numbers_left))
@@ -363,6 +365,7 @@ class Chip():
                     "<->": "bidirectional",
                     "<--": "output",
                     "===": "tri_state",
+                    "ooo": "open_collector",
                 }[s]
                 lines[y][self.left-3] = lines[y][self.left-2] = lines[y][self.left-1] = ' '
                 self.pins.append(PinLeft(self, y, dir, i, lines))
@@ -378,6 +381,7 @@ class Chip():
                     "<->": "bidirectional",
                     "-->": "output",
                     "===": "tri_state",
+                    "ooo": "open_collector",
                 }[s]
                 lines[y][self.right+1] = lines[y][self.right+2] = lines[y][self.right+3] = ' '
                 self.pins.append(PinRight(self, y, dir, i, lines))
