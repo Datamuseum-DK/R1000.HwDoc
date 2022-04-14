@@ -50,5 +50,39 @@ class F652(Chip):
         self.pins.append(Pin(2, "21", "OEA", "T", True, "I"))
         self.pins.append(Pin(6, "3", "OEB", "T", True, "I"))
 
+
+class F652X(Chip):
+
+    def __init__(self, bits):
+        self.symbol_name = "F652_%d" % bits
+
+        i = []
+        
+        i.append("   +----------+")
+        i.append("  %|          |%")
+        i.append("-->oOEA    OEBo<--")
+        i.append("  %|          |%")
+        i.append("-->+CBA    CAB+<--")
+        i.append("  %|          |%")
+        i.append("-->+SBA    SAB+<--")
+        i.append("   |          |")
+        i.append("   |          |")
+        for j in range(bits):
+            if j == bits - 1:
+                 i.append("  %|   xnn    |%")
+            else:
+                 i.append("  %|          |%")
+            i.append("===+A%-2d    %3s+===" % (j, "B%d" % j))
+        i.append("   |          |")
+        i.append("   |  _       |")
+        i.append("   +----------+")
+
+        self.symbol = "\n".join(i)
+
+        super().__init__()
+
+
 if __name__ == "__main__":
     F652().main()
+    F652X(9).main()
+    F652X(64).main()
