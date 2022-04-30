@@ -71,28 +71,41 @@ AddImages:
 RebuildSymbols:
 	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
 
-EE_DO_OPTS = --wait_start 20
 
 NetLists: NetListFiu NetListIoc NetListMem32 NetListSeq NetListTyp NetListVal
 	@true
 
 NetListFiu:
-	(cd Schematics/FIU && eeschema_do ${EE_DO_OPTS} netlist FIU.kicad_sch .)
+	${MAKE} kicad_auto BOARD=FIU KIAUTO=netlist
 
 NetListIoc:
-	(cd Schematics/IOC && eeschema_do ${EE_DO_OPTS} netlist IOC.kicad_sch .)
+	${MAKE} kicad_auto BOARD=IOC KIAUTO=netlist
 
 NetListMem32:
-	(cd Schematics/MEM32 && eeschema_do ${EE_DO_OPTS} netlist MEM32.kicad_sch .)
+	${MAKE} kicad_auto BOARD=MEM32 KIAUTO=netlist
 
 NetListSeq:
-	(cd Schematics/SEQ && eeschema_do ${EE_DO_OPTS} netlist SEQ.kicad_sch .)
+	${MAKE} kicad_auto BOARD=SEQ KIAUTO=netlist
 
 NetListTyp:
-	(cd Schematics/TYP && eeschema_do ${EE_DO_OPTS} netlist TYP.kicad_sch .)
+	${MAKE} kicad_auto BOARD=TYP KIAUTO=netlist
 
 NetListVal:
-	(cd Schematics/VAL && eeschema_do ${EE_DO_OPTS} netlist VAL.kicad_sch .)
+	${MAKE} kicad_auto BOARD=VAL KIAUTO=netlist
+
+ERC:
+	${MAKE} kicad_auto BOARD=FIU KIAUTO=run_erc
+	${MAKE} kicad_auto BOARD=IOC KIAUTO=run_erc
+	${MAKE} kicad_auto BOARD=SEQ KIAUTO=run_erc
+	${MAKE} kicad_auto BOARD=MEM32 KIAUTO=run_erc
+	${MAKE} kicad_auto BOARD=TYP KIAUTO=run_erc
+	${MAKE} kicad_auto BOARD=VAL KIAUTO=run_erc
+
+#EE_DO_OPTS = --wait_start 60 --time_out_scale 30 -v
+EE_DO_OPTS = -v
+
+kicad_auto:
+	(cd Schematics/${BOARD} && eeschema_do ${EE_DO_OPTS} ${KIAUTO} ${BOARD}.kicad_sch .)
 
 t_fetch:
 	[ -s CacheDir/${ARTIFACT}.${EXT} ] || ( \
