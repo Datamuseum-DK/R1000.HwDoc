@@ -1,11 +1,11 @@
 (kicad_sch
-  (version 20211123)
+  (version 20220126)
   (generator eeschema)
   (uuid 20011966-60ed-5e4e-0fa9-1499085a8295)
   (paper "User" 584.2 378.46)
   (title_block (title "POWER AND GROUND FINGERS\\nAND BYPASS CAPACITORS") (date "22-MAR-90") (rev "1.0") (comment 1 "VALUE") (comment 2 "232-003063") (comment 3 "S400") (comment 4 "RELEASED") )
   (lib_symbols
-    (symbol "r1000:GB" (pin_numbers hide) (pin_names (offset 0) hide ) (in_bom yes) (on_board yes) (property "Reference" "GB" (id 0) (at 3.81 0 0) (effects (font (size 2.54 2.54) ) (justify left) ) ) (property "Value" "GB" (id 1) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (property "Footprint" "" (id 2) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (property "Datasheet" "" (id 3) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (symbol "GB_0_1" (polyline (pts (xy 2.54 0) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 2.54 0) ) (stroke (width 0.1524) (type default) (color 0 0 0 0) ) (fill (type none) ) ) ) (symbol "GB_1_1" (pin bidirectional line (at 0 0 0) (length 2.54) (name "" (effects (font (size 2.54 2.54) ) ) ) (number "1" (effects (font (size 2.54 2.54) ) ) ) ) ) )
+    (symbol "r1000:GB" (pin_numbers hide) (pin_names (offset 0) hide ) (in_bom yes) (on_board yes) (property "Reference" "GB" (id 0) (at 3.81 0 0) (effects (font (size 2.54 2.54) ) (justify left) ) ) (property "Value" "GB" (id 1) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (property "Footprint" "" (id 2) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (property "Datasheet" "" (id 3) (at 0 0 0) (effects (font (size 1.27 1.27) ) hide ) ) (symbol "GB_0_1" (polyline (pts (xy 2.54 0) (xy 3.81 1.27) (xy 3.81 -1.27) (xy 2.54 0) ) (stroke (width 0.1524) (type default) ) (fill (type none) ) ) ) (symbol "GB_1_1" (pin bidirectional line (at 0 0 0) (length 2.54) (name "" (effects (font (size 2.54 2.54) ) ) ) (number "1" (effects (font (size 2.54 2.54) ) ) ) ) ) )
   )
   (wire (pts (xy 401.32 365.76) (xy 408.94 365.76) ) )
   (wire (pts (xy 408.94 200.66) (xy 408.94 205.74) ) )
