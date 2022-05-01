@@ -148,9 +148,11 @@ class Element():
 
 class Board():
     ''' A Kicad project directory '''
+
     def __init__(self, directory):
         self.dir = directory
         self.name = self.dir.split("/")[-1]
+        self.values = {}
 
         self.read_files()
 
@@ -158,9 +160,10 @@ class Board():
         for i in self.pages.values():
             self.fix_page_sheet(i.sexp)
 
-        self.top.write()
-        for i in self.pages.values():
-            i.write()
+        if True:
+            self.top.write()
+            for i in self.pages.values():
+                i.write()
 
     def read_files(self):
         ''' Read the `.kicad_sch` files '''
@@ -174,6 +177,9 @@ class Board():
 
     def fix_top_sheet(self):
         ''' ... '''
+        for i0 in self.top.sexp.find("symbol_instances"):
+            for i1 in i0:
+                self.values[i1[1][0].name] = i1[3][0].name
         self.top.delete("symbol_instances")
         self.top.delete("sheet_instances")
         self.top.delete("text")
@@ -292,6 +298,23 @@ class Board():
             else:
                 elems.append(Element(i))
         for i in sorted(elems):
+            if i.sexp.name in ("bus", "wire", "bus_entry", "polyline"):
+                for x in ("stroke", "type"):
+                    for j in list(i.sexp.find(x)):
+                        i.sexp -= j
+            if i.sexp.name == "label":
+                for j in list(i.sexp.find("fields_autoplaced")):
+                    i.sexp -= j
+            if i.sexp.name == "symbol":
+                ref = None
+                for i0 in i.sexp.find("property"):
+                    if i0[0].name == "Reference":
+                        ref = i0[1].name
+                        val = self.values.get(ref)
+                    if i0[0].name == "Value":
+                        if i0[1].name == "":
+                           print("  fix val", ref, val)
+                           i0[1].name = val
             sexp += i.sexp
 
 def main():
