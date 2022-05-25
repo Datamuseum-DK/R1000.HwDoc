@@ -8,61 +8,41 @@ class XSTKRAM(Chip):
 
     ''' STK RAM 16x16 '''
 
-    symbol_name = "XSTKRAM"
+    def __init__(self, bits):
 
-    symbol = '''
-      |   |
-      |   |
-    33v 34v
-   +--o---o--+
-   | WE   CS |
-  1|         |17
--->+D0     Q0o===
-  2|         |18
--->+D1     Q1o===
-  3|         |19
--->+D2     Q2o===
-  4|         |20
--->+D3     Q3o===
-  5|         |21
--->+D4     Q4o===
-  6|         |22
--->+D5     Q5o===
-  7|         |23
--->+D6     Q6o===
-  8|         |24
--->+D7     Q7o===
-  9|         |25
--->+D8     Q8o===
- 10|         |26
--->+D9     Q9o===
- 11|         |27
--->+D10   Q10o===
- 12|         |28
--->+D11   Q11o===
- 13|         |29
--->+D12   Q12o===
- 14|         |30
--->+D13   Q13o===
- 15|         |31
--->+D14   Q14o===
- 16|         |32
--->+D15   Q15o===
-   |         |
- 35|         |
--->+A0       |
- 36|         |
--->+A1       |
- 37|         |
--->+A2       |
- 38|         |
--->+A3       |
-   |         |
-   |  xnn    |
-   |         |
-   |  _      |
-   +---------+
-'''
+        self.symbol_name = "XSTKRAM"
+        if bits != 16:
+            self.symbol_name += "%d" % bits
+
+        i = []
+        i.append('      |   |')
+        i.append('      |   |')
+        i.append('     %v  %v')
+        i.append('   +--o---o--+')
+        i.append('   | WE   CS |')
+        for j in range(bits):
+            i.append('  %|         |%')
+            i.append('-->+D%-2d   %3so===' % (j, "Q%d" % j))
+        i.append('   |         |')
+        i.append('  %|         |')
+        i.append('-->+A0       |')
+        i.append('  %|         |')
+        i.append('-->+A1       |')
+        i.append('  %|         |')
+        i.append('-->+A2       |')
+        i.append('  %|         |')
+        i.append('-->+A3       |')
+        i.append('   |         |')
+        i.append('   |  xnn    |')
+        i.append('   |         |')
+        i.append('   |  _      |')
+        i.append('   +---------+')
+
+        self.symbol = '\n'.join(i)
+
+        super().__init__()
 
 if __name__ == "__main__":
-    XSTKRAM(__file__).main()
+    XSTKRAM(16).main()
+    XSTKRAM(20).main()
+    XSTKRAM(32).main()
