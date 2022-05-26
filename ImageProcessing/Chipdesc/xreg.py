@@ -50,4 +50,5 @@ if __name__ == "__main__":
     XREG(20).main()
     XREG(24).main()
     XREG(32).main()
+    XREG(36).main()
     XREG(64).main()
