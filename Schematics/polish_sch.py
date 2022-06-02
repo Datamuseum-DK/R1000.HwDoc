@@ -298,6 +298,15 @@ class Board():
             else:
                 elems.append(Element(i))
         for i in sorted(elems):
+            if i.sexp.name == "global_label":
+                for i0 in i.sexp.find("property"):
+                    if i0[0].name != "Intersheet References":
+                        continue
+                    for i1 in i0.find("effects.font.size"):
+                        sc = .75
+                        sc = 1
+                        i1[0].name = str(sc * 2.54)
+                        i1[1].name = str(sc * 2.54)
             if i.sexp.name in ("bus", "wire", "bus_entry", "polyline"):
                 for x in ("stroke", "type"):
                     for j in list(i.sexp.find(x)):
