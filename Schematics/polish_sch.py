@@ -303,8 +303,8 @@ class Board():
                     if i0[0].name != "Intersheet References":
                         continue
                     for i1 in i0.find("effects.font.size"):
-                        sc = .75
                         sc = 1
+                        sc = .75
                         i1[0].name = str(sc * 2.54)
                         i1[1].name = str(sc * 2.54)
             if i.sexp.name in ("bus", "wire", "bus_entry", "polyline"):
