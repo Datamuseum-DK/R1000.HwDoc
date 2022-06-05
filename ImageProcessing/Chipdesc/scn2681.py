@@ -20,21 +20,21 @@ class SCN2681(Chip):
    |                  |
    |  CLK  X2  RESET  |
  19|                  |30
-===+ D0          TXDA +-->
+<->+ D0          TXDA +-->
  22|                  |31
-===+ D1          RXDA +<--
+<->+ D1          RXDA +<--
  18|                  |7
-===+ D2          CTSA o<--
+<->+ D2          CTSA o<--
  23|                  |29
-===+ D3          RTSA o-->
+<->+ D3          RTSA o-->
  17|                  |12
-===+ D4          DTRA o-->
+<->+ D4          DTRA o-->
  24|                  |2
-===+ D5          DCDA o<--
+<->+ D5          DCDA o<--
  16|                  |4
-===+ D6          DSRA o<--
+<->+ D6          DSRA o<--
  25|                  |
-===+ D7               |11
+<->+ D7               |11
    |             TXDB +-->
   6|                  |10
 -->+ A0          RXDB +<--
