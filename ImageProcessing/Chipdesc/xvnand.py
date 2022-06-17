@@ -36,3 +36,4 @@ class XVNAND(Chip):
 if __name__ == "__main__":
     XVNAND(12).main()
     XVNAND(14).main()
+    XVNAND(16).main()
