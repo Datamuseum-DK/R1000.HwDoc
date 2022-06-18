@@ -46,6 +46,7 @@ class XREG(Chip):
         file.write("#endif\n")
            
 if __name__ == "__main__":
+    XREG(9).main()
     XREG(10).main()
     XREG(16).main()
     XREG(20).main()
