@@ -8,35 +8,36 @@ class F163(Chip):
 
     ''' 74x163 - Synchronous 4-Bit Binary Counters '''
 
-    symbol_name = "F163"
+    def __init__(self, name, width):
 
-    checked = "IOC 0064"
+        self.symbol_name = name
 
-    symbol = '''
+        self.checked = "IOC 0064"
+
+        self.symbol = '''
       |  |  |
       |  |  |
-     2v 9v 1v
+     %v %v %v
    +--+--o--o--+
    |  v        |
    | CLK LD CLR|
-   |           |15
+   |           |%
    |         CO+-->
-  6|           |11
--->+D0       Q0+-->
-  5|           |12
--->+D1       Q1+-->
-  4|           |13
--->+D2       Q2+-->
-  3|           |14
--->+D3       Q3+-->
-  7|           |
+'''
+        for i in range(width):
+            self.symbol += '  %|           |%\n'
+            self.symbol += '-->+D%-2d     %3s+-->\n' % (i, "Q%d" % i)
+        self.symbol += '''  %|           |
 -->+ENP        |
- 10|           |
+  %|           |
 -->+ENT xnn    |
    |           |
    |    _      |
    +-----------+
 '''
 
+        super().__init__()
+
 if __name__ == "__main__":
-    F163().main()
+    F163("F163", 4).main()
+    F163("F163X3", 12).main()
