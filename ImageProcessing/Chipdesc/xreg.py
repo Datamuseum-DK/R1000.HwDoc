@@ -48,6 +48,7 @@ class XREG(Chip):
 if __name__ == "__main__":
     XREG(9).main()
     XREG(10).main()
+    XREG(14).main()
     XREG(16).main()
     XREG(20).main()
     XREG(24).main()

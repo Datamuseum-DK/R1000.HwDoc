@@ -50,6 +50,7 @@ if __name__ == "__main__":
     XBUF(8).main()
     XBUF(9).main()
     XBUF(12).main()
+    XBUF(14).main()
     XBUF(16).main()
     XBUF(20).main()
     XBUF(24).main()
