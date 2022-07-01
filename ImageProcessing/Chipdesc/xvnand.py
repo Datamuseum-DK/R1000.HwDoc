@@ -34,6 +34,7 @@ class XVNAND(Chip):
         super().__init__()
 
 if __name__ == "__main__":
+    XVNAND(7).main()
     XVNAND(12).main()
     XVNAND(14).main()
     XVNAND(16).main()
