@@ -322,7 +322,7 @@ class Board():
                         val = self.values.get(ref)
                     if i0[0].name == "Value":
                         if i0[1].name == "":
-                           print("  fix val", ref, val)
+                           # print("  fix val", ref, val)
                            i0[1].name = val
             sexp += i.sexp
 
