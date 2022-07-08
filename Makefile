@@ -72,8 +72,11 @@ RebuildSymbols:
 	(cd ImageProcessing && sh refresh_kicad_symbols.sh)
 
 
-NetLists: NetListFiu NetListIoc NetListMem32 NetListSeq NetListTyp NetListVal
+NetLists: NetListEmu NetListFiu NetListIoc NetListMem32 NetListSeq NetListTyp NetListVal
 	@true
+
+NetListEmu:
+	${MAKE} kicad_auto BOARD=EMU KIAUTO=netlist
 
 NetListFiu:
 	${MAKE} kicad_auto BOARD=FIU KIAUTO=netlist

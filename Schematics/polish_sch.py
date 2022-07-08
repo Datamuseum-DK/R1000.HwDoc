@@ -333,7 +333,7 @@ def main():
         for i in sys.argv[1:]:
             Board(i)
     else:
-        for i in ("FIU", "IOC", "MEM32", "SEQ", "TYP", "VAL"):
+        for i in ("EMU", "FIU", "IOC", "MEM32", "SEQ", "TYP", "VAL"):
             Board(i)
 
 if __name__ == "__main__":
