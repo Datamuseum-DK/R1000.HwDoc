@@ -322,7 +322,7 @@ class Board():
                         val = self.values.get(ref)
                     if i0[0].name == "Value":
                         if i0[1].name == "":
-                           print("  fix val", ref, val)
+                           # print("  fix val", ref, val)
                            i0[1].name = val
             sexp += i.sexp
 
@@ -333,7 +333,7 @@ def main():
         for i in sys.argv[1:]:
             Board(i)
     else:
-        for i in ("FIU", "IOC", "MEM32", "SEQ", "TYP", "VAL"):
+        for i in ("EMU", "FIU", "IOC", "MEM32", "SEQ", "TYP", "VAL"):
             Board(i)
 
 if __name__ == "__main__":
