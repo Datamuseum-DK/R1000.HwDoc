@@ -14,6 +14,7 @@ class XMUX(Chip):
         self.symbol = ''
         self.symbol += '   +--------+\n'
         self.symbol += '   |        |\n'
+        did_xnn = False
 
         for i in range(npins):
             if i == 0:
@@ -29,6 +30,7 @@ class XMUX(Chip):
                 self.symbol += '  %|        |%\n'
                 self.symbol += '-->+%-4s  OEo<--\n' % ("A%d" % i)
             elif i == (npins - 2):
+                did_xnn = True
                 self.symbol += '  %|    xnn |\n'
                 self.symbol += '-->+%-4s    |\n' % ("A%d" % i)
             else:
@@ -38,6 +40,9 @@ class XMUX(Chip):
         for i in range(npins):
             self.symbol += '  %|        |%\n'
             self.symbol += '-->+%-3s  %3s+===\n' % (("B%d" % i), ("Y%d" % i))
+        if not did_xnn:
+            self.symbol += '   |        |\n'
+            self.symbol += '   |  xnn   |\n'
         self.symbol += '   |        |\n'
         self.symbol += '   |  _     |\n'
         self.symbol += '   +--------+\n'
@@ -60,9 +65,12 @@ class XMUX(Chip):
         file.write("#endif\n")
            
 if __name__ == "__main__":
+    XMUX(4).main()
+    XMUX(5).main()
     XMUX(6).main()
     XMUX(7).main()
     XMUX(8).main()
+    XMUX(10).main()
     XMUX(12).main()
     XMUX(16).main()
     XMUX(20).main()
