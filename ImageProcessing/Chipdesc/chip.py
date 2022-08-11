@@ -37,6 +37,13 @@ class Pin():
         )
 
     def cname(self):
+        retval = self.name
+        for a, b in (
+            ("~", "inv"),
+            ("=", "eq"),
+        ):
+            retval = retval.replace(a, b)
+        return retval
         if not self.invert:
             return self.name
         return self.name + "_"

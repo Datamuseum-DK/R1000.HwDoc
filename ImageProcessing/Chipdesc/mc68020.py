@@ -21,7 +21,7 @@ class MC68020(Chip):
  C1|                           |M1
 -->o RESET                  DS o-->
  K2|                           |G3
--->o HALT                 DBEN o-->
+oooo HALT                 DBEN o-->
  H1|                           |E2
 -->o CDIS                  RMC o-->
  B3|                           |G1

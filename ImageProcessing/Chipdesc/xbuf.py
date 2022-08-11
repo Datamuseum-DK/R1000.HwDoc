@@ -48,8 +48,12 @@ class XBUF(Chip):
 if __name__ == "__main__":
     XBUF(4).main()
     XBUF(8).main()
+    XBUF(9).main()
+    XBUF(12).main()
+    XBUF(14).main()
     XBUF(16).main()
     XBUF(20).main()
+    XBUF(21).main()
     XBUF(24).main()
     XBUF(32).main()
     XBUF(48).main()
