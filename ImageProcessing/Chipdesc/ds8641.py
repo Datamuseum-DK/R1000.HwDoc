@@ -38,5 +38,44 @@ class DS8641(Chip):
    +--------------+
 '''
 
+
+class DS8641XN(Chip):
+
+    ''' National DS8641 - Quad Unified Bus Tranceiver '''
+
+    def __init__(self, npins):
+        self.npins = npins
+
+        self.symbol_name = "8641X%d" % npins
+
+        self.symbol = ""
+
+        self.symbol += "   +--------------+\n"
+        self.symbol += "   |              |\n"
+        for i in range(npins):
+            self.symbol += "  %|              |%\n"
+            self.symbol += "-->+IN%-2d     %-5s+-->\n" % (i, "OUT%d" % i)
+        self.symbol += "   |              |\n"
+        self.symbol += "   |              |\n"
+
+        for i in range(npins):
+            if i == npins - 2:
+                self.symbol += "  %|              |%\n"
+                self.symbol += "-->oEN0       %4so<->\n" % ("B%d" % i)
+            elif i == npins - 1:
+                self.symbol += "  %|     xnn      |%\n"
+                self.symbol += "-->oEN1       %4so<->\n" % ("B%d" % i)
+            else:
+                self.symbol += "   |              |%\n"
+                self.symbol += "   |          %4so<->\n" % ("B%d" % i)
+
+        self.symbol += "   |     _        |\n"
+        self.symbol += "   |              |\n"
+        self.symbol += "   +--------------+\n"
+
+        super().__init__()
+
 if __name__ == "__main__":
     DS8641(__file__).main()
+    DS8641XN(8).main()
+    DS8641XN(17).main()

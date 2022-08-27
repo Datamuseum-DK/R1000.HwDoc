@@ -4,20 +4,17 @@
 
 from chip import Chip
 
-class XBUF(Chip):
+class XFBUF(Chip):
 
     ''' N bit '244-style register '''
 
     def __init__(self, npins):
         self.xreg_npins = npins
-        self.symbol_name = "XBUF%d" % npins
+        self.symbol_name = "XFBUF%d" % npins
         self.symbol = ''
-        self.symbol += '      |   |\n'
-        self.symbol += '      |   |\n'
-        self.symbol += '     %v  %v\n'
-        self.symbol += '   +--o---o--+\n'
-        self.symbol += '   | INV  OE |\n'
-        self.symbol += '   |         |\n'
+        self.symbol += '   +---------+\n'
+        self.symbol += '  %|         |%\n'
+        self.symbol += '-->+INV    OEo<--\n'
 
         for i in range(1, npins + 1):
             if i == npins:
@@ -46,15 +43,4 @@ class XBUF(Chip):
         file.write("#endif\n")
            
 if __name__ == "__main__":
-    XBUF(4).main()
-    XBUF(8).main()
-    XBUF(9).main()
-    XBUF(12).main()
-    XBUF(14).main()
-    XBUF(16).main()
-    XBUF(20).main()
-    XBUF(21).main()
-    XBUF(24).main()
-    XBUF(32).main()
-    XBUF(48).main()
-    XBUF(64).main()
+    XFBUF(32).main()
