@@ -206,16 +206,6 @@ class Chip():
         for i in self.kicad_symbol():
             fo.write(i + "\n")
 
-        with open("/tmp/%s_pins.hh" % self.symbol_name, "w") as file:
-            file.write("// Machine-generated, see R1000.HwDoc/ImageProcessing/Chipdesc/chip.py\n")
-            for pin in self.pins:
-                file.write("#define %s_PIN_%s pin%s\n" % (self.symbol_name, pin.cname(), pin.number))
-            file.write("#ifdef ANON_PINS\n")
-            for pin in self.pins:
-                file.write("    #define PIN_%s %s_PIN_%s\n" % (pin.cname(), self.symbol_name, pin.cname()))
-            file.write("#endif\n")
-            self.other_macros(file)
-
         if False and not self.checked:
             print(self.pyfn, self.symbol_name, "NOT CHECKED")
 
