@@ -50,4 +50,5 @@ if __name__ == "__main__":
     XLAT(20).main()
     XLAT(24).main()
     XLAT(32).main()
+    XLAT(56).main()
     XLAT(64).main()

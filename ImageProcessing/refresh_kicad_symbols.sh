@@ -50,7 +50,7 @@ if __name__ == "__main__":
 
 cp KiCadFiles/R1000.kicad_sym ../Schematics
 
-for board in TYP VAL IOC SEQ FIU RESHA MEM32
+for board in EMU TYP VAL IOC SEQ FIU RESHA MEM32
 do
 	dir=../Schematics/$board
 	if [ -d $dir ] ; then
