@@ -1119,11 +1119,6 @@
     (uuid 2887eee1-5cca-45c9-853b-cf27b41f7095)
   )
 
-  (polyline (pts (xy 116.84 137.16) (xy 116.84 218.44))
-    (stroke (width 0.0243) (type default))
-    (uuid 2c2207ab-8bc3-4c7a-93e2-3f0881d79196)
-  )
-
   (wire (pts (xy 187.96 292.1) (xy 187.96 284.48))
     (stroke (width 0) (type default))
     (uuid 2e4f1eae-39b4-4419-8bd6-8cedba778332)
@@ -1179,6 +1174,11 @@
     (uuid 3336522b-07ff-45a2-bfb8-c6f65569629c)
   )
 
+  (polyline (pts (xy 10.16 137.16) (xy 116.84 137.16))
+    (stroke (width 0.0243) (type default))
+    (uuid 3347f2d0-a4ee-43a8-bf5c-82398ace5a45)
+  )
+
   (wire (pts (xy 142.24 81.28) (xy 167.64 81.28))
     (stroke (width 0) (type default))
     (uuid 33d35809-56a1-4a20-90e3-7277355208a8)
@@ -1229,6 +1229,11 @@
     (stroke (width 0) (type default))
     (uuid 3968ec6a-b237-4ce6-a760-a0e7c018aa5f)
   )
+  (polyline (pts (xy 116.84 218.44) (xy 10.16 218.44))
+    (stroke (width 0.0243) (type default))
+    (uuid 39fb096b-92e9-416e-b240-b75e723f15bb)
+  )
+
   (wire (pts (xy 284.48 284.48) (xy 284.48 292.1))
     (stroke (width 0) (type default))
     (uuid 3a276a40-071c-4ad9-ac41-026bac219795)
@@ -1313,6 +1318,12 @@
     (stroke (width 0) (type default))
     (uuid 44843231-bc4a-4b33-8953-e0f83eb3427d)
   )
+
+  (polyline (pts (xy 116.84 137.16) (xy 116.84 218.44))
+    (stroke (width 0.0243) (type default))
+    (uuid 449ffdd8-2a98-49a3-85b3-55b01d511b43)
+  )
+
   (bus (pts (xy 231.14 53.34) (xy 231.14 58.42))
     (stroke (width 0) (type default))
     (uuid 45cd6aac-01d9-4567-b9dd-ec71c8e19725)
@@ -1344,6 +1355,11 @@
     (stroke (width 0) (type default))
     (uuid 4a630c5f-b32f-4c5a-9b6a-e4518a235b35)
   )
+  (polyline (pts (xy 10.16 137.16) (xy 10.16 218.44))
+    (stroke (width 0.0243) (type default))
+    (uuid 4a9d6940-40c0-4f8e-80a0-cb35a888125e)
+  )
+
   (wire (pts (xy 101.6 71.12) (xy 127 71.12))
     (stroke (width 0) (type default))
     (uuid 4b98b2ea-daf8-4c4e-a6f8-216ff96e0fbe)
@@ -1571,11 +1587,6 @@
   (bus (pts (xy 335.28 314.96) (xy 335.28 320.04))
     (stroke (width 0) (type default))
     (uuid 6fae6606-7b08-4c55-9233-d680dbfb4289)
-  )
-
-  (polyline (pts (xy 116.84 218.44) (xy 10.16 218.44))
-    (stroke (width 0.0243) (type default))
-    (uuid 707fb062-9d49-449c-b6c5-66285caa4f0b)
   )
 
   (wire (pts (xy 43.18 66.04) (xy 68.58 66.04))
@@ -2018,11 +2029,6 @@
     (stroke (width 0) (type default))
     (uuid be4280c9-82f9-4dad-8f07-e573691e8dfc)
   )
-  (polyline (pts (xy 10.16 137.16) (xy 116.84 137.16))
-    (stroke (width 0.0243) (type default))
-    (uuid bf112ccd-5ccf-4857-a67c-bbe1a20b82fa)
-  )
-
   (wire (pts (xy 246.38 248.92) (xy 271.78 248.92))
     (stroke (width 0) (type default))
     (uuid bf1d1d06-5a82-492b-af74-86ba6d999eab)
@@ -2289,12 +2295,6 @@
     (stroke (width 0) (type default))
     (uuid e63ab4a5-aace-4aa3-bbc3-3a10eb639e67)
   )
-
-  (polyline (pts (xy 10.16 137.16) (xy 10.16 218.44))
-    (stroke (width 0.0243) (type default))
-    (uuid e66d8bdb-4b5e-4d2b-8770-a4b60075c50d)
-  )
-
   (bus (pts (xy 139.7 220.98) (xy 139.7 226.06))
     (stroke (width 0) (type default))
     (uuid e7969ee0-0c71-467a-8883-a76290aea235)
@@ -2415,7 +2415,7 @@
     (uuid ffe0018e-4b06-4fcd-9e61-02d4896b5e8f)
   )
 
-  (text "BLUE WIRES on S/N 4995\n\nRAM.IOP_GRANT J4 pin 4 to J3 pin 9\n\nIOP.WR.B0 J4 pin 5 to I5 pin 2\n\n<output> J4 pin 6 to K22 pin 19\n\nAlso hand drawn on schematic"
+  (text "BLUE WIRES on S/N 4995\n\nRAM.IOP_GRANT J4 pin 4 to J3 pin 9\n\nIOP.WR J4 pin 5 to I5 pin 2\n\n<output> J4 pin 6 to K22 pin 19\n\nAlso hand drawn on schematic"
     (at 20.32 213.36 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 60219c3b-89b5-4384-bfdc-fd70fd257d1e)
@@ -3077,7 +3077,7 @@
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
-  (global_label "IOP.WR.B0" (shape input) (at 63.5 170.18 180) (fields_autoplaced)
+  (global_label "IOP.WR" (shape input) (at 63.5 170.18 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 96d973a7-bcf8-4233-b034-2a2c25a2f898)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 39.0616 170.0213 0)
