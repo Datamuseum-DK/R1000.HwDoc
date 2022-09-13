@@ -73,6 +73,7 @@ if __name__ == "__main__":
     XMUX(10).main()
     XMUX(12).main()
     XMUX(16).main()
+    XMUX(17).main()
     XMUX(20).main()
     XMUX(24).main()
     XMUX(32).main()
