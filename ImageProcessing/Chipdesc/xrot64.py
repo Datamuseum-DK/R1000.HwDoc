@@ -37,7 +37,7 @@ class XROT16(Chip):
             else:
                 self.symbol += '  %|           |\n'
             if i < npins:
-                self.symbol += '-->+%3s     %-3s+===\n' % ("B%d" % i, "Y%d" % i)
+                self.symbol += '-->+%3s     %-3s+-->\n' % ("B%d" % i, "Y%d" % i)
             else:
                 self.symbol += '-->+%3s        |\n' % ("B%d" % i)
         self.symbol += '   |           |\n'

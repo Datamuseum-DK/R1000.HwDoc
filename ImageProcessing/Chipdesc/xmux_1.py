@@ -45,7 +45,6 @@ class XMUX_1(Chip):
         self.symbol += '   |        |\n'
         self.symbol += '   |  _     |\n'
         self.symbol += '   +--------+\n'
-        print(self.symbol)
         super().__init__()
 
     def other_macros(self, file):
