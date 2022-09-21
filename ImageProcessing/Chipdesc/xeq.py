@@ -49,6 +49,7 @@ class XEQ(Chip):
         file.write("#endif\n")
            
 if __name__ == "__main__":
+    XEQ(9).main()
     XEQ(16).main()
     XEQ(20).main()
     XEQ(32).main()

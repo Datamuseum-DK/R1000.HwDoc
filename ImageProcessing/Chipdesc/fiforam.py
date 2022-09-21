@@ -35,7 +35,6 @@ class FIFORAM(Chip):
    |         |
    +---------+
 '''
-    print(symbol)
 
 if __name__ == "__main__":
     FIFORAM(__file__).main()
