@@ -27,6 +27,14 @@ class XALUN(Chip):
             "   |%",
             " S3+<--",
         ]
+
+        if width == 32:
+            right.append("   |")
+            right.append("   |")
+            for i in range(0, width, 8):
+                right.append("   |%")
+                right.append("EQ%d+-->" % (i // 8))
+
         left = [
             "   |   ",
             "   |   ",
@@ -69,5 +77,5 @@ class XALUN(Chip):
 
 if __name__ == "__main__":
     XALUN(8).main()
-    XALUN(16).main()
     XALUN(20).main()
+    XALUN(32).main()
