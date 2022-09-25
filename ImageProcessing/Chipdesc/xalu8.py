@@ -28,7 +28,7 @@ class XALUN(Chip):
             " S3+<--",
         ]
 
-        if width == 32:
+        if width in (24, 32):
             right.append("   |")
             right.append("   |")
             for i in range(0, width, 8):
@@ -78,4 +78,5 @@ class XALUN(Chip):
 if __name__ == "__main__":
     XALUN(8).main()
     XALUN(20).main()
+    XALUN(24).main()
     XALUN(32).main()
