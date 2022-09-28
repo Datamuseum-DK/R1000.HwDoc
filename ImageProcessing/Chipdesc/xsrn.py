@@ -48,3 +48,4 @@ class XSRN(Chip):
 
 if __name__ == "__main__":
     XSRN(8,4).main()
+    XSRN(8,5).main()
