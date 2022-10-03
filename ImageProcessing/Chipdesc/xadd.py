@@ -8,9 +8,9 @@ class XADD(Chip):
 
     ''' N bit two input mux with common select '''
 
-    def __init__(self, npins):
+    def __init__(self, npins, bname):
         self.xreg_npins = npins
-        self.symbol_name = "XADD%d" % npins
+        self.symbol_name = bname + "%d" % npins
         self.symbol = ''
         self.symbol += '   +--------+\n'
         self.symbol += '  %|        |%\n'
@@ -32,5 +32,6 @@ class XADD(Chip):
         super().__init__()
 
 if __name__ == "__main__":
-    XADD(8).main()
-    XADD(14).main()
+    XADD(8, "XADD").main()
+    XADD(8, "XSUB").main()
+    XADD(14, "XADD").main()
