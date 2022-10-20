@@ -199,6 +199,7 @@
     )
   )
 
+
   (junction (at 383.54 139.7) (diameter 0) (color 0 0 0 0)
     (uuid 08084fcf-7ccb-4272-9af2-f8b5e3d9cb13)
   )
@@ -235,6 +236,7 @@
 
   (no_connect (at 347.98 144.78) (uuid 10e1201b-43c4-4185-a5dd-85b23307ca44))
   (no_connect (at 381 304.8) (uuid 2549d6a4-2a3e-424c-ba1c-80972d5ed0ff))
+  (no_connect (at 381 170.18) (uuid 55d3d554-342d-460c-a334-a17b130efe81))
   (no_connect (at 190.5 170.18) (uuid 70415883-3fc0-4df1-a72e-6b60986f9c7d))
   (no_connect (at 347.98 149.86) (uuid 85cf8b8b-7973-43c2-81fc-57b77d1e5494))
   (no_connect (at 347.98 274.32) (uuid 9563bada-5025-4ba9-8fb2-61a1d3c12194))
@@ -539,10 +541,6 @@
     (uuid c1b1812f-2960-495a-9b91-19e1563ad9f2)
   )
 
-  (wire (pts (xy 381 170.18) (xy 391.16 170.18))
-    (stroke (width 0) (type default))
-    (uuid c4c66452-f9f5-4851-a000-c2d4981fe7cb)
-  )
   (wire (pts (xy 152.4 190.5) (xy 157.48 190.5))
     (stroke (width 0) (type default))
     (uuid c52251bf-866a-4e50-96f7-5acc4b3ce5d9)
@@ -777,13 +775,6 @@
     (uuid 6733ff89-b350-433a-8561-34be591aa2f6)
     (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 272.6388 279.2413 0)
       (effects (font (size 1.905 1.905)) (justify right))
-    )
-  )
-  (global_label "BANK_SEL" (shape output) (at 391.16 170.18 0) (fields_autoplaced)
-    (effects (font (size 2.54 2.54)) (justify left))
-    (uuid 71ae7328-2ee3-47df-9657-3e48ad28c81c)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 414.6127 170.0213 0)
-      (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "CSA_VALID.DEC2" (shape input) (at 337.82 165.1 180) (fields_autoplaced)
