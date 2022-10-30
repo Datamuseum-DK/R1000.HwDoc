@@ -296,309 +296,155 @@ class XRFRAMD(Chip):
    +------------+
 '''
 
-class XRFTB(Chip):
+class ChipSig():
+
+    def __init__(self, arrow, name, low = None, high = None, bus=False):
+        self.arrow = arrow
+        self.name = name
+        self.low = low
+        self.high = high
+        self.bus = bus
+
+    def __iter__(self):
+        if self.low is None and self.high is None:
+            yield self.name, self.arrow
+        elif self.bus:
+            yield self.name + "%d" % self.low, self.arrow
+            yield self.name + "%d" % self.high, self.arrow
+        else:
+            for pin in range(self.low, self.high + 1):
+                yield self.name + "%d" % pin, self.arrow
+
+    def spacing(self, really):
+        if really:
+            yield ""
+            yield ""
+            if 0 and self.high:
+                yield ""
+                yield ""
+
+class FChip(Chip):
+
+    def __init__(self):
+        self.sig_l = []
+        self.sig_r = []
+
+    def sig_left(self, signal):
+        self.sig_l.append(signal)
+
+    def sig_right(self, signal):
+        self.sig_r.append(signal)
+
+    def finish(self, width = 0):
+        self.symbol = ''
+
+        left = []
+        space = False
+        for sig in self.sig_l:
+            for _i in sig.spacing(space):
+                left.append('   |')
+            for nm, arrow in sig:
+                left.append('  %|')
+                if sig.bus:
+                    left.append(arrow + '=' + nm)
+                else:
+                    left.append(arrow + nm)
+ 
+            space = True
+
+        right = []
+        space = False
+        for sig in self.sig_r:
+            for _i in sig.spacing(space):
+                left.append('   |   ')
+            for nm, arrow in sig:
+                right.append('|%  ')
+                if sig.bus:
+                    right.append(nm + '=' + arrow)
+                else:
+                    right.append(nm + arrow)
+            space = True
+
+        minwidth = max(len(x) for x in left) + max(len(x) for x in right) + 2
+        print("W", width, "MW", minwidth)
+        if width == 0:
+            width = minwidth
+        else:
+            assert width >= minwidth
+
+        top_bot = '   +' + '-' * (width - 8) + '+\n'
+        spacer = '   |' + ' ' * (width - 8) + '|\n'
+
+        self.symbol += top_bot
+        self.symbol += spacer
+        self.symbol += spacer.replace('|    ', '| xnn')
+        self.symbol += spacer
+
+        while len(left) < len(right):
+            left.append('   |')
+        while len(right) < len(left):
+            right.append('|   ')
+        for l, r in zip(left, right):
+            pad = " " * (width - (len(l) + len(r)))
+            self.symbol += l + pad + r.rstrip() + "\n"
+
+        self.symbol += spacer
+        self.symbol += spacer
+        self.symbol += spacer.replace('|  ', '| _')
+        self.symbol += top_bot
+
+        super().__init__()
+
+class XRFTB(FChip):
 
     ''' TYP RF B '''
 
     symbol_name = "XRFTB"
 
-    symbol = '''
-   +------------+
-   |            |
-   |            |
-   |   xnn      |
-   |            |
-  %|            |
--->+TRCV        |
-   |            |
-   |            |
-  %|            |%
--->oWE        Q0+-->
-   |            |%
-   |          Q1+-->
-  %|            |%
--->oCS        Q2+-->
-   |            |%
-   |          Q3+-->
-   |            |%
-   |          Q4+-->
-  %|            |%
--->+AW0       Q5+-->
-  %|            |%
--->+AW1       Q6+-->
-  %|            |%
--->+AW2       Q7+-->
-  %|            |%
--->+AW3       Q8+-->
-  %|            |%
--->+AW4       Q9+-->
-  %|            |%
--->+AW5      Q10+-->
-  %|            |%
--->+AW6      Q11+-->
-  %|            |%
--->+AW7      Q12+-->
-  %|            |%
--->+AW8      Q13+-->
-  %|            |%
--->+AW9      Q14+-->
-   |            |%
-   |         Q15+-->
-   |            |%
-   |         Q16+-->
-  %|            |%
--->+=D0      Q17+-->
-  %|            |%
--->+=D63     Q18+-->
-   |            |%
-   |         Q19+-->
-   |            |%
-   |         Q20+-->
-  %|            |%
--->+RD       Q21+-->
-   |            |%
-   |         Q22+-->
-   |            |%
-   |         Q23+-->
-  %|            |%
--->+B0       Q24+-->
-  %|            |%
--->+B1       Q25+-->
-  %|            |%
--->+B2       Q26+-->
-  %|            |%
--->+B3       Q27+-->
-  %|            |%
--->+B4       Q28+-->
-  %|            |%
--->+B5       Q29+-->
-   |            |%
-   |         Q30+-->
-   |            |%
-   |         Q31+-->
-  %|            |%
--->+CNT0     Q32+-->
-  %|            |%
--->+CNT1     Q33+-->
-  %|            |%
--->+CNT2     Q34+-->
-  %|            |%
--->+CNT3     Q35+-->
-  %|            |%
--->+CNT4     Q36+-->
-  %|            |%
--->+CNT5     Q37+-->
-  %|            |%
--->+CNT6     Q38+-->
-  %|            |%
--->+CNT7     Q39+-->
-  %|            |%
--->+CNT8     Q40+-->
-  %|            |%
--->+CNT9     Q41+-->
-   |            |%
-   |         Q42+-->
-   |            |%
-   |         Q43+-->
-  %|            |%
--->+FRM0     Q44+-->
-  %|            |%
--->+FRM1     Q45+-->
-  %|            |%
--->+FRM2     Q46+-->
-  %|            |%
--->+FRM3     Q47+-->
-  %|            |%
--->+FRM4     Q48+-->
-   |            |%
-   |         Q49+-->
-   |            |%
-   |         Q50+-->
-  %|            |%
--->+CSA0     Q51+-->
-  %|            |%
--->+CSA1     Q52+-->
-  %|            |%
--->+CSA2     Q53+-->
-  %|            |%
--->+CSA3     Q54+-->
-   |            |%
-   |         Q55+-->
-   |            |%
-   |         Q56+-->
-  %|            |%
--->+TOS0     Q57+-->
-  %|            |%
--->+TOS1     Q58+-->
-  %|            |%
--->+TOS2     Q59+-->
-  %|            |%
--->+TOS3     Q60+-->
-   |            |%
-   |         Q61+-->
-  %|            |%
--->+=TYP0    Q62+-->
-  %|            |%
--->+=TYP63   Q63+-->
-   |            |
-   |  _         |
-   +------------+
-'''
+    def __init__(self):
+        super().__init__()
+        self.sig_left(ChipSig("-->o", "WE"))
+        self.sig_left(ChipSig("-->o", "CS"))
+        self.sig_left(ChipSig("-->+", "AW", 0, 9))
+        self.sig_left(ChipSig("-->+", "D", 0, 63, True))
+        self.sig_left(ChipSig("-->+", "RD"))
+        self.sig_left(ChipSig("-->+", "B", 0, 5))
+        self.sig_left(ChipSig("-->+", "CNT", 0, 9))
+        self.sig_left(ChipSig("-->+", "FRM", 0, 4))
+        self.sig_left(ChipSig("-->+", "CSA", 0, 3))
+        self.sig_left(ChipSig("-->+", "TOS", 0, 3))
+        self.sig_left(ChipSig("-->+", "TRCV"))
+        self.sig_left(ChipSig("-->+", "TYP", 0, 63, True))
+        self.sig_right(ChipSig("+-->", "Q", 0, 63))
+        self.finish(24)
 
 
-class XRFVB(Chip):
+class XRFVB(FChip):
 
     ''' VAL RF B '''
 
     symbol_name = "XRFVB"
 
-    symbol = '''
-   +------------+
-   |            |
-   |            |
-   |   xnn      |
-   |            |
-   |            |
-   |            |
-   |            |
-   |            |
-  %|            |%
--->oWE        Q0+-->
-   |            |%
-   |          Q1+-->
-  %|            |%
--->oCS        Q2+-->
-   |            |%
-   |          Q3+-->
-   |            |%
-   |          Q4+-->
-   |            |%
-   |          Q5+-->
-   |            |%
-   |          Q6+-->
-   |            |%
-   |          Q7+-->
-   |            |%
-   |          Q8+-->
-  %|            |%
--->+=AW0      Q9+-->
-  %|            |%
--->+=AW9     Q10+-->
-   |            |%
-   |         Q11+-->
-   |            |%
-   |         Q12+-->
-  %|            |%
--->+=D0      Q13+-->
-  %|            |%
--->+=D63     Q14+-->
-   |            |%
-   |         Q15+-->
-   |            |%
-   |         Q16+-->
-  %|            |%
--->oRD       Q17+-->
-   |            |%
-   |         Q18+-->
-   |            |%
-   |         Q19+-->
-  %|            |%
--->+=B0      Q20+-->
-  %|            |%
--->+=B5      Q21+-->
-   |            |%
-   |         Q22+-->
-   |            |%
-   |         Q23+-->
-  %|            |%
--->+=CNT0    Q24+-->
-  %|            |%
--->+=CNT9    Q25+-->
-   |            |%
-   |         Q26+-->
-   |            |%
-   |         Q27+-->
-  %|            |%
--->+FRM0     Q28+-->
-  %|            |%
--->+FRM1     Q29+-->
-  %|            |%
--->+FRM2     Q30+-->
-  %|            |%
--->+FRM3     Q31+-->
-  %|            |%
--->+FRM4     Q32+-->
-   |            |%
-   |         Q33+-->
-   |            |%
-   |         Q34+-->
-  %|            |%
--->+TOS0     Q35+-->
-  %|            |%
--->+TOS1     Q36+-->
-  %|            |%
--->+TOS2     Q37+-->
-  %|            |%
--->+TOS3     Q38+-->
-   |            |%
-   |         Q39+-->
-   |            |%
-   |         Q40+-->
-  %|            |%
--->+CSA0     Q41+-->
-  %|            |%
--->+CSA1     Q42+-->
-  %|            |%
--->+CSA2     Q43+-->
-  %|            |%
--->+CSA3     Q44+-->
-   |            |%
-   |         Q45+-->
-   |            |%
-   |         Q46+-->
-   |            |%
-   |         Q47+-->
-   |            |%
-   |         Q48+-->
-   |            |%
-   |         Q49+-->
-   |            |%
-   |         Q50+-->
-   |            |%
-   |         Q51+-->
-   |            |%
-   |         Q52+-->
-   |            |%
-   |         Q53+-->
-   |            |%
-   |         Q54+-->
-   |            |%
-   |         Q55+-->
-   |            |%
-   |         Q56+-->
-   |            |%
-   |         Q57+-->
-   |            |%
-   |         Q58+-->
-   |            |%
-   |         Q59+-->
-   |            |%
-   |         Q60+-->
-   |            |%
-   |         Q61+-->
-   |            |%
-   |         Q62+-->
-   |            |%
-   |         Q63+-->
-   |            |
-   |  _         |
-   +------------+
-'''
-
+    def __init__(self):
+        super().__init__()
+        self.sig_left(ChipSig("-->o", "WE"))
+        self.sig_left(ChipSig("-->o", "CS"))
+        self.sig_left(ChipSig("-->+", "AW", 0, 9))
+        self.sig_left(ChipSig("-->+", "D", 0, 63, True))
+        self.sig_left(ChipSig("-->+", "RD"))
+        self.sig_left(ChipSig("-->+", "B", 0, 5))
+        self.sig_left(ChipSig("-->+", "CNT", 0, 9))
+        self.sig_left(ChipSig("-->+", "FRM", 0, 4))
+        self.sig_left(ChipSig("-->+", "CSA", 0, 3))
+        self.sig_left(ChipSig("-->+", "TOS", 0, 3))
+        self.sig_left(ChipSig("-->o", "GETLIT"))
+        self.sig_left(ChipSig("-->o", "VALOE"))
+        self.sig_left(ChipSig("-->+", "VAL", 0, 63, True))
+        self.sig_right(ChipSig("+-->", "Q", 0, 63))
+        self.finish(24)
 
 if __name__ == "__main__":
     XRFVB().main()
     XRFTB().main()
-    XRFRAM().main()
     XRFRAM().main()
     XRFRAMD().main()
