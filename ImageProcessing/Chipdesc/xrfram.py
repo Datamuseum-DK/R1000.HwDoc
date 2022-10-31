@@ -2,7 +2,7 @@
 
 ''' 1024x64 SRAM '''
 
-from Chipdesc.chip import Chip
+from Chipdesc.chip import Chip, ChipSig, FChip
 
 class XRFRAM(Chip):
 
@@ -296,104 +296,25 @@ class XRFRAMD(Chip):
    +------------+
 '''
 
-class ChipSig():
+class XRFTA(FChip):
 
-    def __init__(self, arrow, name, low = None, high = None, bus=False):
-        self.arrow = arrow
-        self.name = name
-        self.low = low
-        self.high = high
-        self.bus = bus
+    ''' TYP RF A '''
 
-    def __iter__(self):
-        if self.low is None and self.high is None:
-            yield self.name, self.arrow
-        elif self.bus:
-            yield self.name + "%d" % self.low, self.arrow
-            yield self.name + "%d" % self.high, self.arrow
-        else:
-            for pin in range(self.low, self.high + 1):
-                yield self.name + "%d" % pin, self.arrow
-
-    def spacing(self, really):
-        if really:
-            yield ""
-            yield ""
-            if 0 and self.high:
-                yield ""
-                yield ""
-
-class FChip(Chip):
+    symbol_name = "XRFTA"
 
     def __init__(self):
-        self.sig_l = []
-        self.sig_r = []
-
-    def sig_left(self, signal):
-        self.sig_l.append(signal)
-
-    def sig_right(self, signal):
-        self.sig_r.append(signal)
-
-    def finish(self, width = 0):
-        self.symbol = ''
-
-        left = []
-        space = False
-        for sig in self.sig_l:
-            for _i in sig.spacing(space):
-                left.append('   |')
-            for nm, arrow in sig:
-                left.append('  %|')
-                if sig.bus:
-                    left.append(arrow + '=' + nm)
-                else:
-                    left.append(arrow + nm)
- 
-            space = True
-
-        right = []
-        space = False
-        for sig in self.sig_r:
-            for _i in sig.spacing(space):
-                left.append('   |   ')
-            for nm, arrow in sig:
-                right.append('|%  ')
-                if sig.bus:
-                    right.append(nm + '=' + arrow)
-                else:
-                    right.append(nm + arrow)
-            space = True
-
-        minwidth = max(len(x) for x in left) + max(len(x) for x in right) + 2
-        print("W", width, "MW", minwidth)
-        if width == 0:
-            width = minwidth
-        else:
-            assert width >= minwidth
-
-        top_bot = '   +' + '-' * (width - 8) + '+\n'
-        spacer = '   |' + ' ' * (width - 8) + '|\n'
-
-        self.symbol += top_bot
-        self.symbol += spacer
-        self.symbol += spacer.replace('|    ', '| xnn')
-        self.symbol += spacer
-
-        while len(left) < len(right):
-            left.append('   |')
-        while len(right) < len(left):
-            right.append('|   ')
-        for l, r in zip(left, right):
-            pad = " " * (width - (len(l) + len(r)))
-            self.symbol += l + pad + r.rstrip() + "\n"
-
-        self.symbol += spacer
-        self.symbol += spacer
-        self.symbol += spacer.replace('|  ', '| _')
-        self.symbol += top_bot
-
         super().__init__()
+        self.sig_left(ChipSig("-->o", "WE"))
+        self.sig_left(ChipSig("-->o", "CS"))
+        self.sig_left(ChipSig("-->+", "AW", 0, 9))
+        self.sig_left(ChipSig("-->+", "D", 0, 63, True))
+        self.sig_left(ChipSig("-->+", "RD"))
+        self.sig_left(ChipSig("-->+", "A", 0, 5))
+        self.sig_left(ChipSig("-->+", "CNT", 0, 9))
+        self.sig_left(ChipSig("-->+", "FRM", 0, 4))
+        self.sig_left(ChipSig("-->+", "TOS", 0, 3))
+        self.sig_right(ChipSig("+===", "Q", 0, 63))
+        self.finish(24)
 
 class XRFTB(FChip):
 
@@ -414,7 +335,7 @@ class XRFTB(FChip):
         self.sig_left(ChipSig("-->+", "CSA", 0, 3))
         self.sig_left(ChipSig("-->+", "TOS", 0, 3))
         self.sig_left(ChipSig("-->+", "TRCV"))
-        self.sig_left(ChipSig("-->+", "TYP", 0, 63, True))
+        self.sig_left(ChipSig("-->o", "TYP", 0, 63, True))
         self.sig_right(ChipSig("+-->", "Q", 0, 63))
         self.finish(24)
 
@@ -438,13 +359,15 @@ class XRFVB(FChip):
         self.sig_left(ChipSig("-->+", "CSA", 0, 3))
         self.sig_left(ChipSig("-->+", "TOS", 0, 3))
         self.sig_left(ChipSig("-->o", "GETLIT"))
-        self.sig_left(ChipSig("-->o", "VALOE"))
-        self.sig_left(ChipSig("-->+", "VAL", 0, 63, True))
+        self.sig_left(ChipSig("-->o", "LHIT"))
+        self.sig_left(ChipSig("-->o", "VALDRV"))
+        self.sig_left(ChipSig("-->o", "VAL", 0, 63, True))
         self.sig_right(ChipSig("+-->", "Q", 0, 63))
         self.finish(24)
 
 if __name__ == "__main__":
-    XRFVB().main()
+    XRFTA().main()
     XRFTB().main()
+    XRFVB().main()
     XRFRAM().main()
     XRFRAMD().main()
