@@ -340,6 +340,27 @@ class XRFTB(FChip):
         self.finish(24)
 
 
+class XRFVA(FChip):
+
+    ''' VAL RF A '''
+
+    symbol_name = "XRFVA"
+
+    def __init__(self):
+        super().__init__()
+        self.sig_left(ChipSig("-->o", "WE"))
+        self.sig_left(ChipSig("-->o", "CS"))
+        self.sig_left(ChipSig("-->+", "AW", 0, 9))
+        self.sig_left(ChipSig("-->+", "D", 0, 63, True))
+        self.sig_left(ChipSig("-->+", "RD"))
+        self.sig_left(ChipSig("-->+", "A", 0, 5))
+        self.sig_left(ChipSig("-->+", "CNT", 0, 9))
+        self.sig_left(ChipSig("-->+", "FRM", 0, 4))
+        self.sig_left(ChipSig("-->+", "TOS", 0, 3))
+        self.sig_right(ChipSig("+===", "Q", 0, 63))
+        self.finish(24)
+
+
 class XRFVB(FChip):
 
     ''' VAL RF B '''
@@ -368,6 +389,7 @@ class XRFVB(FChip):
 if __name__ == "__main__":
     XRFTA().main()
     XRFTB().main()
+    XRFVA().main()
     XRFVB().main()
     XRFRAM().main()
     XRFRAMD().main()
