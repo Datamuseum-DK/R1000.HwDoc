@@ -357,7 +357,11 @@ class XRFVA(FChip):
         self.sig_left(ChipSig("-->+", "CNT", 0, 9))
         self.sig_left(ChipSig("-->+", "FRM", 0, 4))
         self.sig_left(ChipSig("-->+", "TOS", 0, 3))
-        self.sig_right(ChipSig("+===", "Q", 0, 63))
+        self.sig_left(ChipSig("<--+", "AOE"))
+        self.sig_left(ChipSig("<--+", "LOOPOE"))
+        self.sig_left(ChipSig("<--+", "MULTOE"))
+        self.sig_left(ChipSig("<--+", "ZEROOE"))
+        self.sig_right(ChipSig("+-->", "Q", 0, 63))
         self.finish(24)
 
 
