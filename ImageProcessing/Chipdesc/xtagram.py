@@ -2,7 +2,22 @@
 
 ''' 16K x 64 SRAM '''
 
-from Chipdesc.chip import Chip
+from Chipdesc.chip import Chip, FChip, ChipSig
+
+class XTAGRAMB(FChip):
+
+    ''' TAG RAM'''
+
+    symbol_name = "XTAGRAMB"
+
+    def __init__(self):
+        super().__init__()
+        self.sig_left(ChipSig("-->o", "WE"))
+        self.sig_left(ChipSig("-->o", "CS"))
+        self.sig_left(ChipSig("-->+", "A", 0, 13))
+        self.sig_left(ChipSig("-->+", "D", 0, 63, True))
+        self.sig_right(ChipSig("+-->", "Q", 0, 63))
+        self.finish(24)
 
 class XTAGRAM(Chip):
 
@@ -152,3 +167,4 @@ class XTAGRAM(Chip):
 
 if __name__ == "__main__":
     XTAGRAM().main()
+    XTAGRAMB().main()
