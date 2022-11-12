@@ -1,5 +1,6 @@
 {
   "board": {
+    "3dviewports": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -223,7 +224,7 @@
   "net_settings": {
     "classes": [
       {
-        "bus_width": 50.0,
+        "bus_width": 50,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -237,13 +238,15 @@
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 20.0
+        "wire_width": 20
       }
     ],
     "meta": {
-      "version": 2
+      "version": 3
     },
-    "net_colors": null
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -295,6 +298,8 @@
     "plot_directory": "",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
@@ -302,10 +307,6 @@
     [
       "20011966-487c-2cfb-5da0-3540af989df7",
       ""
-    ],
-    [
-      "20011966-21fa-663a-1532-3c85d8c8f023",
-      "Page 01"
     ],
     [
       "20011966-25b4-4225-7fcb-01a5b9dfc023",
@@ -444,48 +445,8 @@
       "Page 35"
     ],
     [
-      "20011966-61c5-5fd9-3635-0a7f8a666dff",
-      "Page 36"
-    ],
-    [
-      "20011966-3c88-6e3b-1201-52dcdaff2120",
-      "Page 37"
-    ],
-    [
-      "20011966-2eec-749e-1a66-7344151493c7",
-      "Page 38"
-    ],
-    [
-      "20011966-5826-2c81-461a-18e43ac99fdb",
-      "Page 39"
-    ],
-    [
-      "20011966-751a-616b-0de1-342df8e0e809",
-      "Page 40"
-    ],
-    [
       "20011966-197d-69fd-3e2c-398108920437",
       "Page 41"
-    ],
-    [
-      "20011966-1a7d-0487-06d6-37ca497ea680",
-      "Page 42"
-    ],
-    [
-      "20011966-160c-3595-2632-2be07035ae79",
-      "Page 43"
-    ],
-    [
-      "20011966-778e-6f9b-0232-06cfdaf89e31",
-      "Page 44"
-    ],
-    [
-      "20011966-1f7f-4588-6245-64ac65b44a95",
-      "Page 45"
-    ],
-    [
-      "20011966-7362-0915-2a3b-0495f36e5145",
-      "Page 46"
     ]
   ],
   "text_variables": {}
