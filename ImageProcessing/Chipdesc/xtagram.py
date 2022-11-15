@@ -2,7 +2,34 @@
 
 ''' 16K x 64 SRAM '''
 
-from Chipdesc.chip import Chip
+from Chipdesc.chip import Chip, FChip, ChipSig
+
+class XLRULOGIC(FChip):
+
+    ''' LRU logic '''
+
+    symbol_name = "XLRULOGIC"
+
+    def __init__(self):
+        super().__init__()
+        self.sig_left(ChipSig("-->+", "CLK"))
+        self.sig_left(ChipSig("-->+", "HITQ"))
+        self.sig_left(ChipSig("-->+", "LOGQ"))
+        self.sig_left(ChipSig("-->+", "SOIL"))
+        self.sig_left(ChipSig("-->+", "LPAR"))
+        self.sig_left(ChipSig("-->+", "NMATCH"))
+        self.sig_left(ChipSig("-->+", "OMATCH"))
+        self.sig_left(ChipSig("-->+", "LRU_UPDATE"))
+        self.sig_left(ChipSig("-->+", "MRUIS_F"))
+        self.sig_left(ChipSig("-->+", "H1"))
+        self.sig_left(ChipSig("-->+", "LATE"))
+
+        self.sig_right(ChipSig("o<->", "TAG", 0, 7))
+        self.sig_right(ChipSig("+<->", "HITLRU", 0, 3))
+        self.sig_right(ChipSig("o-->", "HIT"))
+
+        self.sig_right(ChipSig("+-->", "TMP", 0, 15))
+        self.finish(27)
 
 class XTAGRAM(Chip):
 
@@ -152,3 +179,4 @@ class XTAGRAM(Chip):
 
 if __name__ == "__main__":
     XTAGRAM().main()
+    XLRULOGIC().main()

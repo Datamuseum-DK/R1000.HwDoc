@@ -2167,10 +2167,6 @@
     (stroke (width 0) (type default))
     (uuid 58dcee40-61a9-44f8-803f-8de779d61e90)
   )
-  (bus (pts (xy 360.68 261.62) (xy 360.68 271.78))
-    (stroke (width 0) (type default))
-    (uuid 58e308d7-326d-47eb-ad62-8b362bc313ab)
-  )
   (bus (pts (xy 165.1 327.66) (xy 165.1 332.74))
     (stroke (width 0) (type default))
     (uuid 59ff9ae4-ce83-4310-837d-e2e0a73f0f1b)
@@ -2868,11 +2864,6 @@
     (stroke (width 0) (type default))
     (uuid e3504c99-f8c2-445d-bf4b-23058cfae4d9)
   )
-  (bus (pts (xy 127 238.76) (xy 127 243.84))
-    (stroke (width 0) (type default))
-    (uuid e3f50dcd-5387-4da2-a9e3-57a69c908992)
-  )
-
   (wire (pts (xy 408.94 185.42) (xy 408.94 330.2))
     (stroke (width 0) (type default))
     (uuid e4646a10-8dd9-4c9c-a0fe-7751eea767ec)
@@ -3536,7 +3527,7 @@
   (symbol (lib_id "r1000:F00") (at 513.08 78.74 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0e26bc2f-cd54-404d-8b46-db4c800dd955)
-    (property "Reference" "U3314" (at 528.32 78.74 0)
+    (property "Reference" "U2914" (at 528.32 78.74 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F00" (at 514.985 83.82 0)
@@ -3560,7 +3551,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3314") (unit 1) (value "F00") (footprint "")
+          (reference "U2914") (unit 1) (value "F00") (footprint "")
         )
       )
     )
@@ -3569,7 +3560,7 @@
   (symbol (lib_id "r1000:F04") (at 513.08 160.02 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 11ce8e68-bd4a-458b-867c-f690c15afe29)
-    (property "Reference" "U3316" (at 513.08 160.02 0)
+    (property "Reference" "U2916" (at 513.08 160.02 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F04" (at 514.35 165.1 0)
@@ -3592,7 +3583,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3316") (unit 1) (value "F04") (footprint "")
+          (reference "U2916") (unit 1) (value "F04") (footprint "")
         )
       )
     )
@@ -3651,7 +3642,7 @@
   (symbol (lib_id "r1000:F153") (at 383.54 350.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 343faf1a-cdc0-4694-9c83-bfcbef0d585c)
-    (property "Reference" "U3309" (at 386.08 345.44 0)
+    (property "Reference" "U2909" (at 386.08 345.44 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F153" (at 379.73 355.6 0)
@@ -3686,7 +3677,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3309") (unit 1) (value "F153") (footprint "")
+          (reference "U2909") (unit 1) (value "F153") (footprint "")
         )
       )
     )
@@ -3720,7 +3711,7 @@
   (symbol (lib_id "r1000:F245") (at 304.8 185.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 502e9025-327a-409d-81e8-6d9353324727)
-    (property "Reference" "U3307" (at 307.34 180.34 0)
+    (property "Reference" "U2907" (at 307.34 180.34 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F245" (at 300.99 193.04 0)
@@ -3759,7 +3750,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3307") (unit 1) (value "F245") (footprint "")
+          (reference "U2907") (unit 1) (value "F245") (footprint "")
         )
       )
     )
@@ -3768,7 +3759,7 @@
   (symbol (lib_id "r1000:F00") (at 391.16 55.88 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 51d52a52-8610-47b5-88ab-c53affce9f70)
-    (property "Reference" "U3310" (at 406.4 55.88 0)
+    (property "Reference" "U2910" (at 406.4 55.88 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F00" (at 393.065 60.96 0)
@@ -3792,7 +3783,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3310") (unit 1) (value "F00") (footprint "")
+          (reference "U2910") (unit 1) (value "F00") (footprint "")
         )
       )
     )
@@ -3801,7 +3792,7 @@
   (symbol (lib_id "r1000:F240") (at 193.04 259.08 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5393769e-ccfb-4fd3-a8c4-df205600d5fa)
-    (property "Reference" "U3304" (at 195.58 254 0)
+    (property "Reference" "U2904" (at 195.58 254 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F240" (at 189.23 266.7 0)
@@ -3840,7 +3831,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3304") (unit 1) (value "F240") (footprint "")
+          (reference "U2904") (unit 1) (value "F240") (footprint "")
         )
       )
     )
@@ -3849,7 +3840,7 @@
   (symbol (lib_id "r1000:F00") (at 419.1 71.12 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 56dea9af-2530-4292-b540-1e0f7c759cc1)
-    (property "Reference" "U3311" (at 434.34 71.12 0)
+    (property "Reference" "U2911" (at 434.34 71.12 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F00" (at 421.005 76.2 0)
@@ -3873,7 +3864,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3311") (unit 1) (value "F00") (footprint "")
+          (reference "U2911") (unit 1) (value "F00") (footprint "")
         )
       )
     )
@@ -3882,7 +3873,7 @@
   (symbol (lib_id "r1000:F04") (at 78.74 40.64 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 755fde8b-45fd-4ae1-961d-7321cc96bc3d)
-    (property "Reference" "U3301" (at 78.74 40.64 0)
+    (property "Reference" "U2901" (at 78.74 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F04" (at 80.01 45.72 0)
@@ -3905,7 +3896,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3301") (unit 1) (value "F04") (footprint "")
+          (reference "U2901") (unit 1) (value "F04") (footprint "")
         )
       )
     )
@@ -3939,7 +3930,7 @@
   (symbol (lib_id "r1000:F299") (at 434.34 246.38 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9a98d80d-a9a9-4bc3-8fe2-72ee4f61c8a2)
-    (property "Reference" "U3312" (at 436.88 241.3 0)
+    (property "Reference" "U2912" (at 436.88 241.3 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F299" (at 430.53 251.46 0)
@@ -3978,7 +3969,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3312") (unit 1) (value "F299") (footprint "")
+          (reference "U2912") (unit 1) (value "F299") (footprint "")
         )
       )
     )
@@ -3987,7 +3978,7 @@
   (symbol (lib_id "r1000:NOVRAM") (at 213.36 350.52 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid addefc0c-8c07-41da-b070-af8335af0b4a)
-    (property "Reference" "U3305" (at 215.9 345.44 0)
+    (property "Reference" "U2905" (at 215.9 345.44 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "NOVRAM" (at 207.01 355.6 0)
@@ -4024,7 +4015,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3305") (unit 1) (value "NOVRAM") (footprint "")
+          (reference "U2905") (unit 1) (value "NOVRAM") (footprint "")
         )
       )
     )
@@ -4033,7 +4024,7 @@
   (symbol (lib_id "r1000:F244") (at 307.34 261.62 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b7858b5d-a17d-4197-ac9b-bd13afef450a)
-    (property "Reference" "U3308" (at 309.88 256.54 0)
+    (property "Reference" "U2908" (at 309.88 256.54 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F244" (at 303.53 269.24 0)
@@ -4072,7 +4063,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3308") (unit 1) (value "F244") (footprint "")
+          (reference "U2908") (unit 1) (value "F244") (footprint "")
         )
       )
     )
@@ -4081,7 +4072,7 @@
   (symbol (lib_id "r1000:F175") (at 462.28 88.9 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bd32ddf2-1d28-49b9-a47c-8bc94f0aae25)
-    (property "Reference" "U3313" (at 464.82 83.82 0)
+    (property "Reference" "U2913" (at 464.82 83.82 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F175" (at 461.01 93.98 0)
@@ -4116,7 +4107,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3313") (unit 1) (value "F175") (footprint "")
+          (reference "U2913") (unit 1) (value "F175") (footprint "")
         )
       )
     )
@@ -4125,7 +4116,7 @@
   (symbol (lib_id "r1000:F374") (at 241.3 99.06 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c1aa0ddb-76d6-47bf-96e4-9b1eecbd4aa1)
-    (property "Reference" "U3306" (at 243.84 93.98 0)
+    (property "Reference" "U2906" (at 243.84 93.98 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F374" (at 237.49 106.68 0)
@@ -4164,7 +4155,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3306") (unit 1) (value "F374") (footprint "")
+          (reference "U2906") (unit 1) (value "F374") (footprint "")
         )
       )
     )
@@ -4198,7 +4189,7 @@
   (symbol (lib_id "r1000:F02") (at 129.54 22.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d3767b3f-2e38-4587-96f8-3419c3f1f502)
-    (property "Reference" "U3302" (at 141.7 22.225 0)
+    (property "Reference" "U2902" (at 141.7 22.225 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F02" (at 128.27 27.305 0)
@@ -4222,7 +4213,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3302") (unit 1) (value "F02") (footprint "")
+          (reference "U2902") (unit 1) (value "F02") (footprint "")
         )
       )
     )
@@ -4231,7 +4222,7 @@
   (symbol (lib_id "r1000:8051") (at 149.86 185.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d49edf78-a44c-4ce9-9d40-97a099d41c50)
-    (property "Reference" "U3303" (at 152.4 180.34 0)
+    (property "Reference" "U2903" (at 152.4 180.34 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "8051" (at 148.59 190.5 0)
@@ -4290,7 +4281,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3303") (unit 1) (value "8051") (footprint "")
+          (reference "U2903") (unit 1) (value "8051") (footprint "")
         )
       )
     )
@@ -4299,7 +4290,7 @@
   (symbol (lib_id "r1000:F04") (at 513.08 139.7 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d8ff2954-31b3-4e68-a333-c391e79c8302)
-    (property "Reference" "U3315" (at 513.08 139.7 0)
+    (property "Reference" "U2915" (at 513.08 139.7 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F04" (at 514.35 144.78 0)
@@ -4322,7 +4313,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-6c3f-17e1-2185-2214326f9c11"
-          (reference "U3315") (unit 1) (value "F04") (footprint "")
+          (reference "U2915") (unit 1) (value "F04") (footprint "")
         )
       )
     )
