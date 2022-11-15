@@ -511,3 +511,104 @@ class Chip():
         sig += pin_side("T", hlo, hhi + 1)
         sig += pin_side("B", hlo, hhi + 1)
         return sig
+
+class ChipSig():
+
+    def __init__(self, arrow, name, low = None, high = None, bus=False):
+        self.arrow = arrow
+        self.name = name
+        self.low = low
+        self.high = high
+        self.bus = bus
+
+    def __iter__(self):
+        if self.low is None and self.high is None:
+            yield self.name, self.arrow
+        elif self.bus:
+            yield self.name + "%d" % self.low, self.arrow
+            yield self.name + "%d" % self.high, self.arrow
+        else:
+            for pin in range(self.low, self.high + 1):
+                yield self.name + "%d" % pin, self.arrow
+
+    def spacing(self, really):
+        if really:
+            yield ""
+            yield ""
+            if 0 and self.high:
+                yield ""
+                yield ""
+
+class FChip(Chip):
+
+    def __init__(self):
+        self.sig_l = []
+        self.sig_r = []
+
+    def sig_left(self, signal):
+        self.sig_l.append(signal)
+
+    def sig_right(self, signal):
+        self.sig_r.append(signal)
+
+    def finish(self, width = 0):
+        self.symbol = ''
+
+        left = []
+        space = False
+        for sig in self.sig_l:
+            for _i in sig.spacing(space):
+                left.append('   |')
+            for nm, arrow in sig:
+                left.append('  %|')
+                if sig.bus:
+                    left.append(arrow + '=' + nm)
+                else:
+                    left.append(arrow + nm)
+ 
+            space = True
+
+        right = []
+        space = False
+        for sig in self.sig_r:
+            for _i in sig.spacing(space):
+                right.append('   |   ')
+            for nm, arrow in sig:
+                right.append('|%  ')
+                if sig.bus:
+                    right.append(nm + '=' + arrow)
+                else:
+                    right.append(nm + arrow)
+            space = True
+
+        minwidth = max(len(x) for x in left) + max(len(x) for x in right) + 2
+        if width == 0:
+            print(self.symbol_name, "W", width, "MW", minwidth)
+            width = minwidth
+        else:
+            print(self.symbol_name, "W", width, "MW", minwidth)
+            assert width >= minwidth
+
+        top_bot = '   +' + '-' * (width - 8) + '+\n'
+        spacer = '   |' + ' ' * (width - 8) + '|\n'
+
+        self.symbol += top_bot
+        self.symbol += spacer
+        self.symbol += spacer.replace('|    ', '| xnn')
+        self.symbol += spacer
+
+        while len(left) < len(right):
+            left.append('   |')
+        while len(right) < len(left):
+            right.append('|   ')
+        for l, r in zip(left, right):
+            pad = " " * (width - (len(l) + len(r)))
+            self.symbol += l + pad + r.rstrip() + "\n"
+
+        self.symbol += spacer
+        self.symbol += spacer
+        self.symbol += spacer.replace('|  ', '| _')
+        self.symbol += top_bot
+
+        super().__init__()
+
