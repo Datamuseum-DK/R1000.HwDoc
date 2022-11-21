@@ -23,13 +23,18 @@ class XLRULOGIC(FChip):
         self.sig_left(ChipSig("-->+", "MRUIS_F"))
         self.sig_left(ChipSig("-->+", "H1"))
         self.sig_left(ChipSig("-->+", "LHIT", 0, 3))
+        self.sig_left(ChipSig("-->+", "ITAG", 56, 57))
+        self.sig_left(ChipSig("-->+", "CMD", 0, 3))
+        self.sig_left(ChipSig("-->+", "FORCE_HIT"))
+        self.sig_left(ChipSig("-->+", "PHIT"))
+        self.sig_left(ChipSig("-->+", "MCYC1"))
         self.sig_left(ChipSig("-->+", "LATE"))
 
         self.sig_right(ChipSig("o<->", "TAG", 0, 7))
         self.sig_right(ChipSig("+<->", "HITLRU", 0, 3))
         self.sig_right(ChipSig("o-->", "HIT"))
 
-        self.sig_right(ChipSig("+-->", "TMP", 0, 25))
+        self.sig_right(ChipSig("+-->", "TMP", 0, 7))
         self.finish(27)
 
 class XTAGRAM(Chip):
