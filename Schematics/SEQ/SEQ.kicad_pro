@@ -1,5 +1,6 @@
 {
   "board": {
+    "3dviewports": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -185,18 +186,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "error",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "error",
       "net_not_bus_member": "error",
       "no_connect_connected": "error",
@@ -206,6 +212,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "error",
+      "simulation_model_issue": "error",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -223,7 +230,7 @@
   "net_settings": {
     "classes": [
       {
-        "bus_width": 50.0,
+        "bus_width": 50,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -237,13 +244,15 @@
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 20.0
+        "wire_width": 20
       }
     ],
     "meta": {
-      "version": 2
+      "version": 3
     },
-    "net_colors": null
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -296,6 +305,8 @@
     "plot_directory": "SVG",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
@@ -303,50 +314,6 @@
     [
       "20011966-1ffc-24d7-1b4b-436a182362c4",
       ""
-    ],
-    [
-      "20011966-1a47-4c68-7951-4279a300d86b",
-      "Page 01"
-    ],
-    [
-      "20011966-596d-76c7-6476-50ec79531d9c",
-      "Page 02"
-    ],
-    [
-      "20011966-6da1-1674-5633-0564dd09371b",
-      "Page 03"
-    ],
-    [
-      "20011966-19c0-34db-057d-3e232085f1f3",
-      "Page 04"
-    ],
-    [
-      "20011966-2b23-16dc-4fdb-1237a0959e64",
-      "Page 05"
-    ],
-    [
-      "20011966-4b1a-535b-616b-3282f3a72861",
-      "Page 06"
-    ],
-    [
-      "20011966-275b-16ec-121e-63836bd2be74",
-      "Page 07"
-    ],
-    [
-      "20011966-33d4-1711-4799-5aa12c7ccbe5",
-      "Page 08"
-    ],
-    [
-      "20011966-00c2-799b-356c-3d15dc0bf823",
-      "Page 09"
-    ],
-    [
-      "20011966-66b9-0af9-6b51-7c461c986506",
-      "Page 10"
-    ],
-    [
-      "20011966-5081-6097-177c-57a257ecc0a2",
-      "Page 11"
     ],
     [
       "20011966-6971-43fc-362b-5da89d8c67d5",
@@ -643,10 +610,6 @@
     [
       "20011966-045f-514b-3eab-565a48439a3a",
       "Page 85"
-    ],
-    [
-      "20011966-388d-7563-542a-77f08a1be51f",
-      "Page 86"
     ]
   ],
   "text_variables": {}

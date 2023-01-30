@@ -1,4 +1,4 @@
-(kicad_sch (version 20221004) (generator eeschema)
+(kicad_sch (version 20221206) (generator eeschema)
 
   (uuid 20011966-1314-24ae-5427-160425faf38a)
 
@@ -155,11 +155,11 @@
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
-        (arc (start 2.54 2.54) (mid -1.0521 -6.1321) (end 7.62 -2.54)
+        (arc (start 2.54 -7.62) (mid 6.1321 -6.1321) (end 7.62 -2.54)
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
-        (arc (start 7.62 -2.54) (mid -1.0521 1.0521) (end 2.54 -7.62)
+        (arc (start 7.62 -2.54) (mid 6.1321 1.0521) (end 2.54 2.54)
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
@@ -3102,98 +3102,98 @@
   (global_label "TAGA_[0..63]" (shape input) (at 53.34 91.44 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 06f1d171-be38-43df-b3cc-869dca8d0066)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 24.6864 91.2813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 24.6864 91.2813 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "TAGA_[0..63]" (shape input) (at 76.2 335.28 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 10d8a4b6-91fa-434a-811a-d6a0962e19ae)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 47.5464 335.1213 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 47.5464 335.1213 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "NMATCHAE" (shape output) (at 518.16 55.88 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid 19187f32-28a9-4d13-a5cc-763c6c477ecc)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 542.3384 55.7213 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 542.3384 55.7213 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "MAR_NM[0..31]" (shape input) (at 162.56 91.44 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid 1d0fa291-f5f3-4d9e-a932-b6a660f09bc7)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 195.5679 91.2813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 195.5679 91.2813 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "TAGCOMP_EN~" (shape input) (at 96.52 76.2 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 2a05c3d3-8dce-451f-89ab-8e3758f4d59c)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 65.6892 76.0413 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 65.6892 76.0413 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "NAMEQ~" (shape input) (at 383.54 203.2 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 4b88bec5-befe-4bd4-acf8-2533ddffdff6)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 364.1997 203.0413 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 364.1997 203.0413 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "MAR_PG[0..12]" (shape input) (at 302.26 347.98 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 648bc37b-f8e5-4a9b-a557-bc45ee7ba4ba)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 269.7359 347.8213 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 269.7359 347.8213 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "CLK2X~" (shape input) (at 350.52 33.02 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid 6e346b6e-0732-43bf-b9d6-2ef70aa652b8)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 326.9464 32.8613 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 326.9464 32.8613 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "NMATCHAL" (shape output) (at 518.16 144.78 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid 710a3780-3151-46ce-8638-d4401607af31)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 542.0965 144.6213 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 542.0965 144.6213 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "OMATCHAL" (shape output) (at 518.16 180.34 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid 94e0637b-a51a-46eb-805d-410a6c2160de)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 542.0965 180.1813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 542.0965 180.1813 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "MAR_SP[0..2]" (shape input) (at 312.42 218.44 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid af574fcb-cfbe-4879-8e33-c04d538094d9)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 342.4041 218.2813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 342.4041 218.2813 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "CLK2X" (shape input) (at 350.52 121.92 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid de9596b9-6c0a-49e4-abb2-8b727bff26b7)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 326.8254 121.7613 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 326.8254 121.7613 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
   (global_label "OMATCHAE" (shape output) (at 518.16 91.44 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left))
     (uuid e965d079-e80f-44b4-9a21-765ab33f88d1)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 542.3384 91.2813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 542.3384 91.2813 0)
       (effects (font (size 1.905 1.905)) (justify left))
     )
   )
   (global_label "TAGCOMP_EN~" (shape input) (at 71.12 320.04 180) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify right))
     (uuid edcec315-8846-4f9e-af2b-a5be62fe86f6)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (at 40.2892 319.8813 0)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 40.2892 319.8813 0)
       (effects (font (size 1.905 1.905)) (justify right))
     )
   )
@@ -3240,7 +3240,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U23") (unit 1) (value "F374") (footprint "")
+          (reference "U23") (unit 1)
         )
       )
     )
@@ -3265,7 +3265,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "#PWR013") (unit 1) (value "PD") (footprint "")
+          (reference "#PWR013") (unit 1)
         )
       )
     )
@@ -3329,7 +3329,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U21") (unit 1) (value "XEQ16") (footprint "")
+          (reference "U21") (unit 1)
         )
       )
     )
@@ -3354,7 +3354,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "#PWR012") (unit 1) (value "PD") (footprint "")
+          (reference "#PWR012") (unit 1)
         )
       )
     )
@@ -3390,7 +3390,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U26") (unit 1) (value "F260") (footprint "")
+          (reference "U26") (unit 1)
         )
       )
     )
@@ -3427,7 +3427,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U28") (unit 1) (value "F51") (footprint "")
+          (reference "U28") (unit 1)
         )
       )
     )
@@ -3475,7 +3475,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U24") (unit 1) (value "F374") (footprint "")
+          (reference "U24") (unit 1)
         )
       )
     )
@@ -3511,7 +3511,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U25") (unit 1) (value "F260") (footprint "")
+          (reference "U25") (unit 1)
         )
       )
     )
@@ -3607,7 +3607,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U20") (unit 1) (value "XEQ32") (footprint "")
+          (reference "U20") (unit 1)
         )
       )
     )
@@ -3644,7 +3644,7 @@
     (instances
       (project "MEM32"
         (path "/20011966-487c-2cfb-5da0-3540af989df7/20011966-1314-24ae-5427-160425faf38a"
-          (reference "U27") (unit 1) (value "F51") (footprint "")
+          (reference "U27") (unit 1)
         )
       )
     )

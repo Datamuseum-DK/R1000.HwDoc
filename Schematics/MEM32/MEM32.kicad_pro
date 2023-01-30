@@ -186,18 +186,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "error",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "error",
       "net_not_bus_member": "error",
       "no_connect_connected": "error",
@@ -207,6 +212,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "error",
+      "simulation_model_issue": "error",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -341,20 +347,12 @@
       "Page 09"
     ],
     [
-      "20011966-64d1-48fe-410c-75cfcb561e80",
-      "Page 10"
-    ],
-    [
       "20011966-1441-5f26-01a2-3f09c54bd6c8",
       "Page 11"
     ],
     [
       "20011966-7399-7712-1f61-03bdc0b61a9e",
       "Page 12"
-    ],
-    [
-      "20011966-67d0-65b7-7855-6987c36cae12",
-      "Page 13"
     ],
     [
       "20011966-1888-6eb9-10ea-7895b1aa9bc8",
