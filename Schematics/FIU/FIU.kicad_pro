@@ -1,5 +1,6 @@
 {
   "board": {
+    "3dviewports": [],
     "layer_presets": [],
     "viewports": []
   },
@@ -185,18 +186,23 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
-      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
       "different_unit_footprint": "error",
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
       "lib_symbol_issues": "error",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
       "multiple_net_names": "error",
       "net_not_bus_member": "error",
       "no_connect_connected": "error",
@@ -206,6 +212,7 @@
       "pin_to_pin": "error",
       "power_pin_not_driven": "warning",
       "similar_labels": "error",
+      "simulation_model_issue": "error",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -223,7 +230,7 @@
   "net_settings": {
     "classes": [
       {
-        "bus_width": 50.0,
+        "bus_width": 50,
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
@@ -237,13 +244,15 @@
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
-        "wire_width": 20.0
+        "wire_width": 20
       }
     ],
     "meta": {
-      "version": 2
+      "version": 3
     },
-    "net_colors": null
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
@@ -296,6 +305,8 @@
     "plot_directory": "",
     "spice_adjust_passive_values": false,
     "spice_external_command": "spice \"%I\"",
+    "spice_save_all_currents": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
@@ -303,26 +314,6 @@
     [
       "20011966-34db-22cb-3cf6-70f130e3b336",
       ""
-    ],
-    [
-      "20011966-144f-36da-74af-6ea98ecf58c5",
-      "Page 01"
-    ],
-    [
-      "20011966-7e7c-7306-02fa-5a02358cbe7c",
-      "Page 02"
-    ],
-    [
-      "20011966-7581-11bc-0e87-6871b8b1f21d",
-      "Page 03"
-    ],
-    [
-      "20011966-2960-10f8-3917-50adbc8a9b92",
-      "Page 04"
-    ],
-    [
-      "20011966-7a18-6d8e-58bd-4c551a0a0cf3",
-      "Page 05"
     ],
     [
       "20011966-4623-09e3-5067-163716d71c1d",
@@ -361,24 +352,12 @@
       "Page 14"
     ],
     [
-      "20011966-42fa-6fdb-1e58-508b905c9dbd",
-      "Page 15"
-    ],
-    [
       "20011966-1dc9-495e-2ed9-5ef6bb8aa527",
       "Page 16"
     ],
     [
       "20011966-2778-75d3-0f96-5c55616182cc",
       "Page 17"
-    ],
-    [
-      "20011966-221c-1e7c-47fb-66b1f9281adc",
-      "Page 18"
-    ],
-    [
-      "20011966-515c-3c00-1ef0-40f54298c1df",
-      "Page 19"
     ],
     [
       "20011966-7570-62af-4330-73aa82b527b8",
@@ -413,16 +392,8 @@
       "Page 27"
     ],
     [
-      "20011966-0867-027e-26be-5b61c193c8d9",
-      "Page 28"
-    ],
-    [
       "20011966-53e2-3b2b-7c73-7bdab6ae13f2",
       "Page 29"
-    ],
-    [
-      "20011966-28c6-454f-1120-42b1d30561d4",
-      "Page 30"
     ],
     [
       "20011966-0c39-112a-10c5-734e1098b522",
@@ -449,14 +420,6 @@
       "Page 36"
     ],
     [
-      "20011966-6e4a-25b8-159d-756fc4a13bea",
-      "Page 37"
-    ],
-    [
-      "20011966-3397-7111-7202-17606bd05f1e",
-      "Page 38"
-    ],
-    [
       "20011966-573a-4438-6051-005bc9e20e1b",
       "Page 39"
     ],
@@ -481,10 +444,6 @@
       "Page 44"
     ],
     [
-      "20011966-3a3d-434c-05b2-2d4dc4252d68",
-      "Page 45"
-    ],
-    [
       "20011966-65ca-4655-1aa3-1a118d1daad1",
       "Page 46"
     ],
@@ -507,10 +466,6 @@
     [
       "20011966-5b03-527f-7f1e-7852ae720097",
       "Page 51"
-    ],
-    [
-      "20011966-64e0-05cc-4eea-5b45474a528c",
-      "Page 52"
     ],
     [
       "20011966-598c-693c-2f88-594813056adc",
@@ -567,10 +522,6 @@
     [
       "20011966-6bd6-4247-1bd4-0d0bcc804e6a",
       "Page 66"
-    ],
-    [
-      "20011966-545e-16b0-6bf4-38ae9d95bfd9",
-      "Page 67"
     ]
   ],
   "text_variables": {}
