@@ -575,42 +575,6 @@
         )
       )
     )
-    (symbol "r1000:PU" (power) (pin_numbers hide) (pin_names hide) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "PU" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "PU_0_1"
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy -1.27 2.54)
-            (xy 0 3.81)
-            (xy 1.27 2.54)
-            (xy 0 2.54)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "PU_1_1"
-        (pin power_in line (at 0 0 90) (length 2.54)
-          (name "PU" (effects (font (size 2.54 2.54))))
-          (number "1" (effects (font (size 2.54 2.54))))
-        )
-      )
-    )
     (symbol "r1000:XLAT16" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 2.54 5.08 0)
         (effects (font (size 1.27 1.27)))
@@ -798,6 +762,7 @@
   (no_connect (at 502.92 142.24) (uuid 3024097d-88c3-4494-adf1-b332aeb28a4b))
   (no_connect (at 502.92 172.72) (uuid 978aba5d-834f-4eee-a84b-a0a119210053))
   (no_connect (at 502.92 152.4) (uuid bd51db3a-3ee1-469a-aa3f-6245e1aca968))
+  (no_connect (at 490.22 121.92) (uuid f4e9b1dd-d901-4227-bdd0-6b1f25566857))
 
   (bus_entry (at 111.76 147.32) (size 2.54 2.54)
     (stroke (width 0) (type default))
@@ -2612,10 +2577,6 @@
     (stroke (width 0) (type default))
     (uuid fcdf9933-72a4-4552-b9d6-ab6233acf83c)
   )
-  (wire (pts (xy 490.22 119.38) (xy 490.22 121.92))
-    (stroke (width 0) (type default))
-    (uuid fd938692-c809-43a7-bc6e-d956c93d2578)
-  )
   (wire (pts (xy 289.56 210.82) (xy 307.34 210.82))
     (stroke (width 0) (type default))
     (uuid fddb40a5-7290-45cb-9648-a937bc68ca0a)
@@ -3404,7 +3365,7 @@
   (symbol (lib_id "r1000:F37") (at 241.3 22.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 341bcc10-dfb2-47fa-94d6-06a113f21f96)
-    (property "Reference" "U6221" (at 256.54 22.86 0)
+    (property "Reference" "U1404" (at 256.54 22.86 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F37" (at 243.205 27.94 0)
@@ -3427,9 +3388,6 @@
     (pin "3" (uuid e2f485db-6c99-43ee-80ae-587c6eab7ee6))
     (instances
       (project "VAL"
-        (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4de9-5f8d-5e5c-032c9bf81b72"
-          (reference "U6221") (unit 1)
-        )
         (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
           (reference "U1404") (unit 1)
         )
@@ -3639,7 +3597,7 @@
   (symbol (lib_id "r1000:F04") (at 81.28 25.4 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9274df57-e95c-47e2-91cc-3cde8a6581b7)
-    (property "Reference" "U6218" (at 81.28 25.4 0)
+    (property "Reference" "U1401" (at 81.28 25.4 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F04" (at 82.55 30.48 0)
@@ -3661,9 +3619,6 @@
     (pin "2" (uuid 519df68d-07ab-4659-822a-6de68cd247fb))
     (instances
       (project "VAL"
-        (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4de9-5f8d-5e5c-032c9bf81b72"
-          (reference "U6218") (unit 1)
-        )
         (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
           (reference "U1401") (unit 1)
         )
@@ -3801,7 +3756,7 @@
   (symbol (lib_id "r1000:F04") (at 104.14 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b2c48c33-caba-422f-ae02-606f20d61e3c)
-    (property "Reference" "U6219" (at 104.14 38.1 0)
+    (property "Reference" "U1402" (at 104.14 38.1 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F04" (at 105.41 43.18 0)
@@ -3823,9 +3778,6 @@
     (pin "2" (uuid a622bb64-ec2b-4c3d-9d18-8ca216471051))
     (instances
       (project "VAL"
-        (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4de9-5f8d-5e5c-032c9bf81b72"
-          (reference "U6219") (unit 1)
-        )
         (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
           (reference "U1402") (unit 1)
         )
@@ -3836,7 +3788,7 @@
   (symbol (lib_id "r1000:F20") (at 182.88 22.86 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d03d1822-5494-4a3b-a1a3-b7983a2ea1d0)
-    (property "Reference" "U6220" (at 191.135 20.32 0)
+    (property "Reference" "U1403" (at 191.135 20.32 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "F20" (at 182.245 25.4 0)
@@ -3861,9 +3813,6 @@
     (pin "6" (uuid 2d73f1a8-641d-4a15-a7cc-52e8e34c3d69))
     (instances
       (project "VAL"
-        (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4de9-5f8d-5e5c-032c9bf81b72"
-          (reference "U6220") (unit 1)
-        )
         (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
           (reference "U1403") (unit 1)
         )
@@ -3891,31 +3840,6 @@
       (project "VAL"
         (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
           (reference "#PWR01") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "r1000:PU") (at 490.22 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid ffa8dcbd-7877-4aef-9139-89ce4c61ac0d)
-    (property "Reference" "#PWR06" (at 490.22 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PU" (at 490.22 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "" (at 490.22 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 490.22 119.38 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid f8034aab-6d09-4e52-8d14-914d9754ff6a))
-    (instances
-      (project "VAL"
-        (path "/20011966-0b12-5e7d-4f5d-7b7451992361/20011966-4654-4d77-36d8-0b07a8870b2d"
-          (reference "#PWR06") (unit 1)
         )
       )
     )

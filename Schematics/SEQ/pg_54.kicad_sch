@@ -583,7 +583,6 @@
     )
   )
 
-
   (junction (at 83.82 96.52) (diameter 0) (color 0 0 0 0)
     (uuid 132af177-8515-4bb1-94d6-4877471e77a1)
   )
@@ -617,6 +616,7 @@
 
   (no_connect (at 388.62 76.2) (uuid 001e315b-f795-48b6-8483-9ccd56812b4f))
   (no_connect (at 353.06 139.7) (uuid 0c43f0e8-557a-4b85-8fd7-5e5f4652d0b1))
+  (no_connect (at 208.28 116.84) (uuid 8be0b621-cb54-4dad-9b8a-3b145b127a05))
   (no_connect (at 388.62 228.6) (uuid d4e4ab13-736e-4f8a-8869-b11fa6bf9199))
   (no_connect (at 388.62 154.94) (uuid dc028a4b-fb92-414b-8ea1-e411bf6543c3))
   (no_connect (at 175.26 132.08) (uuid e84e6118-4302-4a6c-a920-df49f9719f76))
@@ -816,10 +816,6 @@
   (wire (pts (xy 83.82 96.52) (xy 83.82 101.6))
     (stroke (width 0) (type default))
     (uuid 5291d795-fcad-452e-9574-3d2fe11323d2)
-  )
-  (wire (pts (xy 208.28 116.84) (xy 269.24 116.84))
-    (stroke (width 0) (type default))
-    (uuid 5539966e-81e9-4c0d-9550-b13af9cf4feb)
   )
   (wire (pts (xy 83.82 101.6) (xy 88.9 101.6))
     (stroke (width 0) (type default))
@@ -1151,10 +1147,6 @@
   (label "COND_SEL.UIR~4" (at 337.82 195.58 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 3b1f889d-95ec-4677-820e-9b813f2c8735)
-  )
-  (label "RESTRG.SIM" (at 231.14 116.84 0) (fields_autoplaced)
-    (effects (font (size 2.54 2.54)) (justify left bottom))
-    (uuid 945ba010-b8b8-4c17-acf8-e9135625b4a7)
   )
   (label "RESTARTABLE" (at 231.14 111.76 0) (fields_autoplaced)
     (effects (font (size 2.54 2.54)) (justify left bottom))

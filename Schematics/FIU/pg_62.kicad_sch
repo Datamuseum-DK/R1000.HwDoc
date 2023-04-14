@@ -1676,6 +1676,7 @@
     (uuid ebb14ad2-45c1-45a6-90d6-b80335a8db1c)
   )
 
+  (no_connect (at 129.54 363.22) (uuid e1842bee-0ef9-4f70-83e2-f79d2c57de17))
   (no_connect (at 375.92 297.18) (uuid f853d7a5-b01f-427a-bcbf-574f2cbed5dc))
 
   (bus_entry (at 78.74 350.52) (size 2.54 2.54)
@@ -2021,10 +2022,6 @@
     (uuid 90e968a4-94fd-47d6-9d10-8ec6871b9b4b)
   )
 
-  (wire (pts (xy 104.14 363.22) (xy 129.54 363.22))
-    (stroke (width 0) (type default))
-    (uuid 910e964a-c8d7-4927-a7b8-d7314f65b2e4)
-  )
   (wire (pts (xy 162.56 274.32) (xy 162.56 342.9))
     (stroke (width 0) (type default))
     (uuid 9365b5bb-1332-4bc7-ab67-b1a0ca5489aa)
@@ -2085,11 +2082,6 @@
     (stroke (width 0) (type default))
     (uuid a8d16362-4a49-450d-b558-f12b8ece3fac)
   )
-  (bus (pts (xy 78.74 355.6) (xy 78.74 365.76))
-    (stroke (width 0) (type default))
-    (uuid aa8268e9-af8f-488a-a7fe-8f4b8474a627)
-  )
-
   (wire (pts (xy 129.54 304.8) (xy 132.08 304.8))
     (stroke (width 0) (type default))
     (uuid abb9a1d2-af5c-42db-a9b0-65fbdc5db194)
@@ -2916,31 +2908,6 @@
       (project "FIU"
         (path "/20011966-34db-22cb-3cf6-70f130e3b336/20011966-03fd-1254-4cd9-11c1b9c0a5d9"
           (reference "GB310") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "r1000:PU") (at 104.14 363.22 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 4ba48c84-3f96-4d8a-9881-38edf83c6a39)
-    (property "Reference" "#PWR06302" (at 104.14 363.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "PU" (at 104.14 363.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Footprint" "" (at 104.14 363.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 104.14 363.22 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0cfe9e1c-d21b-42a4-b9ff-a527fec0f554))
-    (instances
-      (project "FIU"
-        (path "/20011966-34db-22cb-3cf6-70f130e3b336/20011966-03fd-1254-4cd9-11c1b9c0a5d9"
-          (reference "#PWR06302") (unit 1)
         )
       )
     )

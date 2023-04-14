@@ -34,6 +34,10 @@ class XALUN(Chip):
             for i in range(0, width, 8):
                 right.append("   |%")
                 right.append("EQ%d+-->" % (i // 8))
+            right.append("   |")
+            right.append("   |")
+            right.append("   |%")
+            right.append("MAG+<--")
 
         left = [
             "   |   ",

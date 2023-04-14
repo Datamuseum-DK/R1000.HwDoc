@@ -2,7 +2,7 @@
 
 ''' 1024x64 SRAM '''
 
-from Chipdesc.chip import Chip
+from Chipdesc.chip import Chip, FChip, ChipSig
 
 class XRFRAM(Chip):
 
@@ -150,5 +150,25 @@ class XRFRAM(Chip):
    +------------+
 '''
 
+from Chipdesc.chip import Chip, FChip, ChipSig
+
+class XRFRAMD(FChip):
+
+    ''' 1024x64 ram with separate in/out '''
+
+    symbol_name = "XRFRAMD"
+
+    def __init__(self):
+        super().__init__()
+
+        self.sig_left(ChipSig("-->+", "D", 0, 63))
+        self.sig_right(ChipSig("+===", "Q", 0, 63))
+        self.sig_left(ChipSig("-->+", "WE"))
+        self.sig_left(ChipSig("-->+", "A", 0, 9))
+        self.sig_right(ChipSig("+<--", "OE"))
+
+        self.finish()
+
 if __name__ == "__main__":
     XRFRAM().main()
+    XRFRAMD().main()
