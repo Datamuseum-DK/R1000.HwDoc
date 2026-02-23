@@ -328,8 +328,8 @@ class SchematicImage(sch.Sheet):
         return True
 
     def iter_bl(self):
-        a =  imageio.imread(self.find_stepped_file("corr_h.png")).astype(np.float)
-        b =  imageio.imread(self.find_stepped_file("corr_v.png")).astype(np.float)
+        a =  imageio.imread(self.find_stepped_file("corr_h.png")).astype(float)
+        b =  imageio.imread(self.find_stepped_file("corr_v.png")).astype(float)
 
         c = np.zeros(a.shape)
 

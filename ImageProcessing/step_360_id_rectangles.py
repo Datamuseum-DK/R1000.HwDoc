@@ -30,13 +30,13 @@ class Sheet_360(sch.Sheet):
         self.load_raw_image()
         self.load_components()
 
-        self.pat_non = imageio.imread("step_360_non.png").astype(np.float)
+        self.pat_non = imageio.imread("step_360_non.png").astype(float)
         self.pat_non -= np.amin(self.pat_non)
         self.pat_non /= .5 * np.amax(self.pat_non)
         self.pat_non -= 1
         self.w_non = np.sum(self.pat_non * self.pat_non)
 
-        self.pat_inv = imageio.imread("step_360_inv.png").astype(np.float)
+        self.pat_inv = imageio.imread("step_360_inv.png").astype(float)
         self.pat_inv -= np.amin(self.pat_inv)
         self.pat_inv /= .5 * np.amax(self.pat_inv)
         self.pat_inv -= 1

@@ -373,7 +373,7 @@ class Sheet():
     def load_raw_image(self):
         ''' Load and normalize image '''
         filename = self.find_stepped_file("raw_image.png")
-        self.img = imageio.imread(filename).astype(np.float)
+        self.img = imageio.imread(filename).astype(float)
         self.img -= np.amin(self.img)
         self.img /= np.amax(self.img) * .5
         self.img -= 1
@@ -382,7 +382,7 @@ class Sheet():
     def load_proj50_image(self):
         ''' Load and normalize image '''
         filename = self.find_stepped_file("proj50.png")
-        self.proj50 = imageio.imread(filename).astype(np.float)
+        self.proj50 = imageio.imread(filename).astype(float)
         self.proj50 -= np.amin(self.proj50)
         self.proj50 /= np.amax(self.proj50) * .5
         self.proj50 -= 1
@@ -411,7 +411,7 @@ class Sheet():
         print("Projecting for", resolution, "DPI")
         proj_height = int(INCH_HEIGHT * resolution)
         proj_width = int(INCH_WIDTH * resolution)
-        projected = np.zeros([proj_height, proj_width], dtype=np.float)
+        projected = np.zeros([proj_height, proj_width], dtype=float)
 
         for proj_y in range(proj_height):
             for proj_x in range(proj_width):

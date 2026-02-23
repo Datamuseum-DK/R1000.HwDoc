@@ -32,7 +32,7 @@ def string_2_template(source, reflect=False, black=-1, white=1):
     dim_x = len(lines[0])
     dim_y = len(lines)
     # print("H", dim_y, "W", dim_x)
-    img = np.zeros([dim_y, dim_x], dtype=np.float)
+    img = np.zeros([dim_y, dim_x], dtype=float)
     for pix_y, i in enumerate(lines):
         for pix_x, j in enumerate(i):
             img[pix_y][pix_x] = {
@@ -56,7 +56,7 @@ def read_pgm(filename=None, string=None):
     dimx = tokens.pop(0)
     dimy = tokens.pop(0)
     _maxval = tokens.pop(0)
-    img = np.zeros([dimy, dimx], dtype=np.float)
+    img = np.zeros([dimy, dimx], dtype=float)
     for pix_y in range(dimy):
         img[pix_y, :] = tokens[:dimx]
         tokens = tokens[dimx:]
@@ -72,7 +72,7 @@ def find_in_snippet(target, template):
         template,
         "same"
     )
-    mask = np.zeros(target.shape, dtype=np.float)
+    mask = np.zeros(target.shape, dtype=float)
     while True:
         ctr = np.unravel_index(np.argmax(corr, axis=None), corr.shape)
         yield (
@@ -300,7 +300,7 @@ class Template_Sheet(sch.Sheet):
     def match(self):
         ''' Match patterns, report findings '''
 
-        self.mask = np.zeros(self.img.shape, dtype=np.float)
+        self.mask = np.zeros(self.img.shape, dtype=float)
 
         i = TemplateMatcher(
             template=self.template_50,

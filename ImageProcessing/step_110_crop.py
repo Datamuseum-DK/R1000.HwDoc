@@ -60,7 +60,7 @@ class Sheet_110(sch.Sheet):
         ''' Load the PGM image and add a white border '''
 
         imgfile = "../" + self.board + "/rawimg/_-" + self.sheet + ".pgm"
-        self.img = imageio.imread(imgfile).astype(np.float)
+        self.img = imageio.imread(imgfile).astype(float)
         self.img -= np.amin(self.img)
         self.img /= np.amax(self.img) * .5
         self.img -= 1
@@ -208,7 +208,7 @@ class Sheet_110(sch.Sheet):
                 min(bbox_sz[1], self.img.shape[1] - bbox_tl[1]),
             )
             print("PASTING", bbox_tl, bbox_br, bbox_sz, move)
-            tmp = np.zeros(list(bbox_sz), dtype=np.float)
+            tmp = np.zeros(list(bbox_sz), dtype=float)
             tmp += 1
             tmp[
                 0 : move[0],
@@ -251,7 +251,7 @@ class Sheet_110(sch.Sheet):
             self.add_landmark(*self.int_br, *sch.INCH_B_R_I, "ic_br")
 
     def ioc_0063(self):
-        tmp = np.zeros([5079,2000 + 6591] , dtype=np.float)
+        tmp = np.zeros([5079,2000 + 6591] , dtype=float)
         tmp += 1
         tmp[:,2000:] = self.img
         self.img = tmp
