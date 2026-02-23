@@ -46,11 +46,11 @@ class XBUF(Chip):
         file.write("#endif\n")
            
 if __name__ == "__main__":
-    XBUF(4).main()
+    #XBUF(4).main()
     XBUF(8).main()
-    XBUF(16).main()
-    XBUF(20).main()
-    XBUF(24).main()
-    XBUF(32).main()
-    XBUF(48).main()
-    XBUF(64).main()
+    #XBUF(16).main()
+    #XBUF(20).main()
+    #XBUF(24).main()
+    #XBUF(32).main()
+    #XBUF(48).main()
+    #XBUF(64).main()
