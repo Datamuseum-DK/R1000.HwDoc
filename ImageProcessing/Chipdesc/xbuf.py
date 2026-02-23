@@ -2,7 +2,7 @@
 
 ''' N bit '244-style buffer '''
 
-from chip import Chip
+from Chipdesc.chip import Chip
 
 class XBUF(Chip):
 
