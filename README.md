@@ -1,3 +1,8 @@
+This repository has moved
+=========================
+
+The future happens at: https://codeberg.org/Datamuseum-dk/R1000.DigitizingTheSchematics
+
 Rational R1000/400 Machine Readable Hardware documentation
 ==========================================================
 
